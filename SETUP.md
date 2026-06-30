@@ -98,7 +98,8 @@ python3 -m pytest --nbval . --nbval-current-env
 
 ## Repository Tour
 
-- `00_welcome/`: syllabus and setup
+- `README.md`: learner-facing course overview, mission, module map, and success criteria
+- `SETUP.md`: environment setup and verification path
 - `slides/module_decks/`: six module-specific slide decks
 - `notebooks/`: progressive practical notebooks
 - `assignments/`: learner assignments and capstone

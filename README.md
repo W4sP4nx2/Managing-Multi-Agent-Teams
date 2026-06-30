@@ -4,11 +4,12 @@ This GitHub page is the learner-facing course overview. It explains what the cou
 
 Start here:
 
-- Setup: [00_welcome/setup_guide.md](00_welcome/setup_guide.md)
+- Setup guide: [SETUP.md](SETUP.md)
 - Notebook order: [notebooks/notebook_manifest.yml](notebooks/notebook_manifest.yml)
 - Assignment path: [assignments/index.md](assignments/index.md)
 - Resource library: [resources/README.md](resources/README.md)
-- Workspace map and asset inventory: [00_welcome/README.md](00_welcome/README.md)
+
+This README is the course overview. It is the front page learners should read first on GitHub: the promise, mission, module map, scope boundaries, and success criteria all live here.
 
 ## Course Promise
 
@@ -28,7 +29,7 @@ Layer 2: The Mock LLM Adapter. Next, learners introduce simulated LLM failure: m
 
 Layer 3: The Live LLM Integration. Finally, learners can enable optional `USE_LIVE_LLM = True` cells with their own API keys. The same schemas from Layer 1 now constrain a real model, and the same repair loop handles real nondeterminism.
 
-Instructor script: "Look at the deterministic agent function. It is hard-coded on purpose. If we plugged in a real LLM before understanding the governance shell, we would not know whether a failure came from the schema, the gateway, the prompt, or the model. First we isolate the rules. Then we use the mock LLM adapter to simulate failure. Finally we flip on the live LLM and use the same contracts to govern the dynamic brain."
+The deterministic functions are teaching adapters. They isolate the governance shell first, then the notebooks introduce messy mock LLM outputs, schema rejection, repair feedback, and optional live model calls.
 
 ## Audience
 
