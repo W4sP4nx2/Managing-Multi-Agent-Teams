@@ -73,6 +73,16 @@ Expected behavior:
 - The notebook confirms repository working directory markers.
 - The notebook writes and cleans a small probe file in `/tmp`.
 
+## Learner Launch Sequence
+
+After setup succeeds:
+
+1. Read [README.md](README.md) for the course overview and mission.
+2. Complete [assignments/multi_agent_systems_foundations.md](assignments/multi_agent_systems_foundations.md) to learn why one agent is not enough, how interaction patterns work, and how architecture choice affects governance.
+3. Run `notebooks/00_sandbox_preflight.ipynb`.
+4. Follow [notebooks/notebook_manifest.yml](notebooks/notebook_manifest.yml) for the canonical notebook order.
+5. Use [assignments/index.md](assignments/index.md) for the assignment path and evidence checklist.
+
 For coverage and timeout protection:
 
 ```bash

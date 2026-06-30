@@ -48,23 +48,24 @@ This course is for engineers, technical leads, AI builders, and curriculum facil
 After completing the course, learners will be able to:
 
 1. Explain why single-agent prompting breaks down for complex software workflows.
-2. Design agent rosters, SOPs, and typed handoff contracts.
-3. Implement shared memory patterns inspired by TeamLog and Theory of Mind.
-4. Use MCP-style tool boundaries and zero-trust authorization policies.
-5. Build Pydantic-enforced inter-agent contracts.
-6. Implement bounded self-repair loops based on ChatDev architecture.
-7. Route tasks across heterogeneous model classes using Fugu-style routing, then explain how learned orchestration extends beyond static rules.
-8. Design enterprise-grade agent ecosystems with identity, permissions, and A2A schemas.
-9. Manage an AI workforce through a human CEO interface that turns natural-language directives into typed plans, commitments, dispatches, and approvals.
-10. Secure cross-organization agent messages with an A2A perimeter, payload classification, schema checks, and dead-letter auditing.
-11. Compare custom orchestration with CrewAI-style production patterns for task dependencies, parallelism, artifact outputs, dynamic inputs, coding-agent teams, and hybrid governance.
-12. Elevate beginner agents such as Logistics Weather, Writer, QA, and CEO assistants into governed production exercises with schemas, gateways, memory, repair budgets, A2A defense, and TeamLog.
+2. Classify multi-agent interaction patterns and choose vertical, horizontal, or hybrid architectures.
+3. Design agent rosters, SOPs, and typed handoff contracts.
+4. Implement shared memory patterns inspired by TeamLog and Theory of Mind.
+5. Use MCP-style tool boundaries and zero-trust authorization policies.
+6. Build Pydantic-enforced inter-agent contracts.
+7. Implement bounded self-repair loops based on ChatDev architecture.
+8. Route tasks across heterogeneous model classes using Fugu-style routing, then explain how learned orchestration extends beyond static rules.
+9. Design enterprise-grade agent ecosystems with identity, permissions, and A2A schemas.
+10. Manage an AI workforce through a human CEO interface that turns natural-language directives into typed plans, commitments, dispatches, and approvals.
+11. Secure cross-organization agent messages with an A2A perimeter, payload classification, schema checks, and dead-letter auditing.
+12. Compare custom orchestration with CrewAI-style production patterns for task dependencies, parallelism, artifact outputs, dynamic inputs, coding-agent teams, and hybrid governance.
+13. Elevate beginner agents such as Logistics Weather, Writer, QA, and CEO assistants into governed production exercises with schemas, gateways, memory, repair budgets, A2A defense, and TeamLog.
 
 ## Module Map
 
 | Module | Theme | Primary Artifact | Learner Outcome |
 | --- | --- | --- | --- |
-| Pre-Course | Controlled Jupyter Sandbox | NB0 | Verify packages, offline mode, working directory, and `/tmp` write access |
+| Pre-Course | Controlled Jupyter Sandbox + Foundations | NB0 + Assignment 00A | Verify the environment, then learn why multi-agent systems need patterns, architecture choices, and governance |
 | 1 | Foundations & Vibe Coding | NB1 + Ex1 | Build a simple sequential agent team |
 | 2 | TeamLog & Theory of Mind | NB2 + Ex2 | Use memory to preserve commitments, hidden constraints, and compressed long-term context |
 | 3 | Agentic RAG & MCP | NB3 + Ex3 | Govern tool access through a standardized boundary |
@@ -107,6 +108,7 @@ The six-module core teaches learners how to manage multi-agent teams. The extens
 
 | Assignment | Artifact | Why It Matters |
 | --- | --- | --- |
+| Multi-Agent Systems Foundations | `assignments/multi_agent_systems_foundations.md` | Teaches when one agent is not enough, how to classify interaction patterns, and how to choose vertical, horizontal, or hybrid architecture |
 | Vibe Coding CEO Interface | NB10 | Teaches the human-manager interface: natural language becomes typed plans, commitments, dispatches, and approval decisions |
 | Context Window Economics | NB2 upgrade | Teaches cognitive-load management through context compression and durable memory |
 | Intelligent Orchestrator | NB9 upgrade | Bridges deterministic routing to typed LLM-manager delegation and escalation as a teaching adapter |
@@ -114,6 +116,7 @@ The six-module core teaches learners how to manage multi-agent teams. The extens
 | CrewAI Framework Bridge | `crewai_learning/README.md` | Shows when to use production orchestration frameworks, how to design a personal coding-agent team, and how to wrap framework convenience with course governance |
 | Basic Agent Governance Labs | `assignments/basic_agent_governance_labs.md` | Gives instructors simple Logistics Weather, Writer, QA, and CEO exercises that still assess schemas, gateways, memory, repair, and escalation |
 | Assignment Syllabus | `assignments/assignment_syllabus.md` | Gives the professor-level building-block map and learning experience for the whole assignment sequence |
+| Virtual Software Company Capstone | `assignments/ex5_capstone_virtual_software_company.md` | Requires an ADR, interaction-pattern map, and proof tests for malfunction, coordination complexity, and unpredictable behavior |
 
 ## Scope Exclusions
 
@@ -130,8 +133,9 @@ The course uses software delivery, logistics weather-risk checks, writing/review
 A learner is successful when they can:
 
 - Set up the environment using the setup guide, run NB0 successfully, and complete the verification commands.
+- Complete Assignment 00A and explain why a given task needs a multi-agent system rather than one super agent.
 - Complete the core notebooks before attempting Assignment 12 and the capstone. Use NB9 and NB11 for advanced orchestration and enterprise perimeter practice, and use `crewai_learning/README.md` as a separate self-contained CrewAI study path.
-- Explain the purpose of each schema, tool policy, and routing decision.
-- Submit a capstone with typed contracts, governed tools, shared memory, and bounded repair.
+- Explain the purpose of each schema, tool policy, routing decision, architecture choice, and interaction pattern.
+- Submit a capstone with typed contracts, governed tools, shared memory, bounded repair, architecture ADR, interaction-pattern map, and challenge-mitigation proof tests.
 
 Instructor delivery materials live in [instructor/](instructor/). Use that folder for rubrics, solution guides, delivery checklists, verification commands, and teaching support.
