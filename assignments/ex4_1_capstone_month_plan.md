@@ -6,6 +6,12 @@ Ship a production-style multi-agent system as an API with typed contracts, gover
 
 ## Monthly Build Plan
 
+### Before Week 1: Architecture Decision
+
+- Write a one-page ADR choosing vertical, horizontal, or hybrid architecture.
+- Map cooperative, competitive/mixed, hierarchical, heterogeneous, and mixture-of-experts patterns to your proposed agents.
+- Identify the three failure challenges your system must prove: malfunction, coordination complexity, and unpredictable behavior.
+
 ### Week 1: Agents + Schemas
 
 - Define roles and responsibilities.
@@ -33,6 +39,7 @@ Ship a production-style multi-agent system as an API with typed contracts, gover
 - Add structured request/response models.
 - Add route, tool, repair, and schema-failure logs.
 - Record a demo showing typed contracts, governance, repair, routing, and auditability.
+- Include the three proof paths: malfunction repair/escalation, invalid handoff rejection, and unauthorized tool denial.
 
 ## Success Metric
 

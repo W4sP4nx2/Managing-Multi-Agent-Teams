@@ -8,6 +8,21 @@ This is one long production journey:
 
 > A human whisper becomes a typed plan, a governed workflow scaffold, a debated patch, a TeamLog update, and finally a human-approved release artifact.
 
+This assignment is also the bridge from Assignment 00A theory into the capstone. You are not building a coding bot. You are proving that human intent can become a **hybrid, heterogeneous, partially hierarchical multi-agent system** with typed context chains, zero-trust tools, bounded repair, and human veto power.
+
+## Architecture Decision Record
+
+Before implementation, submit a one-page ADR with:
+
+1. Selected architecture: vertical, horizontal, or hybrid.
+2. Risk profile of the task.
+3. Why the selected architecture fits better than the alternatives.
+4. Where the manager has authority.
+5. Where specialist agents have autonomy.
+6. Which failure modes the architecture is designed to contain.
+
+Recommended capstone-aligned answer: **hybrid**. The manager creates the `ProjectPlan` and `WorkflowScaffold` through centralized oversight, while Coder and QA use a bounded repair loop with local autonomy.
+
 ## Building Blocks
 
 | Layer | Notebook | Building Block | What It Proves |
@@ -18,6 +33,20 @@ This is one long production journey:
 | Collective Intelligence | NB9 | `DebateRecord` | Conflicting agent evidence becomes structured |
 | Escalation | NB9/NB10 | `EscalationTicket` and `HumanReviewDecision` | Humans intervene when agents cannot resolve contention |
 | Release | NB10/Capstone | `PullRequestSummary` | Final artifact is auditable and typed |
+
+## Interaction Pattern Map
+
+Map each interaction pattern to one concrete implementation point:
+
+| Pattern | Required Implementation | Required Proof |
+| --- | --- | --- |
+| Cooperative | PM/Manager and Tech Lead share project constraints through TeamLog or shared memory | Tech Lead output cites a stored commitment or memory record |
+| Competitive or Mixed | Coder wants to ship, QA or Security challenges the patch | Audit trail shows at least one rejected transition before approval or escalation |
+| Hierarchical | Human/Manager/Security has veto power over release | `HumanReviewDecision` or security decision blocks release when needed |
+| Heterogeneous | Different agent roles or model classes handle different work | Route trace or scaffold shows specialist assignment |
+| Mixture of Experts | Router chooses the right worker/model for a subtask | Route decision explains why a subtask was sent to that target |
+
+You do not need to implement all patterns as separate frameworks. You do need to show that the patterns are visible in the architecture and enforced by artifacts.
 
 ## Exercise 9.1: Dynamic Scaffold
 
@@ -115,6 +144,8 @@ Scenario:
 
 ## Required Evidence
 
+- One-page ADR.
+- Interaction pattern map.
 - Printed or logged `ProjectPlan`.
 - Printed or logged `WorkflowScaffold`.
 - Printed or logged `DebateRecord`.
@@ -122,17 +153,26 @@ Scenario:
 - Final `PullRequestSummary`.
 - Audit trail showing parse, scaffold, debate, pivot, re-execution, and approval.
 
+## Challenge Mitigation Proof
+
+Include three proof tests or notebook cells:
+
+1. **Agent Malfunction:** force a QA/security failure and show bounded repair or typed escalation.
+2. **Coordination Complexity:** pass an invalid or hallucinated handoff and show Pydantic rejection before downstream use.
+3. **Unpredictable Behavior:** attempt an unauthorized tool call and show gateway denial.
+
 ## Rubric
 
 | Criterion | Weight |
 | --- | ---: |
-| Translation layer and schema validation | 20 |
-| Dynamic scaffold correctness | 20 |
-| Debate and escalation behavior | 20 |
-| TeamLog mid-flight pivot | 20 |
-| Final release gate and audit trail | 20 |
+| ADR and architecture justification | 15 |
+| Interaction pattern mapping | 15 |
+| Translation layer and schema validation | 15 |
+| Dynamic scaffold, debate, and escalation behavior | 20 |
+| TeamLog mid-flight pivot | 15 |
+| Challenge mitigation proof tests | 10 |
+| Final release gate and audit trail | 10 |
 
 ## Core Lesson
 
 Vibe Coding is not magic. It is the rigorous translation of human intent into typed, governed state, then execution by a deterministic, observable orchestration machine.
-

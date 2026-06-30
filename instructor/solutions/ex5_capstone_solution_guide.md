@@ -42,6 +42,14 @@ Issue -> CrewAI-style Crew(Agent + Task + Context) -> Same governance wrappers
 
 ## Strong Answer Indicators
 
+- Includes an ADR choosing vertical, horizontal, or hybrid architecture and defending it against the task risk profile.
+- Maps interaction patterns to implementation evidence:
+  - Cooperative: PM/Tech Lead memory or TeamLog handoff.
+  - Competitive or mixed: Coder vs QA/Security rejection and repair.
+  - Hierarchical: Security or Release veto.
+  - Heterogeneous: specialist roles or routed model classes.
+  - Mixture of Experts: router chooses a specialist/model class.
+- Demonstrates the three required challenge proofs: malfunction handling, coordination-complexity validation, and unauthorized-tool denial.
 - All inter-agent artifacts are Pydantic models or equivalent strict schemas.
 - Tool calls include caller, tool, arguments, and sensitivity.
 - Unauthorized tool call test is present and passes by failing safely.
@@ -103,4 +111,6 @@ Issue -> CrewAI-style Crew(Agent + Task + Context) -> Same governance wrappers
 6. Test `POST /tasks` and `GET /tasks/{task_id}`.
 7. Confirm external vendor high-risk request is rejected.
 8. Read PR summary for traceability to `TaskSpec`.
-9. Inspect CrewAI/custom comparison and verify governance remains in the loop.
+9. Inspect ADR and interaction pattern map.
+10. Confirm challenge-mitigation proof tests are present.
+11. Inspect CrewAI/custom comparison and verify governance remains in the loop.
