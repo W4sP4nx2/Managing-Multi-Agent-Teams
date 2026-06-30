@@ -1,0 +1,15 @@
+pydantic>=2.7
+fastapi>=0.110
+pytest>=8.0
+pytest-asyncio>=0.23
+pytest-cov>=5.0
+pytest-timeout>=2.3
+
+# Optional production integrations used in the course narrative.
+# Install these when converting the offline teaching adapter into a live system:
+# uvicorn
+# pydantic-ai
+# langgraph
+# crewai
+# pyautogen
+# mcp

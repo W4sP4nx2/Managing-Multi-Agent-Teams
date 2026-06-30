@@ -1,0 +1,113 @@
+openapi: 3.0.3
+info:
+  title: External Security Agent A2A API
+  version: "1.0.0"
+  description: "Teaching OpenAPI contract for outsourcing SECURITY_SCAN to a third-party agent."
+servers:
+  - url: https://security-agent.example.com
+security:
+  - ApiKeyAuth: []
+paths:
+  /security-scan:
+    post:
+      summary: Scan a typed CodePatch and return a typed SecurityReview.
+      operationId: securityScan
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CodePatch"
+      responses:
+        "200":
+          description: Security review completed.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SecurityReview"
+        "401":
+          description: Missing or invalid API key.
+        "422":
+          description: Request failed schema validation.
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+  schemas:
+    CodeFile:
+      type: object
+      additionalProperties: false
+      required:
+        - path
+        - content
+      properties:
+        path:
+          type: string
+          pattern: "^[^/].*\\.py$"
+        content:
+          type: string
+    CodePatch:
+      type: object
+      additionalProperties: false
+      required:
+        - files
+        - rationale
+        - tests_to_run
+      properties:
+        files:
+          type: array
+          minItems: 1
+          items:
+            $ref: "#/components/schemas/CodeFile"
+        rationale:
+          type: string
+          minLength: 12
+        tests_to_run:
+          type: array
+          minItems: 1
+          items:
+            type: string
+    SecurityFinding:
+      type: object
+      additionalProperties: false
+      required:
+        - severity
+        - message
+      properties:
+        severity:
+          type: string
+          enum: [low, medium, high, critical]
+        message:
+          type: string
+    SecurityReview:
+      type: object
+      additionalProperties: false
+      required:
+        - approved
+        - findings
+        - reviewer_identity
+      properties:
+        approved:
+          type: boolean
+        findings:
+          type: array
+          items:
+            $ref: "#/components/schemas/SecurityFinding"
+        critical_count:
+          type: integer
+          minimum: 0
+          default: 0
+        medium_count:
+          type: integer
+          minimum: 0
+          default: 0
+        low_count:
+          type: integer
+          minimum: 0
+          default: 0
+        reviewer_identity:
+          type: string

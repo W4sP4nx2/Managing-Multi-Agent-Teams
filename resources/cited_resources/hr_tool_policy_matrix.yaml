@@ -1,0 +1,38 @@
+version: "1.0"
+course_module: "Homework D: HR Governance"
+description: "Teaching policy matrix for zero-trust HR agent tool access."
+trust_tiers:
+  public: 0
+  confidential: 1
+  restricted: 2
+tools:
+  REDACT_PII:
+    required_tier: confidential
+    allowed_roles:
+      - resume_parser
+      - hr_compliance
+  EVALUATE_CANDIDATE:
+    required_tier: confidential
+    allowed_roles:
+      - bias_checker
+    payload_rules:
+      pii_quarantine_must_be_empty: true
+      redaction_complete_required: true
+  UPDATE_PAYROLL:
+    required_tier: restricted
+    allowed_roles:
+      - payroll_admin
+    human_approval_required: true
+  EXPORT_REPORT:
+    required_tier: confidential
+    allowed_roles:
+      - hr_compliance
+      - hiring_manager
+organization_rules:
+  external_vendor:
+    denied_data_tiers:
+      - restricted
+    denied_tools:
+      - UPDATE_PAYROLL
+      - EVALUATE_CANDIDATE
+audit_required: true

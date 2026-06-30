@@ -1,0 +1,298 @@
+---
+research_mission:
+  description: |-
+    Research Topic: {research_topic}
+
+    Execute the ReAct research loop. Hard stop at 5 iterations.
+
+    LOOP (MAX 5 ITERATIONS):
+    FOR iteration IN 1..5:
+      THOUGHT: What does {research_topic} require? What gaps remain?
+      ACTION: Query ALL THREE tools simultaneously
+        - SemanticScholarSearchTool → citation-rich, high-impact papers
+        - ArxivPaperTool → latest preprints and technical depth
+        - ExaSearchTool → broad academic coverage
+      OBSERVATION: Filter results (credibility >= 0.85 only). Calculate confidence score.
+      IF confidence >= 0.8: BREAK → return results
+      ELSE: identify gaps, refine queries, next iteration
+
+    IF iteration == 5 AND confidence < 0.8:
+      → PARTIAL_RESULTS = true
+      → Return best results with warning
+      → List remaining gaps
+
+    CONFIDENCE FORMULA:
+    confidence = (num_sources/9)*0.25 + (sources_with_url/num_sources)*0.25 + avg_credibility*0.25 + coverage_score*0.25
+
+    coverage_score: 1.0 = sources cover 3+ distinct subtopics | 0.5 = partial | 0.0 = single aspect
+
+    FOR EVERY SOURCE extract (no "not specified" allowed):
+    - Full title, full author names, publication year
+    - Live academic URL (arXiv/.edu/Semantic Scholar only)
+    - Complete APA citation
+    - Credibility score (>= 0.85 required)
+    - Key findings
+
+    ERROR HANDLING:
+    IF tool fails → log error → retry once → try next tool → if all fail: return partial + error log
+    NEVER hallucinate sources, URLs, or author names.
+  expected_output: 'Structured research report: topic, sources list (full metadata,
+    live academic URLs, APA citations, credibility scores >= 0.85), key_findings,
+    confidence_score (with formula breakdown), iterations_performed (max 5), research_gaps,
+    PARTIAL_RESULTS flag (true/false), error_log (if any tool failures occurred).'
+  agent: academic_research_specialist
+write_article:
+  description: |-
+    Research Topic: {research_topic}
+
+    Write a comprehensive article using ONLY sources from the research report.
+
+    CITATION HANDLING (graceful degradation — never skip a source):
+    - Missing author → "Unknown Author"
+    - Missing year → "n.d."
+    - Missing URL → [URL_NOT_AVAILABLE]
+    - Missing title → "Untitled Paper"
+
+    QUALITY REQUIREMENTS:
+    - Minimum 8 unique sources cited
+    - MANDATORY tool distribution — you MUST cite at least:
+      • 3 sources tagged [arXiv]
+      • 3 sources tagged [Semantic Scholar]
+      • 1 source tagged [ExaSearch] — if ExaSearch returned 0 results, note it as a gap in quality_notes and use all available sources instead
+    - Every sentence making a factual claim MUST have an inline APA citation immediately after it — no exceptions
+    - PRE-FINALIZATION SELF-SCAN: Read every sentence. If any factual claim lacks a citation → add one before proceeding
+    - References section: academic URLs ONLY (arXiv, Semantic Scholar, .edu)
+    - Real-world examples → label "Illustrative Example", NO invented URLs
+
+    STRUCTURE:
+    1. Abstract (150-250 words) — narrative hook opener
+    2. 4-6 sections with DESCRIPTIVE headers (5-10 word noun phrases, not "Overview")
+    3. Each section: ### Illustrative Example + ### Key Takeaways bullets
+    4. Full References section (academic only)
+    Minimum 1000 words.
+
+    QUALITY NOTES (required at end):
+    - source count per tool: arXiv count, Semantic Scholar count, ExaSearch count
+    - word_count total
+    - any gaps or missing citations
+
+    NEVER fabricate sources, data, or URLs.
+  expected_output: 'Polished markdown article: title, abstract, 4-6 descriptive-headed
+    sections with inline APA citations after every factual claim + live academic URLs,
+    ### Key Takeaways per section, References section (academic URLs only), word_count
+    (min 1000), quality_notes with source count per tool (arXiv / Semantic Scholar
+    / ExaSearch) and any gaps.'
+  agent: senior_content_writer
+  context:
+  - research_mission
+evaluate_content:
+  description: |-
+    Evaluate the article from the Write Article task against these 5 dimensions. Score each 0-10. Total is out of 50.
+
+    DIMENSIONS:
+    1. Accuracy — are claims backed by academic sources?
+    2. Citation Completeness — does every claim have an inline citation?
+    3. Source Quality — are all references arXiv, Semantic Scholar, or .edu?
+    4. URL Validity — are all URLs academic and non-broken?
+    5. Structure — does the article have Abstract, 4-6 sections, Key Takeaways, References?
+
+    URL AUDIT: For each URL in References, mark PASS (academic) or FAIL (non-academic/broken). Deduct from Accuracy and URL Validity for each FAIL.
+
+    Set retry_count = 0 (first run). Calculate total. Apply decision rule from your backstory.
+
+    Output every field. Do not truncate or skip any section.
+  expected_output: |-
+    Evaluation report with ALL of the following fields:
+    - overall_score: XX/50
+    - accuracy: X/10 (with brief justification)
+    - citation_completeness: X/10 (with brief justification)
+    - source_quality: X/10 (with brief justification)
+    - url_validity: X/10 (with brief justification)
+    - structure: X/10 (with brief justification)
+    - url_audit: list of each URL with PASS or FAIL
+    - factual_errors: list (or "none found")
+    - missing_citations: list (or "none found")
+    - retry_count: 0
+    - approval_status: approved | RETRY_RESEARCH | BEST_EFFORT
+    - retry_directives: specific fixes needed (or "N/A" if approved)
+    - evaluator_notes: any additional observations
+  agent: content_quality_evaluator
+  context:
+  - research_mission
+  - write_article
+quality_gate_check:
+  description: |-
+    Read the Evaluate Content output. Find the approval_status field and route accordingly.
+
+    STEP 1 — Find approval_status in the evaluation report.
+      If found: route using the logic below.
+      If NOT found or report is empty/malformed: output PROCEED_TO_DELIVERY with BEST_EFFORT warning.
+
+    STEP 2 — Route:
+      approval_status = "approved" or "BEST_EFFORT" → PROCEED_TO_DELIVERY
+      approval_status = "RETRY_RESEARCH" → RETRY_NEEDED (include gaps + suggested queries)
+      approval_status = "ERROR" → PROCEED_TO_DELIVERY with BEST_EFFORT warning
+      approval_status missing → PROCEED_TO_DELIVERY with BEST_EFFORT warning
+
+    STEP 3 — If PROCEED_TO_DELIVERY: forward the article, research report, and scorecard verbatim. Do not modify anything.
+  expected_output: |-
+    One of the following:
+
+    PROCEED_TO_DELIVERY:
+    - routing_decision: PROCEED_TO_DELIVERY
+    - approval_basis: approved | BEST_EFFORT | fallback
+    - warning_block: (if BEST_EFFORT or fallback) list of unresolved issues
+    - article: [verbatim]
+    - research_summary: [verbatim]
+    - scorecard: [verbatim]
+
+    RETRY_NEEDED:
+    - routing_decision: RETRY_NEEDED
+    - gaps: list
+    - suggested_queries: list
+    - dimensions_below_threshold: list
+
+    PIPELINE_ERROR (infrastructure failure only):
+    - routing_decision: PIPELINE_ERROR
+    - failed_agent: name
+    - error_description: detail
+    - suggested_fix: action
+  agent: quality_gate
+  context:
+  - research_mission
+  - write_article
+  - evaluate_content
+manager_review_and_score:
+  description: |-
+    Research Topic: {research_topic}
+
+    You are the Workflow Manager. Execute your 5 skills in sequence against ALL upstream outputs.
+
+    STEP 1 — METRICS RECORDER:
+    Extract and timestamp scores from every agent: Research Mission, Write Article, Evaluate Content, Quality Gate.
+
+    STEP 2 — WORKFLOW STATE CHECK:
+    Verify retry counts. Flag HARD_STOP if any max is exceeded.
+
+    STEP 3 — MULTI-DIMENSION SCORE:
+    overall_quality = (research.confidence * 0.30) + (min(citations,8)/8 * 0.25) + (accuracy/10 * 0.25) + (structure/10 * 0.20)
+    >= 0.8 → APPROVE | >= 0.6 → APPROVE_WITH_NOTES | < 0.6 → REJECT_AND_RETRY
+
+    STEP 4 — MANAGER OVERRIDE RULE (CRITICAL):
+    IF overall_quality >= 0.6 AND Quality Gate says RETRY_NEEDED:
+      → OVERRIDE to APPROVE_WITH_NOTES
+      → Log: "Manager override: quality score sufficient, proceeding to delivery"
+      → DO NOT follow Quality Gate's retry instruction
+
+    IF overall_quality < 0.6 AND Quality Gate says PROCEED_TO_DELIVERY:
+      → OVERRIDE to REJECT_AND_RETRY
+
+    The manager's computed overall_quality ALWAYS wins over the Quality Gate routing.
+
+    STEP 5 — DECISION ROUTER:
+    ONE decision only. Never loop. Never modify content.
+    APPROVE or APPROVE_WITH_NOTES → pass to Report Compiler
+    REJECT_AND_RETRY (only if overall_quality < 0.6) → return retry instructions
+  expected_output: |-
+    Complete Manager Review block:
+    1. Execution Log — JSON entries per agent (name, timestamp, scores, status)
+    2. Multi-Dimension Score table (Research 30% + Citations 25% + Accuracy 25% + Structure 20% = Overall Quality + Decision)
+    3. Workflow State (retry counts, max retries, HARD_STOP flag if triggered)
+    4. Manager Decision — ONE of: APPROVE / APPROVE_WITH_NOTES / REJECT_AND_RETRY / ERROR with reason
+    5. Diagnostic Notes — gap analysis for every score below threshold
+    6. Override Log — if manager overrode Quality Gate decision, document it here
+  agent: workflow_manager
+  context:
+  - research_mission
+  - write_article
+  - evaluate_content
+  - quality_gate_check
+compile_final_report:
+  description: "Research Topic: {research_topic}\n\nOnly proceed if Manager Decision
+    is APPROVE or APPROVE_WITH_NOTES.\n\nYou are a FORMATTING ENGINE. Copy everything
+    verbatim. Do not write, rewrite, or generate any content.\n\n══════════════════════════════════════════\nSECTION
+    1 — SOURCES (VERBATIM COPY RULE)\n══════════════════════════════════════════\nLocate
+    the \"## \U0001F517 Sources\" section in Write Article task output.\nCopy it CHARACTER-FOR-CHARACTER.\n\nDO
+    NOT:\n- Search for new sources\n- Regenerate the source list\n- Replace URLs with
+    placeholders\n- Modify any citation\n\nVERIFICATION: Before finalizing, check
+    every URL.\n- arXiv.org, semanticscholar.org, aclanthology.org, .edu = PASS\n-
+    example.com or any placeholder = ERROR → Re-copy from Write Article context immediately\n\nIf
+    section missing: Output \"[SOURCES_NOT_FOUND — check Write Article context]\"\n\n══════════════════════════════════════════\nSECTION
+    2 — FULL ARTICLE (VERBATIM COPY RULE)\n══════════════════════════════════════════\nLocate
+    the full article text in Write Article task output.\nCopy it CHARACTER-FOR-CHARACTER.\n\nVERIFICATION:\n-
+    Word count must match Write Article output (±5 words)\n- All inline citations
+    must match exactly\n- All URLs must match exactly\n- If mismatch detected → HALT
+    and report: \"[ARTICLE_MISMATCH — recheck context]\"\n\nIf article missing: Output
+    \"[ARTICLE_NOT_FOUND — Manager failed to pass context]\"\nDO NOT write a replacement
+    article.\n\n══════════════════════════════════════════\nSECTION 3 — SCORECARD
+    (VERBATIM COPY RULE)\n══════════════════════════════════════════\nLocate the Evaluate
+    Content task output. Copy each score CHARACTER-FOR-CHARACTER.\n\nNEVER:\n- Recalculate
+    scores\n- Round numbers\n- \"Fix\" perceived errors\n- Add commentary\n\nALWAYS:\n-
+    Copy exact numbers (e.g., 42/50 not \"approximately 40\")\n- Copy exact confidence
+    (e.g., 0.84 not \"0.8\")\n- Copy exact status (e.g., \"APPROVED\" not \"approved\")\n\nVERIFICATION:
+    Compare each score against Evaluate Content output.\nIf ANY score differs → HALT
+    → Re-copy from context.\n\n══════════════════════════════════════════\nFINAL REPORT
+    FORMAT (exact structure)\n══════════════════════════════════════════\n> ⚠️ **Disclaimer:**
+    This report was AI-assisted. Verify critical claims independently.\n\n## \U0001F3AF
+    Executive Summary\n[3 bullet points — copy verbatim from Write Article abstract
+    or key findings]\n\n## \U0001F4DA Key Findings\n[Numbered list — copy verbatim
+    from Write Article key takeaways with inline citations and live URLs]\n\n## \U0001F4F0
+    Full Article\n[COPY VERBATIM from Write Article task output — character-for-character]\n\n##
+    \U0001F517 Sources\n[COPY VERBATIM from Write Article References section — no
+    modifications]\n\n## \U0001F4CA Evaluation Scorecard\n[COPY VERBATIM from Evaluate
+    Content output]\n| Dimension | Score |\n| Accuracy | [COPY from Evaluate Content]
+    |\n| Citation Completeness | [COPY from Evaluate Content] |\n| Source Quality
+    | [COPY from Evaluate Content] |\n| URL Validity | [COPY from Evaluate Content]
+    |\n| Structure | [COPY from Evaluate Content] |\n| **Total** | [COPY from Evaluate
+    Content] |\n| Confidence | [COPY from Evaluate Content] |\n| Status | [COPY from
+    Evaluate Content] |\n\n## \U0001F9E0 Manager Review & Execution Log\n[COPY VERBATIM
+    from Manager Review and Score task — execution log JSON, multi-dimension score
+    table, workflow state, manager decision, diagnostic notes]\n\n## \U0001F4A1 Recommendations
+    & Next Steps\n[COPY VERBATIM from Evaluate Content evaluator_notes and retry_directives]"
+  expected_output: |-
+    Complete final markdown report with ALL content copied verbatim from upstream agents:
+    - AI disclaimer at top
+    - Executive Summary (3 bullets from Write Article)
+    - Key Findings with live academic URLs (no example.com)
+    - Full Article (character-for-character from Write Article, 1000+ words)
+    - Sources (academic URLs only: arXiv / Semantic Scholar / ACL / .edu)
+    - Evaluation Scorecard (exact scores from Evaluate Content — no rounding, no recalculation)
+    - Full Manager Review block verbatim (execution log JSON + score table + workflow state + decision + diagnostics)
+    - Recommendations verbatim from evaluator
+
+    FAIL CONDITIONS — output an error if any of these occur:
+    ✗ Any "example.com" URL appears → [URL_ERROR]
+    ✗ Article word count differs >5% from Write Article → [ARTICLE_MISMATCH]
+    ✗ Any score differs from Evaluate Content → [SCORECARD_MISMATCH]
+    ✗ Article is missing → [ARTICLE_NOT_FOUND]
+    ✗ Sources section is missing → [SOURCES_NOT_FOUND]
+  agent: report_compiler
+  context:
+  - write_article
+  - evaluate_content
+  - quality_gate_check
+  - manager_review_and_score
+deliver_clean_report:
+  description: "Receive the compiled report from the Report Compiler and deliver it
+    as a clean, reader-facing markdown document.\n\nSTRIP all of the following — do
+    not include anything from this list:\n- JSON or code blocks\n- Execution logs
+    and timestamps\n- Quality notes, word count metadata\n- Pipeline decisions (PROCEED_TO_DELIVERY,
+    RETRY_NEEDED, PIPELINE_ERROR)\n- Manager Review & Execution Log section\n- URL
+    audit lists, factual_errors fields, retry_directives, evaluator_notes fields\n-
+    Tool source labels: [arXiv], [Semantic Scholar], [ExaSearch]\n- Any [COPY from
+    ...] placeholders\n- Any [ERROR: ...] tags\n- Duplicate article sections — if
+    article appears twice, keep only one\n- Any \"Provide your complete response:\"
+    prompts\n\nFORMAT THESE SECTIONS CLEANLY in order:\n1. > ⚠️ **Disclaimer:** This
+    report was AI-assisted. Verify critical claims independently.\n2. ## \U0001F3AF
+    Executive Summary — 3 bullets\n3. ## \U0001F4DA Key Findings — numbered list\n4.
+    ## \U0001F4F0 Full Article — full verbatim article with all headings, examples,
+    takeaways\n5. ## \U0001F517 Sources — clean APA citations with hyperlinks only,
+    one per line\n6. ## \U0001F4CA Evaluation Scorecard — table with Dimension | Score
+    rows + Total + Status only\n7. ## \U0001F4A1 Recommendations & Next Steps — bullet
+    list\n\nSTART the output with the disclaimer line. No preamble. No closing remarks."
+  expected_output: A single clean markdown document beginning with the ⚠️ Disclaimer
+    and ending after the last Recommendation bullet. No JSON, no logs, no metadata,
+    no pipeline annotations, no duplicate sections. Pure reader-facing content only.
+  agent: document_delivery_agent
+  context:
+  - compile_final_report

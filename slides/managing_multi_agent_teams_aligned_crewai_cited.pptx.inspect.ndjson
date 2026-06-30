@@ -1,0 +1,820 @@
+{"kind":"deck","id":"pr/gcz2uv","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/2x4nap4r","slide":1,"title":"frontier tech leaders","textShapes":8}
+{"kind":"shape","id":"sh/nap4r65w","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/cvixczed","slide":1,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":1,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":1,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":1,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":1,"text":"Critical Assets — How They Fit","textPreview":"Critical Assets — How They Fit","textChars":30,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/54zidony","slide":1,"text":"Cite: ChatDev + CrewAI","textPreview":"Cite: ChatDev + CrewAI","textChars":22,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/judg7ads","slide":1,"text":"Managing\nMulti-Agent Teams","textPreview":"Managing | Multi-Agent Teams","textChars":26,"textLines":2,"bbox":[58,124,820,170]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":1,"text":"Agentic AI  ·  Vibe Coding  ·  System Governance  ·  Pydantic  ·  MCP","textPreview":"Agentic AI  ·  Vibe Coding  ·  System Governance  ·  Pydantic  ·  MCP","textChars":69,"textLines":1,"bbox":[58,398,720,30]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":1,"text":"6 Modules  ·  Build. Break. Fix. Govern.","textPreview":"6 Modules  ·  Build. Break. Fix. Govern.","textChars":40,"textLines":1,"bbox":[58,454,520,28]}
+{"kind":"notes","id":"nt/2x4nap4r","slide":1,"text":""}
+{"kind":"slide","id":"sl/pg3ex0nu","slide":2,"title":"frontier tech leaders","textShapes":7}
+{"kind":"shape","id":"sh/yxobm58z","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/5o7qpg3e","slide":2,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/g3ex0nux","slide":2,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/r65wjudg","slide":2,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/ylc7u54z","slide":2,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":2,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":2,"text":"Cite: Course philosophy","textPreview":"Cite: Course philosophy","textChars":23,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/yd0z6103","slide":2,"text":"Build the governance shell first.\nThen connect real agents and frameworks.\nThat is how production learning sticks.","textPreview":"Build the governance shell first. | Then connect real agents and frameworks. | That is how production learning sticks.","textChars":114,"textLines":3,"bbox":[270,230,760,136]}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":2,"text":"Course principle","textPreview":"Course principle","textChars":16,"textLines":1,"bbox":[488,470,300,26]}
+{"kind":"notes","id":"nt/pg3ex0nu","slide":2,"text":""}
+{"kind":"slide","id":"sl/s72x4nap","slide":3,"title":"frontier tech leaders","textShapes":17}
+{"kind":"shape","id":"sh/vmtwra5g","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/o7qpg3ex","slide":3,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/dsji5sne","slide":3,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":3,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":3,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":3,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":3,"text":"Cite: Course overview + ChatDev","textPreview":"Cite: Course overview + ChatDev","textChars":31,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":3,"text":"Course Overview","textPreview":"Course Overview","textChars":15,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":3,"text":"What This Course Teaches","textPreview":"What This Course Teaches","textChars":24,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":3,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,184,28,28]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":3,"text":"Multi-agent teams fail without contracts, memory, and governance.","textPreview":"Multi-agent teams fail without contracts, memory, and governance.","textChars":65,"textLines":1,"bbox":[114,184,998,34]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":3,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,230,28,28]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":3,"text":"We build the governance shell first: schemas, gateways, repair loops.","textPreview":"We build the governance shell first: schemas, gateways, repair loops.","textChars":69,"textLines":1,"bbox":[114,230,998,34]}
+{"kind":"textbox","id":"sh/61032lsz","slide":3,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,276,28,28]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":3,"text":"Three layers: deterministic shell → mock LLM failure → live LLM.","textPreview":"Three layers: deterministic shell → mock LLM failure → live LLM.","textChars":64,"textLines":1,"bbox":[114,276,998,34]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":3,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,322,28,28]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":3,"text":"Each module gives one problem, one architecture, one practice.","textPreview":"Each module gives one problem, one architecture, one practice.","textChars":62,"textLines":1,"bbox":[114,322,998,34]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":3,"text":"Understand the pipes before the brain.","textPreview":"Understand the pipes before the brain.","textChars":38,"textLines":1,"bbox":[82,470,980,48]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":3,"text":"▸  One slide, one idea, one practice.","textPreview":"▸  One slide, one idea, one practice.","textChars":37,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/s72x4nap","slide":3,"text":""}
+{"kind":"slide","id":"sl/val87ed8","slide":4,"title":"frontier tech leaders","textShapes":21}
+{"kind":"shape","id":"sh/1gvy90je","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/qtcj6tov","slide":4,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/je9cvixc","slide":4,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":4,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":4,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":4,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":4,"text":"Cite: Module map + ChatDev","textPreview":"Cite: Module map + ChatDev","textChars":26,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":4,"text":"Course Overview","textPreview":"Course Overview","textChars":15,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":4,"text":"Six modules, one production path.","textPreview":"Six modules, one production path.","textChars":33,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,184,28,28]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":4,"text":"Module 1   Foundations & Vibe Coding","textPreview":"Module 1   Foundations & Vibe Coding","textChars":36,"textLines":1,"bbox":[114,184,998,34]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,230,28,28]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":4,"text":"Module 2   TeamLog & Theory of Mind","textPreview":"Module 2   TeamLog & Theory of Mind","textChars":35,"textLines":1,"bbox":[114,230,998,34]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,276,28,28]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":4,"text":"Module 3   Agentic RAG & MCP","textPreview":"Module 3   Agentic RAG & MCP","textChars":28,"textLines":1,"bbox":[114,276,998,34]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,322,28,28]}
+{"kind":"textbox","id":"sh/1cfa9w3m","slide":4,"text":"Module 4   Pydantic AI & Type Safety","textPreview":"Module 4   Pydantic AI & Type Safety","textChars":36,"textLines":1,"bbox":[114,322,998,34]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,368,28,28]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":4,"text":"Module 5   Fugu Routing & ChatDev Self-Repair","textPreview":"Module 5   Fugu Routing & ChatDev Self-Repair","textChars":45,"textLines":1,"bbox":[114,368,998,34]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,414,28,28]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":4,"text":"Module 6   Internet of Agents & Zero Trust","textPreview":"Module 6   Internet of Agents & Zero Trust","textChars":42,"textLines":1,"bbox":[114,414,998,34]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":4,"text":"Governance before autonomy.","textPreview":"Governance before autonomy.","textChars":27,"textLines":1,"bbox":[82,470,980,48]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":4,"text":"▸  One slide, one idea, one practice.","textPreview":"▸  One slide, one idea, one practice.","textChars":37,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/val87ed8","slide":4,"text":""}
+{"kind":"slide","id":"sl/mlkjm1cf","slide":5,"title":"frontier tech leaders","textShapes":10}
+{"kind":"shape","id":"sh/vahoza1g","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/ovahoza1","slide":5,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/dg7adsji","slide":5,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":5,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":5,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":5,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":5,"text":"Cite: ChatDev + AutoGen","textPreview":"Cite: ChatDev + AutoGen","textChars":23,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":5,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[58,132,110,78]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":5,"text":"Module 1 → Foundations & Vibe Coding","textPreview":"Module 1 → Foundations & Vibe Coding","textChars":36,"textLines":1,"bbox":[180,132,620,110]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":5,"text":"From isolated prompting to managed AI teams","textPreview":"From isolated prompting to managed AI teams","textChars":43,"textLines":1,"bbox":[58,280,720,40]}
+{"kind":"textbox","id":"sh/5wjudg7a","slide":5,"text":"JOURNEY  ▸","textPreview":"JOURNEY  ▸","textChars":10,"textLines":1,"bbox":[58,470,160,24]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":5,"text":"Goal: move from isolated prompts to governed handoffs.","textPreview":"Goal: move from isolated prompts to governed handoffs.","textChars":54,"textLines":1,"bbox":[210,470,900,24]}
+{"kind":"notes","id":"nt/mlkjm1cf","slide":5,"text":""}
+{"kind":"slide","id":"sl/58z25kb6","slide":6,"title":"frontier tech leaders","textShapes":17}
+{"kind":"shape","id":"sh/9cvixcze","slide":6,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/ylc7u54z","slide":6,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/r65wjudg","slide":6,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/g3ex0nux","slide":6,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/5o7qpg3e","slide":6,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/yxobm58z","slide":6,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/nih4byhg","slide":6,"text":"Cite: ChatDev + Vibe Coding","textPreview":"Cite: ChatDev + Vibe Coding","textChars":27,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/g7adsji5","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/9s36hcrm","slide":6,"text":"Module 1 · Foundations & Vibe Coding","textPreview":"Module 1 · Foundations & Vibe Coding","textChars":36,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":6,"text":"The Single-Agent Ceiling","textPreview":"The Single-Agent Ceiling","textChars":24,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":6,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,184,28,28]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":6,"text":"Problem: one model must plan, code, test, and review itself.","textPreview":"Problem: one model must plan, code, test, and review itself.","textChars":60,"textLines":1,"bbox":[114,184,998,34]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":6,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,230,28,28]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":6,"text":"Result: brittle outputs, hidden assumptions, no accountability.","textPreview":"Result: brittle outputs, hidden assumptions, no accountability.","textChars":63,"textLines":1,"bbox":[114,230,998,34]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":6,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,276,28,28]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":6,"text":"Vibe coding is not casual prompting at scale.","textPreview":"Vibe coding is not casual prompting at scale.","textChars":45,"textLines":1,"bbox":[114,276,998,34]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":6,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,322,28,28]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":6,"text":"It is intent-driven software creation with roles, artifacts, and gates.","textPreview":"It is intent-driven software creation with roles, artifacts, and gates.","textChars":71,"textLines":1,"bbox":[114,322,998,34]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":6,"text":"First skill: managing delegation, not building a swarm.","textPreview":"First skill: managing delegation, not building a swarm.","textChars":55,"textLines":1,"bbox":[82,470,980,48]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":6,"text":"▸  One slide, one idea, one practice.","textPreview":"▸  One slide, one idea, one practice.","textChars":37,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/58z25kb6","slide":6,"text":""}
+{"kind":"slide","id":"sl/0z61032l","slide":7,"title":"frontier tech leaders","textShapes":26}
+{"kind":"shape","id":"sh/qd4vmtwr","slide":7,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/x4nap4r6","slide":7,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/8jqh0fep","slide":7,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":7,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":7,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":7,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":7,"text":"Cite: CrewAI processes","textPreview":"Cite: CrewAI processes","textChars":22,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":7,"text":"Module 1 · Foundations & Vibe Coding","textPreview":"Module 1 · Foundations & Vibe Coding","textChars":36,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/svu9knih","slide":7,"text":"CrewAI Processes: Sequential vs Hierarchical","textPreview":"CrewAI Processes: Sequential vs Hierarchical","textChars":44,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"shape","id":"sh/hgn29gr2","slide":7,"bbox":[54,158,560,390]}
+{"kind":"shape","id":"sh/ap4r65wj","slide":7,"bbox":[666,158,560,390]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":7,"text":"Sequential","textPreview":"Sequential","textChars":10,"textLines":1,"bbox":[84,194,480,34]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":7,"text":"Hierarchical","textPreview":"Hierarchical","textChars":12,"textLines":1,"bbox":[696,194,480,34]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":7,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,258,28,28]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":7,"text":"CrewAI: Process.sequential","textPreview":"CrewAI: Process.sequential","textChars":26,"textLines":1,"bbox":[116,258,448,34]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":7,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,306,28,28]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":7,"text":"Tasks run in order","textPreview":"Tasks run in order","textChars":18,"textLines":1,"bbox":[116,306,448,34]}
+{"kind":"textbox","id":"sh/lszqtcj6","slide":7,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,354,28,28]}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":7,"text":"Best for fixed pipelines","textPreview":"Best for fixed pipelines","textChars":24,"textLines":1,"bbox":[116,354,448,34]}
+{"kind":"textbox","id":"sh/wval87ed","slide":7,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,402,28,28]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":7,"text":"Transparent, easy to test","textPreview":"Transparent, easy to test","textChars":25,"textLines":1,"bbox":[116,402,448,34]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":7,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,258,28,28]}
+{"kind":"textbox","id":"sh/psfil0rq","slide":7,"text":"CrewAI: Process.hierarchical","textPreview":"CrewAI: Process.hierarchical","textChars":28,"textLines":1,"bbox":[728,258,448,34]}
+{"kind":"textbox","id":"sh/w7mp0bi9","slide":7,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,306,28,28]}
+{"kind":"textbox","id":"sh/7mp0bi9s","slide":7,"text":"Manager coordinates agents","textPreview":"Manager coordinates agents","textChars":26,"textLines":1,"bbox":[728,306,448,34]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":7,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,354,28,28]}
+{"kind":"textbox","id":"sh/l0rqd4vm","slide":7,"text":"Best for dynamic delegation","textPreview":"Best for dynamic delegation","textChars":27,"textLines":1,"bbox":[728,354,448,34]}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":7,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,402,28,28]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":7,"text":"Flexible, harder to debug","textPreview":"Flexible, harder to debug","textChars":25,"textLines":1,"bbox":[728,402,448,34]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":7,"text":"▸  CrewAI is used here as the production-framework comparison, not a replacement for governance.","textPreview":"▸  CrewAI is used here as the production-framework comparison, not a replacement for governance.","textChars":96,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/0z61032l","slide":7,"text":""}
+{"kind":"slide","id":"sl/fu18jqh0","slide":8,"title":"resources/README.md: papers, videos, cited schemas.","textShapes":19}
+{"kind":"shape","id":"sh/1032lszq","slide":8,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/u9knih4b","slide":8,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/judg7ads","slide":8,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":8,"text":"resources/README.md: papers, videos, cited schemas.","textPreview":"resources/README.md: papers, videos, cited schemas.","textChars":51,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":8,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":8,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":8,"text":"Cite: CrewAI + course governance","textPreview":"Cite: CrewAI + course governance","textChars":32,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/cvixczed","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":8,"text":"Module 1 · Foundations & Vibe Coding","textPreview":"Module 1 · Foundations & Vibe Coding","textChars":36,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":8,"text":"Five Production Failure Modes","textPreview":"Five Production Failure Modes","textChars":29,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":8,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,184,28,28]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":8,"text":"Role confusion — agent does too many things.","textPreview":"Role confusion — agent does too many things.","textChars":44,"textLines":1,"bbox":[114,184,998,34]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":8,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,230,28,28]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":8,"text":"Context loss — downstream agent never received upstream output.","textPreview":"Context loss — downstream agent never received upstream output.","textChars":63,"textLines":1,"bbox":[114,230,998,34]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":8,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,276,28,28]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":8,"text":"Tool overreach — agent calls tools it should not have.","textPreview":"Tool overreach — agent calls tools it should not have.","textChars":54,"textLines":1,"bbox":[114,276,998,34]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":8,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,322,28,28]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":8,"text":"No done criteria — agent never knows when to stop.","textPreview":"No done criteria — agent never knows when to stop.","textChars":50,"textLines":1,"bbox":[114,322,998,34]}
+{"kind":"textbox","id":"sh/c3ylc7u5","slide":8,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,368,28,28]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":8,"text":"No escalation path — failure loops silently instead of surfacing.","textPreview":"No escalation path — failure loops silently instead of surfacing.","textChars":65,"textLines":1,"bbox":[114,368,998,34]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":8,"text":"Boring is safe.","textPreview":"Boring is safe.","textChars":15,"textLines":1,"bbox":[82,470,980,48]}
+{"kind":"textbox","id":"sh/al87ed8b","slide":8,"text":"▸  One slide, one idea, one practice.","textPreview":"▸  One slide, one idea, one practice.","textChars":37,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/fu18jqh0","slide":8,"text":""}
+{"kind":"slide","id":"sl/qh0fepkz","slide":9,"title":"frontier tech leaders","textShapes":10}
+{"kind":"shape","id":"sh/vahoza1g","slide":9,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/ovahoza1","slide":9,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/dg7adsji","slide":9,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":9,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":9,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":9,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":9,"text":"Cite: ChatDev delegation","textPreview":"Cite: ChatDev delegation","textChars":24,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":9,"text":"Module 1 · Foundations & Vibe Coding","textPreview":"Module 1 · Foundations & Vibe Coding","textChars":36,"textLines":1,"bbox":[52,58,500,20]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":9,"text":"Key Takeaway","textPreview":"Key Takeaway","textChars":12,"textLines":1,"bbox":[52,88,500,54]}
+{"kind":"shape","id":"sh/y90je9cv","slide":9,"bbox":[52,176,250,6]}
+{"kind":"textbox","id":"sh/5wjudg7a","slide":9,"text":"The first skill is not","textPreview":"The first skill is not","textChars":22,"textLines":1,"bbox":[100,240,980,56]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":9,"text":"building a swarm.","textPreview":"building a swarm.","textChars":17,"textLines":1,"bbox":[100,312,980,56]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":9,"text":"It is managing delegation.","textPreview":"It is managing delegation.","textChars":26,"textLines":1,"bbox":[100,384,980,56]}
+{"kind":"notes","id":"nt/qh0fepkz","slide":9,"text":""}
+{"kind":"slide","id":"sl/29gr2p8n","slide":10,"title":"frontier tech leaders","textShapes":10}
+{"kind":"shape","id":"sh/2p8nqxs7","slide":10,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/9gr2p8nq","slide":10,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/gvy90je9","slide":10,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/r2p8nqxs","slide":10,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":10,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":10,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":10,"text":"Cite: TeamLog + ToM","textPreview":"Cite: TeamLog + ToM","textChars":19,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/rqd4vmtw","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/25kb6xkf","slide":10,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[58,132,110,78]}
+{"kind":"textbox","id":"sh/4fu18jqh","slide":10,"text":"TeamLog &\nTheory of Mind","textPreview":"TeamLog & | Theory of Mind","textChars":24,"textLines":2,"bbox":[180,132,620,110]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":10,"text":"Alignment as shared commitments and retrievable state","textPreview":"Alignment as shared commitments and retrievable state","textChars":53,"textLines":1,"bbox":[58,280,720,40]}
+{"kind":"textbox","id":"sh/m94fu18j","slide":10,"text":"JOURNEY  ▸","textPreview":"JOURNEY  ▸","textChars":10,"textLines":1,"bbox":[58,470,160,24]}
+{"kind":"textbox","id":"sh/fu18jqh0","slide":10,"text":"Foundations  →  Memory & Mind  →  RAG & MCP  →  Type Safety  →  Routing & Repair  →  Zero Trust","textPreview":"Foundations  →  Memory & Mind  →  RAG & MCP  →  Type Safety  →  Routing & Repair  →  Zero Trust","textChars":95,"textLines":1,"bbox":[210,470,900,24]}
+{"kind":"notes","id":"nt/29gr2p8n","slide":10,"text":""}
+{"kind":"slide","id":"sl/re1w7mp0","slide":11,"title":"frontier tech leaders","textShapes":17}
+{"kind":"shape","id":"sh/dg7adsji","slide":11,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/6tovahoz","slide":11,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/vahoza1g","slide":11,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":11,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":11,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":11,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":11,"text":"Cite: TeamLog + ToM","textPreview":"Cite: TeamLog + ToM","textChars":19,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":11,"text":"Module 2 · TeamLog & Theory of Mind","textPreview":"Module 2 · TeamLog & Theory of Mind","textChars":35,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":11,"text":"Why Agent Teams Misalign","textPreview":"Why Agent Teams Misalign","textChars":24,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/sji5snel","slide":11,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,184,28,28]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":11,"text":"Hidden constraints disappear between turns.","textPreview":"Hidden constraints disappear between turns.","textChars":43,"textLines":1,"bbox":[114,184,998,34]}
+{"kind":"textbox","id":"sh/adsji5sn","slide":11,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,230,28,28]}
+{"kind":"textbox","id":"sh/lszqtcj6","slide":11,"text":"A local agent satisfies its task while violating the global mission.","textPreview":"A local agent satisfies its task while violating the global mission.","textChars":68,"textLines":1,"bbox":[114,230,998,34]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":11,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,276,28,28]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":11,"text":"Long workflows erase context: the coder forgets the PM's constraint.","textPreview":"Long workflows erase context: the coder forgets the PM's constraint.","textChars":68,"textLines":1,"bbox":[114,276,998,34]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":11,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,322,28,28]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":11,"text":"Memory is governed data, not a prompt dump.","textPreview":"Memory is governed data, not a prompt dump.","textChars":43,"textLines":1,"bbox":[114,322,998,34]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":11,"text":"Alignment is a data architecture problem.","textPreview":"Alignment is a data architecture problem.","textChars":41,"textLines":1,"bbox":[82,470,980,48]}
+{"kind":"textbox","id":"sh/4zidonyd","slide":11,"text":"▸  One slide, one idea, one practice.","textPreview":"▸  One slide, one idea, one practice.","textChars":37,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/re1w7mp0","slide":11,"text":""}
+{"kind":"slide","id":"sl/4fu18jqh","slide":12,"title":"frontier tech leaders","textShapes":26}
+{"kind":"shape","id":"sh/3m94fu18","slide":12,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/s72x4nap","slide":12,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":12,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/adsji5sn","slide":12,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":12,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/sji5snel","slide":12,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":12,"text":"Cite: TeamLog + ToM","textPreview":"Cite: TeamLog + ToM","textChars":19,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":12,"text":"Module 2 · TeamLog & Theory of Mind","textPreview":"Module 2 · TeamLog & Theory of Mind","textChars":35,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/z61032ls","slide":12,"text":"Two Patterns to Learn","textPreview":"Two Patterns to Learn","textChars":21,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"shape","id":"sh/al87ed8b","slide":12,"bbox":[54,158,560,390]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":12,"bbox":[666,158,560,390]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":12,"text":"TeamLog","textPreview":"TeamLog","textChars":7,"textLines":1,"bbox":[84,194,480,34]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":12,"text":"Theory of Mind","textPreview":"Theory of Mind","textChars":14,"textLines":1,"bbox":[696,194,480,34]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":12,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,258,28,28]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":12,"text":"Who owns the promise?","textPreview":"Who owns the promise?","textChars":21,"textLines":1,"bbox":[116,258,448,34]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":12,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,306,28,28]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":12,"text":"Who can see it?","textPreview":"Who can see it?","textChars":15,"textLines":1,"bbox":[116,306,448,34]}
+{"kind":"textbox","id":"sh/65wjudg7","slide":12,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,354,28,28]}
+{"kind":"textbox","id":"sh/ed8bat47","slide":12,"text":"What must be true before done?","textPreview":"What must be true before done?","textChars":30,"textLines":1,"bbox":[116,354,448,34]}
+{"kind":"textbox","id":"sh/7u54zido","slide":12,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,402,28,28]}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":12,"text":"Commitments override local goals","textPreview":"Commitments override local goals","textChars":32,"textLines":1,"bbox":[116,402,448,34]}
+{"kind":"textbox","id":"sh/l0rqd4vm","slide":12,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,258,28,28]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":12,"text":"What does each teammate know?","textPreview":"What does each teammate know?","textChars":29,"textLines":1,"bbox":[728,258,448,34]}
+{"kind":"textbox","id":"sh/36hcrmhk","slide":12,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,306,28,28]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":12,"text":"What are they missing?","textPreview":"What are they missing?","textChars":22,"textLines":1,"bbox":[728,306,448,34]}
+{"kind":"textbox","id":"sh/lc7u54zi","slide":12,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,354,28,28]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":12,"text":"What should stay hidden?","textPreview":"What should stay hidden?","textChars":24,"textLines":1,"bbox":[728,354,448,34]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":12,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,402,28,28]}
+{"kind":"textbox","id":"sh/tgfmlkjm","slide":12,"text":"Memory = role-filtered retrieval","textPreview":"Memory = role-filtered retrieval","textChars":32,"textLines":1,"bbox":[728,402,448,34]}
+{"kind":"textbox","id":"sh/4vmtwra5","slide":12,"text":"▸  Shared does not mean open.","textPreview":"▸  Shared does not mean open.","textChars":29,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/4fu18jqh","slide":12,"text":""}
+{"kind":"slide","id":"sl/lwval87e","slide":13,"title":"frontier tech leaders","textShapes":17}
+{"kind":"shape","id":"sh/ed8bat47","slide":13,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":13,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/wfyxobm5","slide":13,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/36hcrmhk","slide":13,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":13,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/lc7u54zi","slide":13,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":13,"text":"Cite: Agentic RAG","textPreview":"Cite: Agentic RAG","textChars":17,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":13,"text":"Module 2 · TeamLog & Theory of Mind","textPreview":"Module 2 · TeamLog & Theory of Mind","textChars":35,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":13,"text":"The Hidden Constraint Pattern","textPreview":"The Hidden Constraint Pattern","textChars":29,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":13,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,184,28,28]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":13,"text":"PM records: Use PostgreSQL for persistent storage.","textPreview":"PM records: Use PostgreSQL for persistent storage.","textChars":50,"textLines":1,"bbox":[114,184,998,34]}
+{"kind":"textbox","id":"sh/fyxobm58","slide":13,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,230,28,28]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":13,"text":"Coder prompt omits it under context-window pressure.","textPreview":"Coder prompt omits it under context-window pressure.","textChars":52,"textLines":1,"bbox":[114,230,998,34]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":13,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,276,28,28]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":13,"text":"Coder queries memory, retrieves the constraint, honors it.","textPreview":"Coder queries memory, retrieves the constraint, honors it.","textChars":58,"textLines":1,"bbox":[114,276,998,34]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":13,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,322,28,28]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":13,"text":"Security password records are not returned to the coder.","textPreview":"Security password records are not returned to the coder.","textChars":56,"textLines":1,"bbox":[114,322,998,34]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":13,"text":"Need-to-know is a data architecture rule.","textPreview":"Need-to-know is a data architecture rule.","textChars":41,"textLines":1,"bbox":[82,470,980,48]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":13,"text":"▸  One slide, one idea, one practice.","textPreview":"▸  One slide, one idea, one practice.","textChars":37,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/lwval87e","slide":13,"text":""}
+{"kind":"slide","id":"sl/25kb6xkf","slide":14,"title":"frontier tech leaders","textShapes":10}
+{"kind":"shape","id":"sh/val87ed8","slide":14,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/kre1w7mp","slide":14,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/dcbulwva","slide":14,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/2x4nap4r","slide":14,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/vixczed8","slide":14,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/k3q5o7qp","slide":14,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/donyd0z6","slide":14,"text":"Cite: TeamLog + memory","textPreview":"Cite: TeamLog + memory","textChars":22,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":14,"text":"Module 2 · TeamLog & Theory of Mind","textPreview":"Module 2 · TeamLog & Theory of Mind","textChars":35,"textLines":1,"bbox":[52,58,500,20]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":14,"text":"Key Takeaway","textPreview":"Key Takeaway","textChars":12,"textLines":1,"bbox":[52,88,500,54]}
+{"kind":"shape","id":"sh/adsji5sn","slide":14,"bbox":[52,176,250,6]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":14,"text":"Alignment is a","textPreview":"Alignment is a","textChars":14,"textLines":1,"bbox":[100,240,980,56]}
+{"kind":"textbox","id":"sh/sji5snel","slide":14,"text":"data architecture problem,","textPreview":"data architecture problem,","textChars":26,"textLines":1,"bbox":[100,312,980,56]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":14,"text":"not only prompting.","textPreview":"not only prompting.","textChars":19,"textLines":1,"bbox":[100,384,980,56]}
+{"kind":"notes","id":"nt/25kb6xkf","slide":14,"text":""}
+{"kind":"slide","id":"sl/7y1kre1w","slide":15,"title":"frontier tech leaders","textShapes":10}
+{"kind":"shape","id":"sh/90je9cvi","slide":15,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/yd0z6103","slide":15,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/rytsvu9k","slide":15,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/g7adsji5","slide":15,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/9s36hcrm","slide":15,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/y1kre1w7","slide":15,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/rmhk3q5o","slide":15,"text":"Cite: MCP + RAG","textPreview":"Cite: MCP + RAG","textChars":15,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/g3ex0nux","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/5o7qpg3e","slide":15,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[58,132,110,78]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":15,"text":"Agentic RAG\n& MCP","textPreview":"Agentic RAG | & MCP","textChars":17,"textLines":2,"bbox":[180,132,620,110]}
+{"kind":"textbox","id":"sh/cvixczed","slide":15,"text":"The governed nervous system for tools, memory, and access","textPreview":"The governed nervous system for tools, memory, and access","textChars":57,"textLines":1,"bbox":[58,280,720,40]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":15,"text":"JOURNEY  ▸","textPreview":"JOURNEY  ▸","textChars":10,"textLines":1,"bbox":[58,470,160,24]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":15,"text":"assignment_syllabus.md: numbered assignments and Homework A-G.","textPreview":"assignment_syllabus.md: numbered assignments and Homework A-G.","textChars":62,"textLines":1,"bbox":[210,470,900,24]}
+{"kind":"notes","id":"nt/7y1kre1w","slide":15,"text":""}
+{"kind":"slide","id":"sl/8z25kb6x","slide":16,"title":"frontier tech leaders","textShapes":17}
+{"kind":"shape","id":"sh/epkzupwb","slide":16,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/pg3ex0nu","slide":16,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/wval87ed","slide":16,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/7mp0bi9s","slide":16,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":16,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/psfil0rq","slide":16,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/w7mp0bi9","slide":16,"text":"Cite: MCP + Agentic RAG","textPreview":"Cite: MCP + Agentic RAG","textChars":23,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/7u54zido","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/ed8bat47","slide":16,"text":"Module 3 · Agentic RAG & MCP","textPreview":"Module 3 · Agentic RAG & MCP","textChars":28,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":16,"text":"The Access Problem","textPreview":"The Access Problem","textChars":18,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":16,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,184,28,28]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":16,"text":"Agents need code, tickets, docs, databases, and tests.","textPreview":"Agents need code, tickets, docs, databases, and tests.","textChars":54,"textLines":1,"bbox":[114,184,998,34]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":16,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,230,28,28]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":16,"text":"Direct access creates security and reliability risk.","textPreview":"Direct access creates security and reliability risk.","textChars":52,"textLines":1,"bbox":[114,230,998,34]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":16,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,276,28,28]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":16,"text":"Agentic RAG: agents choose sources, inspect evidence, decide next step.","textPreview":"Agentic RAG: agents choose sources, inspect evidence, decide next step.","textChars":71,"textLines":1,"bbox":[114,276,998,34]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":16,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,322,28,28]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":16,"text":"MCP: a standard interface between agents and external tools.","textPreview":"MCP: a standard interface between agents and external tools.","textChars":60,"textLines":1,"bbox":[114,322,998,34]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":16,"text":"RAG gives context. MCP gives action. Policy decides.","textPreview":"RAG gives context. MCP gives action. Policy decides.","textChars":52,"textLines":1,"bbox":[82,470,980,48]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":16,"text":"▸  One slide, one idea, one practice.","textPreview":"▸  One slide, one idea, one practice.","textChars":37,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/8z25kb6x","slide":16,"text":""}
+{"kind":"slide","id":"sl/54zidony","slide":17,"title":"frontier tech leaders","textShapes":26}
+{"kind":"shape","id":"sh/m94fu18j","slide":17,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/x0nuxc3y","slide":17,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/4fu18jqh","slide":17,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/fil0rqd4","slide":17,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/qxs72x4n","slide":17,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/xobm58z2","slide":17,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/83itgfml","slide":17,"text":"Cite: MCP protocol","textPreview":"Cite: MCP protocol","textChars":18,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/mtwra5gb","slide":17,"text":"Module 3 · Agentic RAG & MCP","textPreview":"Module 3 · Agentic RAG & MCP","textChars":28,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":17,"text":"RAG vs MCP — What Each Does","textPreview":"RAG vs MCP — What Each Does","textChars":27,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"shape","id":"sh/d4vmtwra","slide":17,"bbox":[54,158,560,390]}
+{"kind":"shape","id":"sh/6dcbulwv","slide":17,"bbox":[666,158,560,390]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":17,"text":"Agentic RAG","textPreview":"Agentic RAG","textChars":11,"textLines":1,"bbox":[84,194,480,34]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":17,"text":"MCP Gateway","textPreview":"MCP Gateway","textChars":11,"textLines":1,"bbox":[696,194,480,34]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":17,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,258,28,28]}
+{"kind":"textbox","id":"sh/61032lsz","slide":17,"text":"Retrieve from shared memory","textPreview":"Retrieve from shared memory","textChars":27,"textLines":1,"bbox":[116,258,448,34]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":17,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,306,28,28]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":17,"text":"Filter by role and sensitivity","textPreview":"Filter by role and sensitivity","textChars":30,"textLines":1,"bbox":[116,306,448,34]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":17,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,354,28,28]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":17,"text":"Inspect evidence","textPreview":"Inspect evidence","textChars":16,"textLines":1,"bbox":[116,354,448,34]}
+{"kind":"textbox","id":"sh/c3ylc7u5","slide":17,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,402,28,28]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":17,"text":"Govern context as input","textPreview":"Govern context as input","textChars":23,"textLines":1,"bbox":[116,402,448,34]}
+{"kind":"textbox","id":"sh/uxc3ylc7","slide":17,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,258,28,28]}
+{"kind":"textbox","id":"sh/1cfa9w3m","slide":17,"text":"Standard tool discovery","textPreview":"Standard tool discovery","textChars":23,"textLines":1,"bbox":[728,258,448,34]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":17,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,306,28,28]}
+{"kind":"textbox","id":"sh/j6tovaho","slide":17,"text":"Identity + tool + args + sensitivity","textPreview":"Identity + tool + args + sensitivity","textChars":36,"textLines":1,"bbox":[728,306,448,34]}
+{"kind":"textbox","id":"sh/ulwval87","slide":17,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,354,28,28]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":17,"text":"Policy decides","textPreview":"Policy decides","textChars":14,"textLines":1,"bbox":[728,354,448,34]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":17,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,402,28,28]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":17,"text":"Audit every invocation","textPreview":"Audit every invocation","textChars":22,"textLines":1,"bbox":[728,402,448,34]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":17,"text":"▸  The nervous system must be standardized before it is powerful.","textPreview":"▸  The nervous system must be standardized before it is powerful.","textChars":65,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/54zidony","slide":17,"text":""}
+{"kind":"slide","id":"sl/m58z25kb","slide":18,"title":"frontier tech leaders","textShapes":17}
+{"kind":"shape","id":"sh/mhk3q5o7","slide":18,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/t83itgfm","slide":18,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/4nap4r65","slide":18,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/bq1oryts","slide":18,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/m58z25kb","slide":18,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/twra5gbq","slide":18,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/4byhgn29","slide":18,"text":"Cite: MCP security","textPreview":"Cite: MCP security","textChars":18,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/bm58z25k","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/m1cfa9w3","slide":18,"text":"Module 3 · Agentic RAG & MCP","textPreview":"Module 3 · Agentic RAG & MCP","textChars":28,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":18,"text":"Zero-Trust Tool Boundary","textPreview":"Zero-Trust Tool Boundary","textChars":24,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/1032lszq","slide":18,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,184,28,28]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":18,"text":"Do not ask: does the model want this tool?","textPreview":"Do not ask: does the model want this tool?","textChars":42,"textLines":1,"bbox":[114,184,998,34]}
+{"kind":"textbox","id":"sh/judg7ads","slide":18,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,230,28,28]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":18,"text":"Ask: does policy allow this identity to use this tool for this data?","textPreview":"Ask: does policy allow this identity to use this tool for this data?","textChars":68,"textLines":1,"bbox":[114,230,998,34]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":18,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,276,28,28]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":18,"text":"Flow: Agent → ToolRequest → Policy Gate → MCP Server → ToolResult.","textPreview":"Flow: Agent → ToolRequest → Policy Gate → MCP Server → ToolResult.","textChars":66,"textLines":1,"bbox":[114,276,998,34]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":18,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,322,28,28]}
+{"kind":"textbox","id":"sh/cvixczed","slide":18,"text":"Threats: prompt injection, tool overreach, context leakage, stale permissions.","textPreview":"Threats: prompt injection, tool overreach, context leakage, stale permissions.","textChars":78,"textLines":1,"bbox":[114,322,998,34]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":18,"text":"The tool gateway is the bouncer.","textPreview":"The tool gateway is the bouncer.","textChars":32,"textLines":1,"bbox":[82,470,980,48]}
+{"kind":"textbox","id":"sh/90je9cvi","slide":18,"text":"▸  One slide, one idea, one practice.","textPreview":"▸  One slide, one idea, one practice.","textChars":37,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/m58z25kb","slide":18,"text":""}
+{"kind":"slide","id":"sl/bat47y1k","slide":19,"title":"frontier tech leaders","textShapes":10}
+{"kind":"shape","id":"sh/1gvy90je","slide":19,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/qtcj6tov","slide":19,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/je9cvixc","slide":19,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":19,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":19,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":19,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":19,"text":"Cite: MCP governance","textPreview":"Cite: MCP governance","textChars":20,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":19,"text":"Module 3 · Agentic RAG & MCP","textPreview":"Module 3 · Agentic RAG & MCP","textChars":28,"textLines":1,"bbox":[52,58,500,20]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":19,"text":"Key Takeaway","textPreview":"Key Takeaway","textChars":12,"textLines":1,"bbox":[52,88,500,54]}
+{"kind":"shape","id":"sh/8bat47y1","slide":19,"bbox":[52,176,250,6]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":19,"text":"The nervous system must be","textPreview":"The nervous system must be","textChars":26,"textLines":1,"bbox":[100,240,980,56]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":19,"text":"standardized and governed","textPreview":"standardized and governed","textChars":25,"textLines":1,"bbox":[100,312,980,56]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":19,"text":"before it is powerful.","textPreview":"before it is powerful.","textChars":22,"textLines":1,"bbox":[100,384,980,56]}
+{"kind":"notes","id":"nt/bat47y1k","slide":19,"text":""}
+{"kind":"slide","id":"sl/j2t83itg","slide":20,"title":"frontier tech leaders","textShapes":10}
+{"kind":"shape","id":"sh/t83itgfm","slide":20,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/mhk3q5o7","slide":20,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/b2hwfyxo","slide":20,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/4byhgn29","slide":20,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/twra5gbq","slide":20,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/m58z25kb","slide":20,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/bq1oryts","slide":20,"text":"Cite: Pydantic AI","textPreview":"Cite: Pydantic AI","textChars":17,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/47y1kre1","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/tsvu9kni","slide":20,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[58,132,110,78]}
+{"kind":"textbox","id":"sh/90je9cvi","slide":20,"text":"Pydantic AI\n& Type Safety","textPreview":"Pydantic AI | & Type Safety","textChars":25,"textLines":2,"bbox":[180,132,620,110]}
+{"kind":"textbox","id":"sh/gfmlkjm1","slide":20,"text":"Typed contracts for production delegation","textPreview":"Typed contracts for production delegation","textChars":41,"textLines":1,"bbox":[58,280,720,40]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":20,"text":"JOURNEY  ▸","textPreview":"JOURNEY  ▸","textChars":10,"textLines":1,"bbox":[58,470,160,24]}
+{"kind":"textbox","id":"sh/yd0z6103","slide":20,"text":"Foundations  →  Memory & Mind  →  RAG & MCP  →  Type Safety  →  Routing & Repair  →  Zero Trust","textPreview":"Foundations  →  Memory & Mind  →  RAG & MCP  →  Type Safety  →  Routing & Repair  →  Zero Trust","textChars":95,"textLines":1,"bbox":[210,470,900,24]}
+{"kind":"notes","id":"nt/j2t83itg","slide":20,"text":""}
+{"kind":"slide","id":"sl/mhk3q5o7","slide":21,"title":"frontier tech leaders","textShapes":17}
+{"kind":"shape","id":"sh/z25kb6xk","slide":21,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/onyd0z61","slide":21,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/d8v6psfi","slide":21,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":21,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":21,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":21,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":21,"text":"Cite: Pydantic AI","textPreview":"Cite: Pydantic AI","textChars":17,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/61032lsz","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":21,"text":"Module 4 · Pydantic AI & Type Safety","textPreview":"Module 4 · Pydantic AI & Type Safety","textChars":36,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":21,"text":"Why Raw Text Breaks","textPreview":"Why Raw Text Breaks","textChars":19,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":21,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,184,28,28]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":21,"text":"Raw LLM output is flexible; production systems need reliable fields.","textPreview":"Raw LLM output is flexible; production systems need reliable fields.","textChars":68,"textLines":1,"bbox":[114,184,998,34]}
+{"kind":"textbox","id":"sh/4nap4r65","slide":21,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,230,28,28]}
+{"kind":"textbox","id":"sh/bq1oryts","slide":21,"text":"PM emits TaskSpec. Coder emits CodePatch. QA emits TestResult.","textPreview":"PM emits TaskSpec. Coder emits CodePatch. QA emits TestResult.","textChars":62,"textLines":1,"bbox":[114,230,998,34]}
+{"kind":"textbox","id":"sh/m58z25kb","slide":21,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,276,28,28]}
+{"kind":"textbox","id":"sh/twra5gbq","slide":21,"text":"Pydantic is the customs checkpoint: valid artifacts cross.","textPreview":"Pydantic is the customs checkpoint: valid artifacts cross.","textChars":58,"textLines":1,"bbox":[114,276,998,34]}
+{"kind":"textbox","id":"sh/4byhgn29","slide":21,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,322,28,28]}
+{"kind":"textbox","id":"sh/bm58z25k","slide":21,"text":"Validation errors become structured feedback for repair.","textPreview":"Validation errors become structured feedback for repair.","textChars":56,"textLines":1,"bbox":[114,322,998,34]}
+{"kind":"textbox","id":"sh/m1cfa9w3","slide":21,"text":"Schema drift is silent. Pydantic makes it loud.","textPreview":"Schema drift is silent. Pydantic makes it loud.","textChars":47,"textLines":1,"bbox":[82,470,980,48]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":21,"text":"▸  One slide, one idea, one practice.","textPreview":"▸  One slide, one idea, one practice.","textChars":37,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/mhk3q5o7","slide":21,"text":""}
+{"kind":"slide","id":"sl/5wjudg7a","slide":22,"title":"frontier tech leaders","textShapes":17}
+{"kind":"shape","id":"sh/yxobm58z","slide":22,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/5o7qpg3e","slide":22,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/g3ex0nux","slide":22,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/r65wjudg","slide":22,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/ylc7u54z","slide":22,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":22,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":22,"text":"Cite: Pydantic validators","textPreview":"Cite: Pydantic validators","textChars":25,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/yd0z6103","slide":22,"text":"Module 4 · Pydantic AI & Type Safety","textPreview":"Module 4 · Pydantic AI & Type Safety","textChars":36,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":22,"text":"Strict Schema Rules","textPreview":"Strict Schema Rules","textChars":19,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/lwval87e","slide":22,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,184,28,28]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":22,"text":"Use extra='forbid' to reject hallucinated fields.","textPreview":"Use extra='forbid' to reject hallucinated fields.","textChars":49,"textLines":1,"bbox":[114,184,998,34]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":22,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,230,28,28]}
+{"kind":"textbox","id":"sh/w3m94fu1","slide":22,"text":"Validate field lengths and constrain enums.","textPreview":"Validate field lengths and constrain enums.","textChars":43,"textLines":1,"bbox":[114,230,998,34]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":22,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,276,28,28]}
+{"kind":"textbox","id":"sh/ex0nuxc3","slide":22,"text":"Reject unsafe file paths before they reach the filesystem.","textPreview":"Reject unsafe file paths before they reach the filesystem.","textChars":58,"textLines":1,"bbox":[114,276,998,34]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":22,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,322,28,28]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":22,"text":"Test valid inputs, invalid inputs, empty lists, extra fields, unsafe paths.","textPreview":"Test valid inputs, invalid inputs, empty lists, extra fields, unsafe paths.","textChars":75,"textLines":1,"bbox":[114,322,998,34]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":22,"text":"Test contracts as rigorously as code.","textPreview":"Test contracts as rigorously as code.","textChars":37,"textLines":1,"bbox":[82,470,980,48]}
+{"kind":"textbox","id":"sh/lc7u54zi","slide":22,"text":"▸  One slide, one idea, one practice.","textPreview":"▸  One slide, one idea, one practice.","textChars":37,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/5wjudg7a","slide":22,"text":""}
+{"kind":"slide","id":"sl/crmhk3q5","slide":23,"title":"frontier tech leaders","textShapes":10}
+{"kind":"shape","id":"sh/m1cfa9w3","slide":23,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/tsvu9kni","slide":23,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/47y1kre1","slide":23,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/bat47y1k","slide":23,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/mp0bi9s3","slide":23,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/tgfmlkjm","slide":23,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/4vmtwra5","slide":23,"text":"Cite: Type-safe delegation","textPreview":"Cite: Type-safe delegation","textChars":26,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":23,"text":"Module 4 · Pydantic AI & Type Safety","textPreview":"Module 4 · Pydantic AI & Type Safety","textChars":36,"textLines":1,"bbox":[52,58,500,20]}
+{"kind":"textbox","id":"sh/0z61032l","slide":23,"text":"Key Takeaway","textPreview":"Key Takeaway","textChars":12,"textLines":1,"bbox":[52,88,500,54]}
+{"kind":"shape","id":"sh/pkzupwb2","slide":23,"bbox":[52,176,250,6]}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":23,"text":"Type safety is how","textPreview":"Type safety is how","textChars":18,"textLines":1,"bbox":[100,240,980,56]}
+{"kind":"textbox","id":"sh/7ed8bat4","slide":23,"text":"agent conversation becomes","textPreview":"agent conversation becomes","textChars":26,"textLines":1,"bbox":[100,312,980,56]}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":23,"text":"software architecture.","textPreview":"software architecture.","textChars":22,"textLines":1,"bbox":[100,384,980,56]}
+{"kind":"notes","id":"nt/crmhk3q5","slide":23,"text":""}
+{"kind":"slide","id":"sl/bq1oryts","slide":24,"title":"frontier tech leaders","textShapes":10}
+{"kind":"shape","id":"sh/9s36hcrm","slide":24,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/y1kre1w7","slide":24,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/rmhk3q5o","slide":24,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/gfmlkjm1","slide":24,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/90je9cvi","slide":24,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/yd0z6103","slide":24,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":24,"text":"Cite: ChatDev + Fugu","textPreview":"Cite: ChatDev + Fugu","textChars":20,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":24,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[58,132,110,78]}
+{"kind":"textbox","id":"sh/tovahoza","slide":24,"text":"Fugu Routing &\nChatDev Self-Repair","textPreview":"Fugu Routing & | ChatDev Self-Repair","textChars":34,"textLines":2,"bbox":[180,132,620,110]}
+{"kind":"textbox","id":"sh/032lszqt","slide":24,"text":"Dynamic routing, bounded correction, and recovery loops","textPreview":"Dynamic routing, bounded correction, and recovery loops","textChars":55,"textLines":1,"bbox":[58,280,720,40]}
+{"kind":"textbox","id":"sh/bi9s36hc","slide":24,"text":"JOURNEY  ▸","textPreview":"JOURNEY  ▸","textChars":10,"textLines":1,"bbox":[58,470,160,24]}
+{"kind":"textbox","id":"sh/ixczed8v","slide":24,"text":"Foundations  →  Memory & Mind  →  RAG & MCP  →  Type Safety  →  Routing & Repair  →  Zero Trust","textPreview":"Foundations  →  Memory & Mind  →  RAG & MCP  →  Type Safety  →  Routing & Repair  →  Zero Trust","textChars":95,"textLines":1,"bbox":[210,470,900,24]}
+{"kind":"notes","id":"nt/bq1oryts","slide":24,"text":""}
+{"kind":"slide","id":"sl/61032lsz","slide":25,"title":"frontier tech leaders","textShapes":26}
+{"kind":"shape","id":"sh/byhgn29g","slide":25,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/0je9cvix","slide":25,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/t47y1kre","slide":25,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":25,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":25,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/0rqd4vmt","slide":25,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/tcj6tova","slide":25,"text":"Cite: ChatDev + Fugu","textPreview":"Cite: ChatDev + Fugu","textChars":20,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/ixczed8v","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/bi9s36hc","slide":25,"text":"Module 5 · Fugu Routing & ChatDev Self-Repair","textPreview":"Module 5 · Fugu Routing & ChatDev Self-Repair","textChars":45,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":25,"text":"Two Reflexes Every Team Needs","textPreview":"Two Reflexes Every Team Needs","textChars":29,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"shape","id":"sh/yd0z6103","slide":25,"bbox":[54,158,560,390]}
+{"kind":"shape","id":"sh/90je9cvi","slide":25,"bbox":[666,158,560,390]}
+{"kind":"textbox","id":"sh/gfmlkjm1","slide":25,"text":"Fugu Routing","textPreview":"Fugu Routing","textChars":12,"textLines":1,"bbox":[84,194,480,34]}
+{"kind":"textbox","id":"sh/rmhk3q5o","slide":25,"text":"ChatDev Repair","textPreview":"ChatDev Repair","textChars":14,"textLines":1,"bbox":[696,194,480,34]}
+{"kind":"textbox","id":"sh/y1kre1w7","slide":25,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,258,28,28]}
+{"kind":"textbox","id":"sh/9s36hcrm","slide":25,"text":"Simple task → fast, cheap worker","textPreview":"Simple task → fast, cheap worker","textChars":32,"textLines":1,"bbox":[116,258,448,34]}
+{"kind":"textbox","id":"sh/g7adsji5","slide":25,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,306,28,28]}
+{"kind":"textbox","id":"sh/nih4byhg","slide":25,"text":"Complex task → deeper, slower worker","textPreview":"Complex task → deeper, slower worker","textChars":36,"textLines":1,"bbox":[116,306,448,34]}
+{"kind":"textbox","id":"sh/yxobm58z","slide":25,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,354,28,28]}
+{"kind":"textbox","id":"sh/61032lsz","slide":25,"text":"Signals: complexity, risk, cost, latency","textPreview":"Signals: complexity, risk, cost, latency","textChars":40,"textLines":1,"bbox":[116,354,448,34]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":25,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,402,28,28]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":25,"text":"Log every route decision","textPreview":"Log every route decision","textChars":24,"textLines":1,"bbox":[116,402,448,34]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":25,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,258,28,28]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":25,"text":"Developer writes, tester fails","textPreview":"Developer writes, tester fails","textChars":30,"textLines":1,"bbox":[728,258,448,34]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":25,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,306,28,28]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":25,"text":"Reviewer sends evidence","textPreview":"Reviewer sends evidence","textChars":23,"textLines":1,"bbox":[728,306,448,34]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":25,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,354,28,28]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":25,"text":"Developer repairs with context","textPreview":"Developer repairs with context","textChars":30,"textLines":1,"bbox":[728,354,448,34]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":25,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,402,28,28]}
+{"kind":"textbox","id":"sh/l87ed8ba","slide":25,"text":"Max repairs: 2, then escalate","textPreview":"Max repairs: 2, then escalate","textChars":29,"textLines":1,"bbox":[728,402,448,34]}
+{"kind":"textbox","id":"sh/sneloj2t","slide":25,"text":"▸  Reflexes make teams resilient only when bounded.","textPreview":"▸  Reflexes make teams resilient only when bounded.","textChars":51,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/61032lsz","slide":25,"text":""}
+{"kind":"slide","id":"sl/psfil0rq","slide":26,"title":"frontier tech leaders","textShapes":17}
+{"kind":"shape","id":"sh/1gvy90je","slide":26,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/qtcj6tov","slide":26,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/je9cvixc","slide":26,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":26,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":26,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":26,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":26,"text":"Cite: ChatDev self-repair","textPreview":"Cite: ChatDev self-repair","textChars":25,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":26,"text":"Module 5 · Fugu Routing & ChatDev Self-Repair","textPreview":"Module 5 · Fugu Routing & ChatDev Self-Repair","textChars":45,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":26,"text":"The Bounded Repair Loop","textPreview":"The Bounded Repair Loop","textChars":23,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":26,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,184,28,28]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":26,"text":"Flow: Task → Router → Coder → QA → Reviewer → Repair Memory → Coder.","textPreview":"Flow: Task → Router → Coder → QA → Reviewer → Repair Memory → Coder.","textChars":68,"textLines":1,"bbox":[114,184,998,34]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":26,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,230,28,28]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":26,"text":"Store failing test, error log, expected behavior, prior patch rationale.","textPreview":"Store failing test, error log, expected behavior, prior patch rationale.","textChars":72,"textLines":1,"bbox":[114,230,998,34]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":26,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,276,28,28]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":26,"text":"Budget: Research 2, Writing 2, Evaluation 1, Manager 0.","textPreview":"Budget: Research 2, Writing 2, Evaluation 1, Manager 0.","textChars":55,"textLines":1,"bbox":[114,276,998,34]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":26,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,322,28,28]}
+{"kind":"textbox","id":"sh/1cfa9w3m","slide":26,"text":"On exceed: ESCALATED_TO_HUMAN, never silent failure.","textPreview":"On exceed: ESCALATED_TO_HUMAN, never silent failure.","textChars":52,"textLines":1,"bbox":[114,322,998,34]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":26,"text":"The repair loop must have an exit.","textPreview":"The repair loop must have an exit.","textChars":34,"textLines":1,"bbox":[82,470,980,48]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":26,"text":"▸  One slide, one idea, one practice.","textPreview":"▸  One slide, one idea, one practice.","textChars":37,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/psfil0rq","slide":26,"text":""}
+{"kind":"slide","id":"sl/gfmlkjm1","slide":27,"title":"frontier tech leaders","textShapes":10}
+{"kind":"shape","id":"sh/fyxobm58","slide":27,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/8jqh0fep","slide":27,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/x4nap4r6","slide":27,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":27,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":27,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":27,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":27,"text":"Cite: ChatDev bounded repair","textPreview":"Cite: ChatDev bounded repair","textChars":28,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":27,"text":"Module 5 · Fugu Routing & ChatDev Self-Repair","textPreview":"Module 5 · Fugu Routing & ChatDev Self-Repair","textChars":45,"textLines":1,"bbox":[52,58,500,20]}
+{"kind":"textbox","id":"sh/nih4byhg","slide":27,"text":"Key Takeaway","textPreview":"Key Takeaway","textChars":12,"textLines":1,"bbox":[52,88,500,54]}
+{"kind":"shape","id":"sh/yxobm58z","slide":27,"bbox":[52,176,250,6]}
+{"kind":"textbox","id":"sh/5o7qpg3e","slide":27,"text":"Reflexes make agent teams","textPreview":"Reflexes make agent teams","textChars":25,"textLines":1,"bbox":[100,240,980,56]}
+{"kind":"textbox","id":"sh/g3ex0nux","slide":27,"text":"resilient,","textPreview":"resilient,","textChars":10,"textLines":1,"bbox":[100,312,980,56]}
+{"kind":"textbox","id":"sh/r65wjudg","slide":27,"text":"only when bounded.","textPreview":"only when bounded.","textChars":18,"textLines":1,"bbox":[100,384,980,56]}
+{"kind":"notes","id":"nt/gfmlkjm1","slide":27,"text":""}
+{"kind":"slide","id":"sl/vahoza1g","slide":28,"title":"frontier tech leaders","textShapes":10}
+{"kind":"shape","id":"sh/94fu18jq","slide":28,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/2hwfyxob","slide":28,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":28,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/gvy90je9","slide":28,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":28,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":28,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":28,"text":"Cite: IoA + Zero Trust","textPreview":"Cite: IoA + Zero Trust","textChars":22,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/kzupwb2h","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/9knih4by","slide":28,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[58,132,110,78]}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":28,"text":"Internet of Agents\n& Zero Trust","textPreview":"Internet of Agents | & Zero Trust","textChars":31,"textLines":2,"bbox":[180,132,620,110]}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":28,"text":"Enterprise-scale interoperability and governance","textPreview":"Enterprise-scale interoperability and governance","textChars":48,"textLines":1,"bbox":[58,280,720,40]}
+{"kind":"textbox","id":"sh/72x4nap4","slide":28,"text":"JOURNEY  ▸","textPreview":"JOURNEY  ▸","textChars":10,"textLines":1,"bbox":[58,470,160,24]}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":28,"text":"Foundations  →  Memory & Mind  →  RAG & MCP  →  Type Safety  →  Routing & Repair  →  Zero Trust","textPreview":"Foundations  →  Memory & Mind  →  RAG & MCP  →  Type Safety  →  Routing & Repair  →  Zero Trust","textChars":95,"textLines":1,"bbox":[210,470,900,24]}
+{"kind":"notes","id":"nt/vahoza1g","slide":28,"text":""}
+{"kind":"slide","id":"sl/a1gvy90j","slide":29,"title":"frontier tech leaders","textShapes":17}
+{"kind":"shape","id":"sh/ji5snelo","slide":29,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/c3ylc7u5","slide":29,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/1kre1w7m","slide":29,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/ulwval87","slide":29,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/j6tovaho","slide":29,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":29,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/1cfa9w3m","slide":29,"text":"Cite: Cisco IoA","textPreview":"Cite: Cisco IoA","textChars":15,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":29,"text":"Module 6 · Internet of Agents & Zero Trust","textPreview":"Module 6 · Internet of Agents & Zero Trust","textChars":42,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/byhgn29g","slide":29,"text":"From Local Team to Ecosystem","textPreview":"From Local Team to Ecosystem","textChars":28,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/idonyd0z","slide":29,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,184,28,28]}
+{"kind":"textbox","id":"sh/t47y1kre","slide":29,"text":"Enterprise agents collaborate across teams, vendors, and tools.","textPreview":"Enterprise agents collaborate across teams, vendors, and tools.","textChars":63,"textLines":1,"bbox":[114,184,998,34]}
+{"kind":"textbox","id":"sh/0je9cvix","slide":29,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,230,28,28]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":29,"text":"Every agent needs organization, role, trust tier, identity.","textPreview":"Every agent needs organization, role, trust tier, identity.","textChars":59,"textLines":1,"bbox":[114,230,998,34]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":29,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,276,28,28]}
+{"kind":"textbox","id":"sh/tcj6tova","slide":29,"text":"A2A messages need schemas, provenance, and policy-aware routing.","textPreview":"A2A messages need schemas, provenance, and policy-aware routing.","textChars":64,"textLines":1,"bbox":[114,276,998,34]}
+{"kind":"textbox","id":"sh/0rqd4vmt","slide":29,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,322,28,28]}
+{"kind":"textbox","id":"sh/bi9s36hc","slide":29,"text":"Governance matrix: agents × tools × data classes × message types.","textPreview":"Governance matrix: agents × tools × data classes × message types.","textChars":65,"textLines":1,"bbox":[114,322,998,34]}
+{"kind":"textbox","id":"sh/ixczed8v","slide":29,"text":"Enterprise multi-agent AI is a governed network.","textPreview":"Enterprise multi-agent AI is a governed network.","textChars":48,"textLines":1,"bbox":[82,470,980,48]}
+{"kind":"textbox","id":"sh/al87ed8b","slide":29,"text":"▸  One slide, one idea, one practice.","textPreview":"▸  One slide, one idea, one practice.","textChars":37,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/a1gvy90j","slide":29,"text":""}
+{"kind":"slide","id":"sl/kre1w7mp","slide":30,"title":"frontier tech leaders","textShapes":30}
+{"kind":"shape","id":"sh/ap4r65wj","slide":30,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/hgn29gr2","slide":30,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/svu9knih","slide":30,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":30,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":30,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":30,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":30,"text":"Cite: OWASP + A2A","textPreview":"Cite: OWASP + A2A","textChars":17,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":30,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":30,"text":"Module 6 · Internet of Agents & Zero Trust","textPreview":"Module 6 · Internet of Agents & Zero Trust","textChars":42,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":30,"text":"Threat Model & Controls","textPreview":"Threat Model & Controls","textChars":23,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"shape","id":"sh/d0z61032","slide":30,"bbox":[54,158,560,390]}
+{"kind":"shape","id":"sh/29gr2p8n","slide":30,"bbox":[666,158,560,390]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":30,"text":"What Can Go Wrong","textPreview":"What Can Go Wrong","textChars":17,"textLines":1,"bbox":[84,194,480,34]}
+{"kind":"textbox","id":"sh/knih4byh","slide":30,"text":"Governance Controls","textPreview":"Governance Controls","textChars":19,"textLines":1,"bbox":[696,194,480,34]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":30,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,258,28,28]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":30,"text":"Prompt injection from payload","textPreview":"Prompt injection from payload","textChars":29,"textLines":1,"bbox":[116,258,448,34]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":30,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,306,28,28]}
+{"kind":"textbox","id":"sh/kre1w7mp","slide":30,"text":"Tool misuse by impersonated agent","textPreview":"Tool misuse by impersonated agent","textChars":33,"textLines":1,"bbox":[116,306,448,34]}
+{"kind":"textbox","id":"sh/dcbulwva","slide":30,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,354,28,28]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":30,"text":"Context exfiltration across orgs","textPreview":"Context exfiltration across orgs","textChars":32,"textLines":1,"bbox":[116,354,448,34]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":30,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,402,28,28]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":30,"text":"Unbounded agent-to-agent delegation","textPreview":"Unbounded agent-to-agent delegation","textChars":35,"textLines":1,"bbox":[116,402,448,34]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":30,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,450,28,28]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":30,"text":"Stale permissions","textPreview":"Stale permissions","textChars":17,"textLines":1,"bbox":[116,450,448,34]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":30,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,258,28,28]}
+{"kind":"textbox","id":"sh/z61032ls","slide":30,"text":"Schema checks on A2A messages","textPreview":"Schema checks on A2A messages","textChars":29,"textLines":1,"bbox":[728,258,448,34]}
+{"kind":"textbox","id":"sh/al87ed8b","slide":30,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,306,28,28]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":30,"text":"Dead-letter denied payloads","textPreview":"Dead-letter denied payloads","textChars":27,"textLines":1,"bbox":[728,306,448,34]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":30,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,354,28,28]}
+{"kind":"textbox","id":"sh/idonyd0z","slide":30,"text":"Audit every route and tool call","textPreview":"Audit every route and tool call","textChars":31,"textLines":1,"bbox":[728,354,448,34]}
+{"kind":"textbox","id":"sh/byhgn29g","slide":30,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,402,28,28]}
+{"kind":"textbox","id":"sh/0je9cvix","slide":30,"text":"Trust tiers: internal, partner, public","textPreview":"Trust tiers: internal, partner, public","textChars":38,"textLines":1,"bbox":[728,402,448,34]}
+{"kind":"textbox","id":"sh/t47y1kre","slide":30,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,450,28,28]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":30,"text":"No action without policy approval","textPreview":"No action without policy approval","textChars":33,"textLines":1,"bbox":[728,450,448,34]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":30,"text":"▸  Log route decisions, tool calls, denials, schema failures, and repairs.","textPreview":"▸  Log route decisions, tool calls, denials, schema failures, and repairs.","textChars":74,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/kre1w7mp","slide":30,"text":""}
+{"kind":"slide","id":"sl/h0fepkzu","slide":31,"title":"frontier tech leaders","textShapes":10}
+{"kind":"shape","id":"sh/9s36hcrm","slide":31,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/y1kre1w7","slide":31,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/rmhk3q5o","slide":31,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/gfmlkjm1","slide":31,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/90je9cvi","slide":31,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/yd0z6103","slide":31,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":31,"text":"Cite: IoA ecosystem","textPreview":"Cite: IoA ecosystem","textChars":19,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":31,"text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":31,"text":"Module 6 · Internet of Agents & Zero Trust","textPreview":"Module 6 · Internet of Agents & Zero Trust","textChars":42,"textLines":1,"bbox":[52,58,500,20]}
+{"kind":"textbox","id":"sh/tovahoza","slide":31,"text":"Key Takeaway","textPreview":"Key Takeaway","textChars":12,"textLines":1,"bbox":[52,88,500,54]}
+{"kind":"shape","id":"sh/032lszqt","slide":31,"bbox":[52,176,250,6]}
+{"kind":"textbox","id":"sh/bi9s36hc","slide":31,"text":"Enterprise multi-agent AI","textPreview":"Enterprise multi-agent AI","textChars":25,"textLines":1,"bbox":[100,240,980,56]}
+{"kind":"textbox","id":"sh/ixczed8v","slide":31,"text":"is a governed network,","textPreview":"is a governed network,","textChars":22,"textLines":1,"bbox":[100,312,980,56]}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":31,"text":"not a bigger chat room.","textPreview":"not a bigger chat room.","textChars":23,"textLines":1,"bbox":[100,384,980,56]}
+{"kind":"notes","id":"nt/h0fepkzu","slide":31,"text":""}
+{"kind":"slide","id":"sl/yhgn29gr","slide":32,"title":"frontier tech leaders","textShapes":21}
+{"kind":"shape","id":"sh/ed8bat47","slide":32,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":32,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/wfyxobm5","slide":32,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/36hcrmhk","slide":32,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":32,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/lc7u54zi","slide":32,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":32,"text":"Cite: ChatDev capstone","textPreview":"Cite: ChatDev capstone","textChars":22,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":32,"text":"32","textPreview":"32","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":32,"text":"Capstone","textPreview":"Capstone","textChars":8,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":32,"text":"Build the Virtual Software Company","textPreview":"Build the Virtual Software Company","textChars":34,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":32,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,184,28,28]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":32,"text":"5+ agents with typed contracts at every handoff.","textPreview":"5+ agents with typed contracts at every handoff.","textChars":48,"textLines":1,"bbox":[114,184,998,34]}
+{"kind":"textbox","id":"sh/fyxobm58","slide":32,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,230,28,28]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":32,"text":"Sequential process with a quality gate that routes, not modifies.","textPreview":"Sequential process with a quality gate that routes, not modifies.","textChars":65,"textLines":1,"bbox":[114,230,998,34]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":32,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,276,28,28]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":32,"text":"Governed tool access through an MCP-style gateway with audit log.","textPreview":"Governed tool access through an MCP-style gateway with audit log.","textChars":65,"textLines":1,"bbox":[114,276,998,34]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":32,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,322,28,28]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":32,"text":"Shared memory with role-filtered retrieval.","textPreview":"Shared memory with role-filtered retrieval.","textChars":43,"textLines":1,"bbox":[114,322,998,34]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":32,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,368,28,28]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":32,"text":"Bounded self-repair: max 2 repairs, then ESCALATED_TO_HUMAN.","textPreview":"Bounded self-repair: max 2 repairs, then ESCALATED_TO_HUMAN.","textChars":60,"textLines":1,"bbox":[114,368,998,34]}
+{"kind":"textbox","id":"sh/w3m94fu1","slide":32,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,414,28,28]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":32,"text":"Clean reader-facing delivery: strip pipeline metadata.","textPreview":"Clean reader-facing delivery: strip pipeline metadata.","textChars":54,"textLines":1,"bbox":[114,414,998,34]}
+{"kind":"textbox","id":"sh/ex0nuxc3","slide":32,"text":"If you can build this, you can manage a production AI workforce.","textPreview":"If you can build this, you can manage a production AI workforce.","textChars":64,"textLines":1,"bbox":[82,470,980,48]}
+{"kind":"textbox","id":"sh/lwval87e","slide":32,"text":"▸  One slide, one idea, one practice.","textPreview":"▸  One slide, one idea, one practice.","textChars":37,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/yhgn29gr","slide":32,"text":""}
+{"kind":"slide","id":"sl/3ex0nuxc","slide":33,"title":"frontier tech leaders","textShapes":19}
+{"kind":"shape","id":"sh/ex0nuxc3","slide":33,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/loj2t83i","slide":33,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/w3m94fu1","slide":33,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":33,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":33,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/lwval87e","slide":33,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":33,"text":"Cite: Resource library","textPreview":"Cite: Resource library","textChars":22,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/32lszqtc","slide":33,"text":"33","textPreview":"33","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/ahoza1gv","slide":33,"text":"Alignment Bridge","textPreview":"Alignment Bridge","textChars":16,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":33,"text":"Critical Assets — How They Fit","textPreview":"Critical Assets — How They Fit","textChars":30,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/54zidony","slide":33,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,184,28,28]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":33,"text":"course_overview.md: promise, philosophy, module map, success criteria.","textPreview":"course_overview.md: promise, philosophy, module map, success criteria.","textChars":70,"textLines":1,"bbox":[114,184,998,34]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":33,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,230,28,28]}
+{"kind":"textbox","id":"sh/cvixczed","slide":33,"text":"README.md: workspace map, assets, quick start, teaching order.","textPreview":"README.md: workspace map, assets, quick start, teaching order.","textChars":62,"textLines":1,"bbox":[114,230,998,34]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":33,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,276,28,28]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":33,"text":"assignment_syllabus.md: numbered assignments and Homework A-G.","textPreview":"assignment_syllabus.md: numbered assignments and Homework A-G.","textChars":62,"textLines":1,"bbox":[114,276,998,34]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":33,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,322,28,28]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":33,"text":"resources/README.md: papers, videos, cited schemas.","textPreview":"resources/README.md: papers, videos, cited schemas.","textChars":51,"textLines":1,"bbox":[114,322,998,34]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":33,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,368,28,28]}
+{"kind":"textbox","id":"sh/5kb6xkf6","slide":33,"text":"crewai_learning: Homework G readiness and coding-agent teams.","textPreview":"crewai_learning: Homework G readiness and coding-agent teams.","textChars":61,"textLines":1,"bbox":[114,368,998,34]}
+{"kind":"textbox","id":"sh/czed8v6p","slide":33,"text":"Use documents as teaching aids, not slide copy.","textPreview":"Use documents as teaching aids, not slide copy.","textChars":47,"textLines":1,"bbox":[82,470,980,48]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":33,"text":"▸  One slide, one idea, one practice.","textPreview":"▸  One slide, one idea, one practice.","textChars":37,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/3ex0nuxc","slide":33,"text":""}
+{"kind":"slide","id":"sl/kb6xkf6d","slide":34,"title":"frontier tech leaders","textShapes":15}
+{"kind":"shape","id":"sh/itgfmlkj","slide":34,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/pkzupwb2","slide":34,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/0z61032l","slide":34,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/72x4nap4","slide":34,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":34,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":34,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":34,"text":"Cite: Mock LLM adapter","textPreview":"Cite: Mock LLM adapter","textChars":22,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/7y1kre1w","slide":34,"text":"34","textPreview":"34","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":34,"text":"Alignment Bridge","textPreview":"Alignment Bridge","textChars":16,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":34,"text":"Three Layers of Learning","textPreview":"Three Layers of Learning","textChars":24,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":34,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,184,28,28]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":34,"text":"Deterministic shell: predictable mocks test the pipes.","textPreview":"Deterministic shell: predictable mocks test the pipes.","textChars":54,"textLines":1,"bbox":[114,184,998,34]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":34,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,230,28,28]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":34,"text":"Mock LLM adapter: messy JSON and schema failures become feedback.","textPreview":"Mock LLM adapter: messy JSON and schema failures become feedback.","textChars":65,"textLines":1,"bbox":[114,230,998,34]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":34,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[82,276,28,28]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":34,"text":"Live LLM integration: same contracts govern a real model.","textPreview":"Live LLM integration: same contracts govern a real model.","textChars":57,"textLines":1,"bbox":[114,276,998,34]}
+{"kind":"textbox","id":"sh/fyxobm58","slide":34,"text":"First isolate the rules. Then add the dynamic brain.","textPreview":"First isolate the rules. Then add the dynamic brain.","textChars":52,"textLines":1,"bbox":[82,470,980,48]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":34,"text":"▸  One slide, one idea, one practice.","textPreview":"▸  One slide, one idea, one practice.","textChars":37,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/kb6xkf6d","slide":34,"text":""}
+{"kind":"slide","id":"sl/xs72x4na","slide":35,"title":"frontier tech leaders","textShapes":30}
+{"kind":"shape","id":"sh/twra5gbq","slide":35,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/m58z25kb","slide":35,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/bq1oryts","slide":35,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/4nap4r65","slide":35,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":35,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":35,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":35,"text":"Cite: 5-part architecture","textPreview":"Cite: 5-part architecture","textChars":25,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/4vmtwra5","slide":35,"text":"35","textPreview":"35","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/tgfmlkjm","slide":35,"text":"Alignment Bridge","textPreview":"Alignment Bridge","textChars":16,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/xc3ylc7u","slide":35,"text":"Brain → Body → Ecosystem","textPreview":"Brain → Body → Ecosystem","textChars":24,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"shape","id":"sh/4r65wjud","slide":35,"bbox":[54,158,560,390]}
+{"kind":"shape","id":"sh/f6dcbulw","slide":35,"bbox":[666,158,560,390]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":35,"text":"Operating Anatomy","textPreview":"Operating Anatomy","textChars":17,"textLines":1,"bbox":[84,194,480,34]}
+{"kind":"textbox","id":"sh/xkf6dcbu","slide":35,"text":"Management Meaning","textPreview":"Management Meaning","textChars":18,"textLines":1,"bbox":[696,194,480,34]}
+{"kind":"textbox","id":"sh/4zidonyd","slide":35,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,258,28,28]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":35,"text":"Brain: TeamLog + Theory of Mind","textPreview":"Brain: TeamLog + Theory of Mind","textChars":31,"textLines":1,"bbox":[116,258,448,34]}
+{"kind":"textbox","id":"sh/mtwra5gb","slide":35,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,306,28,28]}
+{"kind":"textbox","id":"sh/xobm58z2","slide":35,"text":"Nervous system: Agentic RAG + MCP","textPreview":"Nervous system: Agentic RAG + MCP","textChars":33,"textLines":1,"bbox":[116,306,448,34]}
+{"kind":"textbox","id":"sh/83itgfml","slide":35,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,354,28,28]}
+{"kind":"textbox","id":"sh/4byhgn29","slide":35,"text":"Body: Pydantic + orchestration","textPreview":"Body: Pydantic + orchestration","textChars":30,"textLines":1,"bbox":[116,354,448,34]}
+{"kind":"textbox","id":"sh/twra5gbq","slide":35,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,402,28,28]}
+{"kind":"textbox","id":"sh/m58z25kb","slide":35,"text":"Reflexes: routing + repair","textPreview":"Reflexes: routing + repair","textChars":26,"textLines":1,"bbox":[116,402,448,34]}
+{"kind":"textbox","id":"sh/bq1oryts","slide":35,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[84,450,28,28]}
+{"kind":"textbox","id":"sh/4nap4r65","slide":35,"text":"Ecosystem: API + A2A + zero trust","textPreview":"Ecosystem: API + A2A + zero trust","textChars":33,"textLines":1,"bbox":[116,450,448,34]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":35,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,258,28,28]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":35,"text":"align the team","textPreview":"align the team","textChars":14,"textLines":1,"bbox":[728,258,448,34]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":35,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,306,28,28]}
+{"kind":"textbox","id":"sh/4vmtwra5","slide":35,"text":"route context and tools","textPreview":"route context and tools","textChars":23,"textLines":1,"bbox":[728,306,448,34]}
+{"kind":"textbox","id":"sh/tgfmlkjm","slide":35,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,354,28,28]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":35,"text":"make handoffs executable","textPreview":"make handoffs executable","textChars":24,"textLines":1,"bbox":[728,354,448,34]}
+{"kind":"textbox","id":"sh/uxc3ylc7","slide":35,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,402,28,28]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":35,"text":"recover within bounds","textPreview":"recover within bounds","textChars":21,"textLines":1,"bbox":[728,402,448,34]}
+{"kind":"textbox","id":"sh/c3ylc7u5","slide":35,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[696,450,28,28]}
+{"kind":"textbox","id":"sh/j6tovaho","slide":35,"text":"interoperate safely","textPreview":"interoperate safely","textChars":19,"textLines":1,"bbox":[728,450,448,34]}
+{"kind":"textbox","id":"sh/ulwval87","slide":35,"text":"▸  The anatomy keeps the course from becoming a tool tutorial.","textPreview":"▸  The anatomy keeps the course from becoming a tool tutorial.","textChars":62,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/xs72x4na","slide":35,"text":""}
+{"kind":"slide","id":"sl/i5sneloj","slide":36,"title":"frontier tech leaders","textShapes":24}
+{"kind":"shape","id":"sh/fmlkjm1c","slide":36,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/87ed8bat","slide":36,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/xs72x4na","slide":36,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":36,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":36,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":36,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":36,"text":"Cite: NB8-NB11 + Assignment 12","textPreview":"Cite: NB8-NB11 + Assignment 12","textChars":30,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":36,"text":"36","textPreview":"36","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":36,"text":"Alignment Bridge","textPreview":"Alignment Bridge","textChars":16,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":36,"text":"You can Build labs after the Six Modules","textPreview":"You can Build labs after the Six Modules","textChars":40,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":36,"text":"Bridge from classroom concepts to production operating surfaces:","textPreview":"Bridge from classroom concepts to production operating surfaces:","textChars":64,"textLines":1,"bbox":[82,176,980,28]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":36,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[92,242,28,28]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":36,"text":"Classroom concepts → NB8 API Boundary","textPreview":"Classroom concepts → NB8 API Boundary","textChars":37,"textLines":1,"bbox":[126,242,440,28]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":36,"text":"Goal: external events become governed TaskSpec work.","textPreview":"Goal: external events become governed TaskSpec work.","textChars":52,"textLines":1,"bbox":[594,242,560,30]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":36,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[92,300,28,28]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":36,"text":"NB8 → NB9 Advanced Orchestration","textPreview":"NB8 → NB9 Advanced Orchestration","textChars":32,"textLines":1,"bbox":[126,300,440,28]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":36,"text":"Goal: typed delegation, scaffolds, debate, and routing decisions.","textPreview":"Goal: typed delegation, scaffolds, debate, and routing decisions.","textChars":65,"textLines":1,"bbox":[594,300,560,30]}
+{"kind":"textbox","id":"sh/fyxobm58","slide":36,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[92,358,28,28]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":36,"text":"NB9 → NB10 Vibe Coding CEO Interface","textPreview":"NB9 → NB10 Vibe Coding CEO Interface","textChars":36,"textLines":1,"bbox":[126,358,440,28]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":36,"text":"Goal: human steering updates commitments without breaking contracts.","textPreview":"Goal: human steering updates commitments without breaking contracts.","textChars":68,"textLines":1,"bbox":[594,358,560,30]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":36,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[92,416,28,28]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":36,"text":"NB10 → Assignment 12 From Whisper to Shipped Code","textPreview":"NB10 → Assignment 12 From Whisper to Shipped Code","textChars":49,"textLines":1,"bbox":[126,416,440,28]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":36,"text":"Goal: connect human intent, scaffold, debate, TeamLog, and release.","textPreview":"Goal: connect human intent, scaffold, debate, TeamLog, and release.","textChars":67,"textLines":1,"bbox":[594,416,560,30]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":36,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[92,474,28,28]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":36,"text":"NB11 → CrewAI Learning","textPreview":"NB11 → CrewAI Learning","textChars":22,"textLines":1,"bbox":[126,474,440,28]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":36,"text":"Goal: design Coder, QA, Review agents with optional live execution.","textPreview":"Goal: design Coder, QA, Review agents with optional live execution.","textChars":67,"textLines":1,"bbox":[594,474,560,30]}
+{"kind":"textbox","id":"sh/5wjudg7a","slide":36,"text":"▸  Each bridge lab turns one classroom pattern into one production operating surface.","textPreview":"▸  Each bridge lab turns one classroom pattern into one production operating surface.","textChars":85,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/i5sneloj","slide":36,"text":""}
+{"kind":"slide","id":"sl/nuxc3ylc","slide":37,"title":"frontier tech leaders","textShapes":12}
+{"kind":"shape","id":"sh/1032lszq","slide":37,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/u9knih4b","slide":37,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/judg7ads","slide":37,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":37,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":37,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":37,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":37,"text":"Cite: CrewAI + course governance","textPreview":"Cite: CrewAI + course governance","textChars":32,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/cvixczed","slide":37,"text":"37","textPreview":"37","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":37,"text":"Alignment Bridge","textPreview":"Alignment Bridge","textChars":16,"textLines":1,"bbox":[52,58,560,20]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":37,"text":"CrewAI Coding-Team Readiness","textPreview":"CrewAI Coding-Team Readiness","textChars":28,"textLines":1,"bbox":[52,88,1030,62]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":37,"text":"Everyone gets a coding-agent team design:","textPreview":"Everyone gets a coding-agent team design:","textChars":41,"textLines":1,"bbox":[82,210,940,34]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":37,"text":"Coder → QA → Review with typed state and guardrails.","textPreview":"Coder → QA → Review with typed state and guardrails.","textChars":52,"textLines":1,"bbox":[82,282,1000,64]}
+{"kind":"shape","id":"sh/qh0fepkz","slide":37,"bbox":[82,416,1010,96]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":37,"text":"Bounded retry; live keys optional.","textPreview":"Bounded retry; live keys optional.","textChars":34,"textLines":1,"bbox":[118,440,430,30]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":37,"text":"Score: basics, setup, agents, state, orchestration, template.","textPreview":"Score: basics, setup, agents, state, orchestration, template.","textChars":61,"textLines":1,"bbox":[604,444,430,30]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":37,"text":"▸  CrewAI accelerates orchestration; governance still owns safety.","textPreview":"▸  CrewAI accelerates orchestration; governance still owns safety.","textChars":66,"textLines":1,"bbox":[54,590,980,24]}
+{"kind":"notes","id":"nt/nuxc3ylc","slide":37,"text":""}
+{"kind":"slide","id":"sl/kjm1cfa9","slide":38,"title":"frontier tech leaders","textShapes":8}
+{"kind":"shape","id":"sh/2x4nap4r","slide":38,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/donyd0z6","slide":38,"bbox":[0,40,1280,640]}
+{"kind":"shape","id":"sh/k3q5o7qp","slide":38,"bbox":[0,680,1280,40]}
+{"kind":"textbox","id":"sh/val87ed8","slide":38,"text":"frontier tech leaders","textPreview":"frontier tech leaders","textChars":21,"textLines":1,"bbox":[24,14,220,18]}
+{"kind":"textbox","id":"sh/6psfil0r","slide":38,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[910,17,345,18]}
+{"kind":"textbox","id":"sh/dcbulwva","slide":38,"text":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textPreview":"SDG AI Lab  ·  UN Technology  ·  ICPSD  ·  UNDP","textChars":47,"textLines":1,"bbox":[24,697,300,18]}
+{"kind":"textbox","id":"sh/kre1w7mp","slide":38,"text":"Cite: Karpathy AI Ascent","textPreview":"Cite: Karpathy AI Ascent","textChars":24,"textLines":1,"bbox":[820,647,360,16]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":38,"text":"38","textPreview":"38","textChars":2,"textLines":1,"bbox":[1226,646,34,18]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":38,"text":"You can outsource your thinking —","textPreview":"You can outsource your thinking —","textChars":33,"textLines":1,"bbox":[300,236,680,52]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":38,"text":"but you can't outsource your understanding.","textPreview":"but you can't outsource your understanding.","textChars":43,"textLines":1,"bbox":[260,302,760,52]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":38,"text":"— Andrej Karpathy, Sequoia AI Ascent 2026","textPreview":"— Andrej Karpathy, Sequoia AI Ascent 2026","textChars":41,"textLines":1,"bbox":[410,436,470,26]}
+{"kind":"notes","id":"nt/kjm1cfa9","slide":38,"text":""}

@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "course_module": "Homework E: Marketing Orchestration",
+  "currency": "USD",
+  "model_classes": {
+    "fast-cheap": {
+      "example_models": ["gpt-4o-mini", "claude-haiku"],
+      "cost_per_task": 0.01,
+      "latency_seconds": 0.5,
+      "best_for": ["bulk_variations", "classification", "simple_rewrites"]
+    },
+    "balanced": {
+      "example_models": ["gpt-4o", "claude-sonnet"],
+      "cost_per_task": 0.08,
+      "latency_seconds": 2.0,
+      "best_for": ["landing_page_copy", "moderate_compliance_review", "structured_generation"]
+    },
+    "reasoning": {
+      "example_models": ["reasoning_model", "frontier_reasoner"],
+      "cost_per_task": 0.5,
+      "latency_seconds": 10.0,
+      "best_for": ["brand_strategy", "high_risk_compliance", "multi_step_planning"]
+    }
+  },
+  "routing_examples": [
+    {
+      "task": "Generate 500 variations of this headline",
+      "route": "fast-cheap"
+    },
+    {
+      "task": "Design the core brand strategy",
+      "route": "reasoning"
+    },
+    {
+      "task": "Write landing page copy with compliance constraints",
+      "route": "balanced"
+    }
+  ]
+}

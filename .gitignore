@@ -1,0 +1,36 @@
+.DS_Store
+__pycache__/
+.pytest_cache/
+*.pyc
+.ipynb_checkpoints/
+node_modules/
+instructor/node_modules
+
+# Local Python environments and machine-specific config.
+.venv/
+venv/
+ENV/
+env/
+
+# Never commit local secrets or key material.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# Keep the repository lightweight. Host videos externally and store transcripts
+# under resources/videos/.
+*.mp4
+*.mov
+*.mkv
+*.webm
+resources/videos/*.mp4
+resources/videos/*.mov
+resources/videos/*.mkv
+resources/videos/*.webm
+
+# Put temporary local paper downloads here instead of committing them.
+resources/papers/_local_downloads/

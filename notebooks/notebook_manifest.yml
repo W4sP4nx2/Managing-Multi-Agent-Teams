@@ -1,0 +1,109 @@
+course: Managing Multi-Agent Teams
+runtime_mode: offline_deterministic
+network_access: disabled_for_core_notebooks
+live_llm_default: false
+output_policy: clear_outputs_before_commit
+instructor_output_policy: rendered_outputs_allowed_in_instructor_copies
+
+package_tiers:
+  required:
+    - pydantic
+    - pytest
+    - fastapi
+  recommended:
+    - httpx
+    - jupyter
+    - nbval
+  optional_live_or_framework:
+    - crewai
+    - chromadb
+    - instructor
+    - openai
+
+canonical_notebooks:
+  - order: 0
+    file: 00_sandbox_preflight.ipynb
+    module: Pre-Course Preparation
+    learning_goal: Verify packages, offline mode, working directory, and /tmp write access.
+    assignment_link: assignments/assignment_syllabus.md
+    live_llm_optional: false
+  - order: 1
+    file: 01_hello_multi_agent.ipynb
+    module: Module 1 - Foundations & Vibe Coding
+    learning_goal: Move from isolated prompting to governed agent handoffs.
+    assignment_link: assignments/foundational_architecture_design.md
+    live_llm_optional: true
+  - order: 2
+    file: 02_shared_rag_memory.ipynb
+    module: Module 2 - TeamLog & Theory of Mind
+    learning_goal: Preserve commitments through governed shared memory and context compression.
+    assignment_link: assignments/ex2_tom_memory.md
+    live_llm_optional: false
+  - order: 3
+    file: 03_mcp_tool_gateway.ipynb
+    module: Module 3 - Agentic RAG & MCP
+    learning_goal: Enforce zero-trust tool access through a typed gateway.
+    assignment_link: assignments/ex2_3_mcp_tool_governance.md
+    live_llm_optional: false
+  - order: 4
+    file: 04_pydantic_delegation.ipynb
+    module: Module 4 - Pydantic AI & Type-Safety
+    learning_goal: Reject hallucinated or unsafe inter-agent handoffs before downstream execution.
+    assignment_link: assignments/ex2_1_type_safe_handoffs.md
+    live_llm_optional: true
+  - order: 5
+    file: 05_self_repair_loop.ipynb
+    module: Module 5 - ChatDev Self-Repair
+    learning_goal: Feed schema and QA failures back into a bounded repair loop.
+    assignment_link: assignments/basic_agent_governance_labs.md
+    live_llm_optional: true
+  - order: 6
+    file: 06_dynamic_routing.ipynb
+    module: Module 5 - Fugu-Style Routing
+    learning_goal: Route work by risk, complexity, cost, and budget.
+    assignment_link: assignments/module11_marketing_orchestration.md
+    live_llm_optional: false
+  - order: 7
+    file: 07_debugging_agents.ipynb
+    module: Debugging Sandbox
+    learning_goal: Diagnose schema drift, tool overreach, memory leakage, and unbounded repair.
+    assignment_link: assignments/basic_agent_governance_labs.md
+    live_llm_optional: false
+  - order: 8
+    file: 08_api_boundaries_async_orchestration.ipynb
+    module: API Boundary
+    learning_goal: Convert external HTTP requests into governed asynchronous internal work.
+    assignment_link: assignments/advanced_implementation_governance.md
+    live_llm_optional: false
+  - order: 9
+    file: 09_advanced_fugu_orchestration.ipynb
+    module: Advanced Orchestration
+    learning_goal: Build dynamic scaffolds, debate records, adaptive topology, and typed delegation decisions.
+    assignment_link: assignments/assignment12_from_whisper_to_shipped_code.md
+    live_llm_optional: false
+  - order: 10
+    file: 10_vibe_coding_interface.ipynb
+    module: Vibe Coding CEO Interface
+    learning_goal: Translate natural-language steering into ProjectPlan, TeamCommitment, and HumanReviewDecision.
+    assignment_link: assignments/assignment12_from_whisper_to_shipped_code.md
+    live_llm_optional: false
+  - order: 11
+    file: 11_enterprise_a2a_perimeter.ipynb
+    module: Module 6 - Internet of Agents & Zero Trust
+    learning_goal: Secure cross-organization agent messages with identity, classification, schema checks, and DLQ audit.
+    assignment_link: assignments/ex4_trust_governance_matrix.md
+    live_llm_optional: false
+
+compatibility_aliases:
+  03_mcp_tool_standardization.ipynb: 03_mcp_tool_gateway.ipynb
+  04_pydantic_type_safe_delegation.ipynb: 04_pydantic_delegation.ipynb
+  06_dynamic_routing_fugu.ipynb: 06_dynamic_routing.ipynb
+
+reference_only:
+  - file: 01_type_safe_multi_agent_team.ipynb
+    reason: Legacy/reference notebook retained for earlier course drafts. Do not expose as part of the canonical learner path.
+
+separate_study_tracks:
+  crewai_learning/README.md:
+    purpose: Self-contained CrewAI study path for framework expression after learners understand the governance shell.
+    included_in_core_notebook_sequence: false
