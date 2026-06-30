@@ -133,20 +133,4 @@ A learner is successful when they can:
 - Explain the purpose of each schema, tool policy, and routing decision.
 - Submit a capstone with typed contracts, governed tools, shared memory, and bounded repair.
 
-An instructor is successful when they can:
-
-- Teach all six modules in a two-day workshop.
-- Grade each non-capstone assignment with the objective rubrics and solution guides.
-- Use the solution guides to diagnose common learner mistakes.
-- Connect each lab back to production reliability, security, and maintainability.
-
-## Teaching Arc
-
-The course follows an Andrew Ng-style progression:
-
-1. Start with the intuitive problem.
-2. Use a simple analogy.
-3. Show the architecture.
-4. Implement the smallest practical version.
-5. Name the production failure mode.
-6. Add the guardrail.
+Instructor delivery materials live in [instructor/](instructor/). Use that folder for rubrics, solution guides, delivery checklists, verification commands, and teaching support.
