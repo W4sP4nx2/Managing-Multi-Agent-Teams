@@ -12,6 +12,10 @@ The assignment track excludes:
 
 Assignments use software delivery, logistics weather-risk checks, writing/review, A2A security, and human CEO steering because those scenarios keep attention on orchestration, security, memory, and bounded autonomy.
 
+## Source Alignment
+
+The assignment path incorporates high-level concepts from the IBM Multi-Agent Systems Educational Module provided in the course notes: the evolution from single-agent to multi-agent systems, interaction patterns, architecture patterns, and common multi-agent challenges. Those concepts are adapted here into governance exercises, not copied as generic theory.
+
 ## Learning Experience
 
 Each assignment should feel like a small management simulation:
@@ -29,6 +33,9 @@ The instructor should keep asking one question: **What management failure does t
 
 | Block | Skill | Evidence |
 | --- | --- | --- |
+| Multi-Agent Motivation | Learners identify when one agent is structurally insufficient | single-agent stress test and upgrade path |
+| Interaction Pattern | Learners choose cooperative, competitive, mixed, hierarchical, heterogeneous, or mixture-of-experts patterns | scenario classification and governance control |
+| Architecture Pattern | Learners choose vertical, horizontal, or hybrid structures | decision matrix with risk if wrong |
 | Handoff | Agents pass work through explicit artifacts | `TaskSpec`, `CodePatch`, `TestResult`, `ReviewDecision` |
 | Type Safety | Raw LLM output becomes validated state | Pydantic rejects extra fields, invalid enums, unsafe paths |
 | Tool Governance | Agents request tools through policy gates | `ToolRequest`, `ToolResult`, denied audit events |
@@ -43,6 +50,7 @@ The instructor should keep asking one question: **What management failure does t
 
 | Number | Assignment | Professor's Vision | Learner Builds | Success Evidence |
 | --- | --- | --- | --- | --- |
+| 0A | Assignment 00A: Multi-Agent Systems Foundations | Learners understand why multi-agent systems exist before they implement them. | Single-agent stress test, interaction-pattern classification, architecture matrix, failure map. | Learner can justify the team shape and the governance controls before writing agent code. |
 | 1 | Assignment 01: Agent Roster & SOPs | Learners first learn to design a team before coding one. | Agent roles, handoff artifacts, SOPs, and failure paths. | Roster has clear ownership and no overlapping responsibilities. |
 | 2 | Assignment 02: Basic Agent Governance Labs | Simple agents become governed systems. | Logistics Weather gateway, bounded Writer loop, adversarial QA perimeter, CEO TeamLog steering. | Each lab proves a schema, a boundary, and an escalation or denial path. |
 | 3 | Assignment 03: Type-Safe Handoffs | Learners stop passing raw text between agents. | `TranscriptAnalysis`, `QualityEvaluation`, `FinalReport`. | Invalid handoffs fail validation and valid outputs become structured JSON. |
