@@ -52,6 +52,17 @@ This path is the instructor-facing control map for the Jupyter sequence. It keep
 | Assignment 12 | From Whisper to Shipped Code | Human intent becomes scaffold, debate, TeamLog pivot, and release decision |
 | Assignment 13 | Virtual Software Company Capstone | System ships or escalates through a typed `PullRequestSummary` |
 
+## Framework Bridge Exercises
+
+These exercises do not replace the core governance path. They show how the same management primitives appear inside CrewAI, LangGraph, and AutoGen.
+
+| Framework Exercise | Primary Location | What Learners Practice |
+| --- | --- | --- |
+| Sequential Research and Writing Pipeline | NB1 + Homework G | CrewAI agents, tasks, `Process.sequential`, context chains, least-privilege tools |
+| Hierarchical Customer Support Triage | NB9 + Homework G | CrewAI manager delegation without hardcoded routing |
+| Stateful Code Retry Loop | NB5 + Homework G | LangGraph `StateGraph`, typed state, conditional cycles, retry budget |
+| Framework Translation Table | NB9 + Homework G | Mapping course primitives to CrewAI, LangGraph, and AutoGen equivalents |
+
 ## Instructor Rule
 
 Every notebook and assignment should answer three questions:

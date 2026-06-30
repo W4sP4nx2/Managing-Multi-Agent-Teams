@@ -315,6 +315,20 @@ def nb1() -> list[dict]:
 
             CrewAI can run this as `Process.hierarchical`; AutoGen can run it as a group chat; LangGraph can model it as a state graph. The collaboration pattern is the same: manager, specialists, handoffs, and review.
 
+            ## Framework-Agnostic Building Blocks
+
+            Before choosing CrewAI, AutoGen, or LangGraph, name the five primitives:
+
+            | Building Block | Meaning | CrewAI | AutoGen | LangGraph |
+            | --- | --- | --- | --- | --- |
+            | Agent | The worker with role, goal, backstory, and tools | `Agent()` | `AssistantAgent()` | Node function |
+            | Task | The job and expected output | `Task()` | Message / function request | Node responsibility |
+            | Process | The workflow shape | `Process.sequential` / `Process.hierarchical` | Group chat / manager | Edges and conditional edges |
+            | Tools | The hands that touch systems | `tools=[...]` | Tool/function registration | Tool node / callable |
+            | Memory / State | The brain and handoff record | `context=[...]`, `memory=True` | Conversation history | `TypedDict` state |
+
+            The governance layer does not replace these frameworks. It wraps them: schemas become task outputs, tool policy becomes tool assignment, and memory rules become explicit context/state.
+
             ## 🧪 Exercises: Building Your First Agent Team
 
             **The Story:** Imagine your team is preparing an internal authentication API release. The implementation looks fine, but the Risk Reviewer forgets rate limiting and rollback instructions. The release may work in a demo, but it is not production-ready. Right now, your agents are just passing text. How do we ensure the final handoff is governable?
@@ -343,6 +357,23 @@ def nb1() -> list[dict]:
             5. Prove the authorized agent receives a typed `WeatherResponse`, the unauthorized widget raises `PermissionError`, and a hallucinated field fails schema validation.
 
             **Production Check:** If the LLM adds `vibes="sunny enough"` or requests an unsupported unit, Pydantic should reject it before downstream agents act.
+
+            ### Framework Exercise: Sequential Research & Writing Pipeline
+
+            **Scenario:** A team receives a topic, researches it, writes a short article, and edits it for factual consistency.
+
+            **Framework:** CrewAI-style `Process.sequential`.
+
+            **Your Mission:**
+            1. Define three agents: `Senior Market Researcher`, `Technical Content Writer`, and `Chief Editor`.
+            2. Define three tasks: `research_task`, `writing_task`, and `editing_task`.
+            3. Set `context=[research_task]` on the writing task.
+            4. Set `context=[research_task, writing_task]` on the editing task.
+            5. Add a typed output schema for the research facts or final article. In CrewAI, use `output_pydantic=...`; in the offline adapter, use `Pydantic.model_validate(...)`.
+
+            **The Nail:** Remove `context=[research_task]` from the writing task and explain why the Writer now has a higher hallucination risk.
+
+            **Governance Wrapper:** The Researcher may have a search tool, but the Writer and Editor should not. Tool access is part of role design, not a prompt wish.
 
             **The Takeaway:** Multi-agent collaboration is powerful, but without an audit trail and compliance checks, it's just a black box generating text.
             """
@@ -1456,6 +1487,23 @@ def nb5() -> list[dict]:
             5. Set `max_retries_allowed=2`; force all attempts to fail once and prove the loop returns an `EscalationTicket`.
 
             **Production Check:** A retry is not "try again." It is "try again with the exact typed evidence of what failed."
+
+            ### Framework Exercise: LangGraph Code Generation & Retry Loop
+
+            **Scenario:** A Coder writes code, QA tests it, and the workflow cycles back to the Coder when tests fail.
+
+            **Framework:** LangGraph-style `StateGraph`.
+
+            **Your Mission:**
+            1. Define `AgentState` with `messages`, `code`, `test_passed`, and `retry_count`.
+            2. Implement `coder_node(state)` that reads the latest failure message before writing the next patch.
+            3. Implement `qa_node(state)` that returns typed test evidence, not just `True` or `False`.
+            4. Implement a router that returns `retry`, `end`, or `escalate`.
+            5. Add a conditional edge: `retry -> coder`, `end -> END`, `escalate -> END`.
+
+            **The Nail:** `retry_count` is not decoration. It is the circuit breaker that prevents infinite loops and runaway cost.
+
+            **Governance Wrapper:** In LangGraph, `State` is the shared memory. Keep it typed with `TypedDict` or Pydantic-compatible state fields; do not let agents append arbitrary unstructured blobs forever.
 
             **The Takeaway:** Autonomy without boundaries is just automated chaos. Bounded repair is what makes agents safe for production.
             """
@@ -2596,6 +2644,38 @@ def nb9() -> list[dict]:
             NB9 is the Internal Brain. It builds the workflow and manages disagreement. NB10 is the External Steering Wheel. When NB9 cannot resolve contention, NB10 lets the human update TeamLog or veto the release.
 
             **The Takeaway:** Advanced orchestration is not "more agents." It is the management layer that decides which agents are needed, how they connect, how disagreement is resolved, and when a human must step in.
+
+            ## Framework Bridge Exercises
+
+            ### Exercise 9.3: Customer Support Triage with Hierarchical Delegation
+
+            **Scenario:** A customer ticket may belong to Billing or Technical Support. In a demo, you might write `if "refund" in ticket`; in a managed team, a manager agent reasons about the ticket and delegates to the right specialist.
+
+            **Framework:** CrewAI-style `Process.hierarchical`.
+
+            **Your Mission:**
+            1. Define `Billing Specialist` and `Technical Support Engineer` agents with distinct goals and tool scopes.
+            2. Define a `triage_task` with no fixed worker agent. The manager decides.
+            3. Use a typed `SupportResolution` schema for the final answer.
+            4. Add two tickets: one refund/invoice issue and one login/API key issue.
+            5. Explain how the manager routes the work without hardcoding keyword branches.
+
+            **Governance Wrapper:** Billing tools must not be available to the Technical Support agent. Technical log tools must not be available to Billing. Framework delegation is useful only if tool scopes stay least-privilege.
+
+            ### Exercise 9.4: Translate Course Primitives to Framework Primitives
+
+            **Scenario:** You have built the primitives by hand. Now map them to the frameworks learners will see in production.
+
+            | Course Primitive | CrewAI Equivalent | LangGraph Equivalent | AutoGen Equivalent |
+            | --- | --- | --- | --- |
+            | `DeliveryAgent` / specialist role | `Agent(role=..., goal=...)` | Node function | `AssistantAgent` |
+            | `TaskSpec` | `Task(description=..., output_pydantic=...)` | Typed state field | Structured message / function args |
+            | `SharedMemory` | `context=[task1, task2]`, `memory=True` | `State` / `TypedDict` | Conversation history / shared context |
+            | `ToolPolicy` | explicit `tools=[...]`, `allow_delegation=False` | guarded tool node | registered tool/function with policy wrapper |
+            | `BoundedRepairLoop` | bounded task iterations or Flow control | conditional cycle edge | manager-mediated retry conversation |
+            | `FuguRouter` | hierarchical manager delegation | router node / conditional edge | group chat manager |
+
+            **Deliverable:** Choose one primitive and rebuild it twice: once with the course's offline adapter and once as CrewAI, LangGraph, or AutoGen pseudocode. The governance behavior must be the same in both versions.
             """
         ),
     ]

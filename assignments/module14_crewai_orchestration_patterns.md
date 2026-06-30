@@ -282,6 +282,136 @@ If `ReviewDecision.status == "needs_changes"`, route back to the Coder with type
 | End-to-end demo including failure path | 35% |
 | Peer review and iteration checklist | 30% |
 
+## Exercise 14.9: Sequential Research and Writing Pipeline
+
+**Scenario:** A learner needs to build a real multi-agent content workflow: Researcher -> Writer -> Editor. The Researcher gathers facts, the Writer drafts, and the Editor verifies the draft against the research.
+
+**Framework Pattern:** CrewAI `Process.sequential`.
+
+**Prompt:** Build the workflow using framework-native primitives:
+
+- `Agent`: Senior Market Researcher, Technical Content Writer, Chief Editor.
+- `Task`: research, writing, editing.
+- `Process`: sequential.
+- `Tools`: search tool only on the Researcher.
+- `Memory/Context`: `context=[research_task]` for Writer and `context=[research_task, writing_task]` for Editor.
+
+**Deliverables:**
+
+- CrewAI-style implementation or offline pseudocode skeleton.
+- Typed schema for research facts or final article.
+- One explanation of what breaks when the Writer does not receive `context=[research_task]`.
+
+**Constraints:**
+
+- Tool access must be least privilege.
+- Final output must cite or reference the research facts.
+- Live search/API keys are optional; offline mock facts are acceptable.
+
+**Rubric:**
+
+| Criterion | Weight |
+| --- | ---: |
+| Correct framework building blocks | 35% |
+| Correct context chain and hallucination-risk explanation | 35% |
+| Governance wrapped inside framework features | 30% |
+
+## Exercise 14.10: Hierarchical Customer Support Triage
+
+**Scenario:** A customer ticket may be about refunds, invoices, login failures, or API errors. A managed team should delegate dynamically to Billing or Technical Support without hardcoded keyword routing.
+
+**Framework Pattern:** CrewAI `Process.hierarchical`.
+
+**Prompt:** Design a hierarchical support crew:
+
+- `Billing Specialist`: refund and invoice issues.
+- `Technical Support Engineer`: login and API-key issues.
+- Manager LLM: delegates the task.
+- `SupportResolution` schema: final typed response.
+
+**Deliverables:**
+
+- CrewAI-style hierarchical crew definition or offline manager-adapter skeleton.
+- Two example tickets and expected delegation decisions.
+- Explanation of how tool scopes prevent Billing from reading logs and Technical Support from issuing refunds.
+
+**Constraints:**
+
+- Do not implement routing as `if "billing" in text`.
+- Manager delegation must still produce auditable reasoning.
+- Each specialist receives only the tools needed for its role.
+
+**Rubric:**
+
+| Criterion | Weight |
+| --- | ---: |
+| Clear hierarchical delegation design | 35% |
+| Least-privilege specialist tools | 35% |
+| Typed resolution and audit evidence | 30% |
+
+## Exercise 14.11: LangGraph Stateful Retry Loop
+
+**Scenario:** A Coder writes a patch, QA fails it, and the system must retry safely until the patch passes or the retry budget is exhausted.
+
+**Framework Pattern:** LangGraph `StateGraph`.
+
+**Prompt:** Build a stateful/cyclic workflow:
+
+- `AgentState`: `messages`, `code`, `test_passed`, `retry_count`.
+- `coder_node`: writes or repairs code based on state.
+- `qa_node`: returns typed test evidence.
+- `router_node`: returns `retry`, `end`, or `escalate`.
+- Conditional edges route `retry -> coder`, `end -> END`, and `escalate -> END`.
+
+**Deliverables:**
+
+- LangGraph-style graph or offline state-machine skeleton.
+- Passing scenario.
+- Escalation scenario after the retry budget is exhausted.
+- Explanation of why LangGraph is a better fit than a simple sequential crew for explicit cycles.
+
+**Constraints:**
+
+- Retry count must increment and be enforced.
+- QA evidence must be written into state for the next Coder attempt.
+- The final escalation must be typed, not a free-form string.
+
+**Rubric:**
+
+| Criterion | Weight |
+| --- | ---: |
+| Correct cyclic graph/state design | 40% |
+| Bounded retry and escalation | 35% |
+| Typed state and QA feedback | 25% |
+
+## Exercise 14.12: Framework Translation Table
+
+**Scenario:** Learners have built the governance primitives by hand. Now they must prove they can recognize the same primitives inside CrewAI, LangGraph, and AutoGen.
+
+**Prompt:** Complete the mapping below and implement one row in two ways: course offline adapter and framework-style pseudocode.
+
+| Course Primitive | CrewAI Equivalent | LangGraph Equivalent | AutoGen Equivalent |
+| --- | --- | --- | --- |
+| Specialist agent | `Agent(role=..., goal=...)` | Node function | `AssistantAgent` |
+| Typed handoff | `Task(output_pydantic=...)` | Typed state field | Structured message / function args |
+| Shared memory | `context=[...]`, `memory=True` | `State` / `TypedDict` | Conversation history |
+| Tool governance | `tools=[...]`, `allow_delegation=False` | guarded tool node | registered tool wrapper |
+| Bounded repair | bounded Flow/task control | conditional cycle edge | manager-mediated retry |
+
+**Deliverables:**
+
+- Completed mapping table.
+- One pair of implementations showing the same governance behavior.
+- Short trade-off note: control vs framework convenience.
+
+**Rubric:**
+
+| Criterion | Weight |
+| --- | ---: |
+| Accurate framework mapping | 40% |
+| Equivalent governance behavior in both versions | 40% |
+| Clear trade-off analysis | 20% |
+
 ## Production Takeaway
 
 CrewAI is a deployment accelerator, not a governance replacement. Use it to manage task structure, dependencies, parallelism, files, runtime inputs, and optional Flow-style state. Keep the course's governance layer around it: strict schemas, least-privilege tools, audit trails, repair budgets, and human approval.
