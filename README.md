@@ -1,4 +1,6 @@
-# Managing Multi-Agent Teams: Agentic AI & Vibe Coding
+# SRE for AI: Managing Multi-Agent Teams in Production
+
+**Stop Vibe Coding. Start Managing Vibe Coders.**
 
 This GitHub page is the learner-facing course overview. It explains what the course is, what learners will build, and how the modules fit together.
 
@@ -9,31 +11,42 @@ Start here:
 - Assignment path: [assignments/index.md](assignments/index.md)
 - Resource library: [resources/README.md](resources/README.md)
 
-This README is the course overview. It is the front page learners should read first on GitHub: the promise, mission, module map, scope boundaries, and success criteria all live here.
+This README is the course overview. It is the front page learners should read first on GitHub: the promise, mission, module map, scope boundary, and success criteria all live here.
 
 ## Course Promise
 
-By the end of this course, learners can design, build, test, and govern a production-grade multi-agent system that turns a raw software request into validated code through typed delegation, tool governance, shared memory, and self-repair.
+By the end of this course, you will be the **Senior Staff Engineer** who can tame reckless AI agents. You'll build guardrails, circuit breakers, and zero-trust boundaries that prevent brilliant-but-unstable AI "junior developers" from taking down production. You'll ship a multi-agent system that survives real-world chaos: infinite loops, hallucinated credentials, sycophantic agreement loops, and budget overruns.
 
 ## Course Philosophy
 
-Most Agentic AI courses teach you how to make agents talk. This course teaches you how to manage them when they lie, fail, and hallucinate. We do not rely on the LLM to be perfect. We rely on Pydantic schemas to enforce contracts, MCP gateways to enforce security, and bounded repair loops to enforce resilience. You will learn to build systems that are safe to deploy on Monday morning.
+**Most Agentic AI courses show you the magic. This course shows you the disaster—and then teaches you to prevent it.**
 
-The offline notebooks intentionally use deterministic mocks first. That is not because the LLM is unimportant; it is because the governance layer must be understood before API keys, rate limits, and model variability enter the room. Then the course shows the bridge: a mock LLM adapter that returns messy JSON, Pydantic rejection, repair feedback, and optional live LLM cells learners can enable with their own keys.
+Week 1, you'll build an unconstrained CrewAI team. It will loop infinitely. It will hallucinate API keys. It will agree with its own bad code. You'll watch it burn tokens and crash.
 
-## Three-Layer Delivery Model
+Then we give you the superhero tools:
+- **Pydantic schemas** as the sheriff that rejects malformed output
+- **MCP gateways** as the zero-trust bouncer blocking dangerous commands
+- **Theory of Mind** as the shared memory that prevents coordination failures
+- **Bounded repair loops** as the automatic retry mechanism with escape hatches
+- **Circuit breakers** as the budget enforcer that throws hard exceptions at $1.00
 
-Layer 1: The Deterministic Shell. Learners first run Pydantic schemas, tool policies, shared memory, and bounded repair loops with predictable mocked agents. In this layer, we assume the agents are perfect so we can test the pipes, security gates, and contracts.
+This isn't "vibe coding." This is **SRE for AI**—the enterprise-grade discipline of deploying agents safely on Monday morning.
 
-Layer 2: The Mock LLM Adapter. Next, learners introduce simulated LLM failure: messy JSON, hallucinated fields, unsafe paths, invalid enums, and missing fields. The governance shell catches the failure and sends validation feedback into the repair loop.
+## The Flip: Learn Pain Before Cure
 
-Layer 3: The Live LLM Integration. Finally, learners can enable optional `USE_LIVE_LLM = True` cells with their own API keys. The same schemas from Layer 1 now constrain a real model, and the same repair loop handles real nondeterminism.
+| Phase | What You Build | What Breaks | What You Learn |
+|-------|---------------|-------------|----------------|
+| **NB1: The Wild West** | Raw Writer + Reviewer agents | Infinite sycophantic loop, hallucinated code | Why unconstrained agents fail |
+| **NB2: The Pydantic Sheriff** | Rigid `ReviewTicket` schema | Free-text rejection becomes structured validation | Typed handoffs beat natural language |
+| **NB3: The Sandbox** | MCP gateway with auth policies | Agent tries `rm -rf /`, gets blocked | Zero-trust tool boundaries |
+| **NB4: The Bounded Repair** | ChatDev-style self-repair loop | Schema violations trigger auto-retry (max 3 attempts) | Resilience through capped recursion |
+| **NB5+: Production Patterns** | DLQ, routing, budget breakers, A2A perimeter | Complex failures need complex guardrails | Enterprise AgentOps |
 
-The deterministic functions are teaching adapters. They isolate the governance shell first, then the notebooks introduce messy mock LLM outputs, schema rejection, repair feedback, and optional live model calls.
+Live LLMs are available from Day 1 via Ollama (pre-installed in Codespaces). No API key anxiety. No rate limit surprises. Just pure, unfiltered chaos—and the tools to contain it.
 
 ## Audience
 
-This course is for engineers, technical leads, AI builders, and curriculum facilitators who already understand basic LLM prompting and want to move into managed agent teams.
+This course is for **Senior Backend Engineers, Technical Leads, and AI Builders** who need to deploy multi-agent systems to production. You already understand basic LLM prompting, but you've seen agents fail in embarrassing ways: infinite loops, hallucinated credentials, sycophantic agreement, budget overruns. You want enterprise-grade patterns—Zero-Trust AI, Bounded Autonomy, Typed Handoffs, and Agentic Circuit Breakers—that separate production-ready systems from weekend hobbyist demos.
 
 ## Prerequisites
 
@@ -61,23 +74,21 @@ After completing the course, learners will be able to:
 12. Compare custom orchestration with CrewAI-style production patterns for task dependencies, parallelism, artifact outputs, dynamic inputs, coding-agent teams, and hybrid governance.
 13. Elevate beginner agents such as Logistics Weather, Writer, QA, and CEO assistants into governed production exercises with schemas, gateways, memory, repair budgets, A2A defense, and TeamLog.
 
-## Module Map
+## Module Map: From Chaos to Control
 
-| Module | Theme | Primary Artifact | Learner Outcome |
+| Module | Theme | Primary Artifact | The "Aha!" Moment |
 | --- | --- | --- | --- |
-| Pre-Course | Controlled Jupyter Sandbox + Foundations | NB0 + Assignment 00A | Verify the environment, then learn why multi-agent systems need patterns, architecture choices, and governance |
-| 1 | Foundations & Vibe Coding | NB1 + Ex1 | Build a simple sequential agent team |
-| 2 | TeamLog & Theory of Mind | NB2 + Ex2 | Use memory to preserve commitments, hidden constraints, and compressed long-term context |
-| 3 | Agentic RAG & MCP | NB3 + Ex3 | Govern tool access through a standardized boundary |
-| 4 | Pydantic AI & Type-Safety | NB4 | Enforce schemas between agents |
-| 5 | Fugu Routing & ChatDev Self-Repair | NB5 + NB6 | Build bounded repair loops and rule-based heterogeneous routing |
-| 6 | Internet of Agents & Zero-Trust | NB11 + Ex4 | Design and test secure interoperable A2A systems across organizational boundaries |
-| API Boundary | Gateway & Async Orchestration | NB8 | Expose the system through governed HTTP endpoints |
-| Advanced Orchestration | Fugu Concepts | NB9 + Assignment 08 + Homework F | Progress from rule-based routing to conceptual learned orchestration, dynamic scaffolds, debate, and adaptive topology |
-| Vibe Coding CEO Interface | Human Manager Loop | NB10 + Assignment 09 | Manage an AI workforce through natural-language directives, plan edits, and final approval |
-| Enterprise A2A Perimeter | Cross-Org Zero-Trust | NB11 | Block unsafe cross-organization messages and audit denied payloads |
-| CrewAI Self-Contained Study Track | Production Framework Bridge | `crewai_learning/README.md` | Map course governance patterns to CrewAI-style crews, context chains, coding-agent teams, guardrails, failure recovery, and clean delivery |
-| Capstone | Virtual Software Company | NB8 + Assignment 13 | Integrate all patterns end to end |
+| **NB1** | The Wild West: Unconstrained Agents | Two agents in infinite loop | Watch your agents burn tokens agreeing with bad code |
+| **NB2** | The Pydantic Sheriff | `ReviewTicket` schema | First time schema rejection stops hallucinated output |
+| **NB3** | The Sandbox: MCP Gateway | Zero-trust auth policy | Agent tries `rm -rf /` and gets blocked |
+| **NB4** | Bounded Repair Loop | ChatDev-style retry (max 3) | Auto-repair fixes schema violations without human intervention |
+| **NB5-6** | Dynamic Routing & Circuit Breakers | Budget breaker at $1.00 | Hard exception prevents budget overrun |
+| **NB7** | Dead-Letter Queue | DLQ serializer | Failed agents drop to human-review queue instead of crashing |
+| **NB8** | API Boundary & Async Orchestration | Governed HTTP endpoints | External requests hit rate-limited, authenticated gateway |
+| **NB9** | Advanced Orchestration Patterns | Learned routing vs static rules | LLM-as-router makes smarter decisions than hardcoded if-statements |
+| **NB10** | Vibe Coding CEO Interface | Natural language → typed plans | Human directive becomes structured `ProjectPlan` + `TeamCommitment` |
+| **NB11** | Enterprise A2A Perimeter | Cross-org payload auditor | Unsafe inter-agent message blocked and logged to DLQ |
+| **Capstone** | Virtual Software Company | Dockerized CRUD API + tests | Multi-agent team ships production-ready microservice end-to-end |
 
 ## Basic Agent Governance Labs
 
@@ -132,10 +143,27 @@ The course uses software delivery, logistics weather-risk checks, writing/review
 
 A learner is successful when they can:
 
-- Set up the environment using the setup guide, run NB0 successfully, and complete the verification commands.
-- Complete Assignment 00A and explain why a given task needs a multi-agent system rather than one super agent.
-- Complete the core notebooks before attempting Assignment 12 and the capstone. Use NB9 and NB11 for advanced orchestration and enterprise perimeter practice, and use `crewai_learning/README.md` as a separate self-contained CrewAI study path.
-- Explain the purpose of each schema, tool policy, routing decision, architecture choice, and interaction pattern.
-- Submit a capstone with typed contracts, governed tools, shared memory, bounded repair, architecture ADR, interaction-pattern map, and challenge-mitigation proof tests.
+- **Set up the environment** using the setup guide, run NB0 successfully, and complete the verification commands.
+- **Demonstrate the failure** by running NB1's unconstrained agents and watching them loop infinitely or hallucinate.
+- **Deploy the first guardrail** in NB2 and show Pydantic rejecting malformed agent output.
+- **Block a dangerous command** in NB3 by implementing zero-trust MCP gateway policies.
+- **Auto-repair failures** in NB4 with bounded retry loops that fix schema violations without human intervention.
+- **Complete the capstone** with a Dockerized CRUD API that includes typed contracts, governed tools, shared memory, circuit breakers, DLQ integration, and proof tests for malfunction scenarios.
+
+## The Competitive Moat: SRE for AI
+
+Most courses teach capabilities: "Make agents write a blog post." This course teaches **reliability**: "Make agents survive production."
+
+| Other Courses | This Course |
+|--------------|-------------|
+| How to make agents talk | How to stop them from lying |
+| Demo-ware that breaks in prod | Guardrails that deploy Monday morning |
+| Unlimited token budgets | Circuit breakers at $1.00 |
+| Free-text handoffs | Typed Pydantic contracts |
+| Trust all tools | Zero-trust MCP gateways |
+| Infinite retry loops | Bounded repair with DLQ escape |
+| Single-org playground | Cross-org A2A perimeter defense |
+
+**Key Terms You'll Master:** Zero-Trust AI, Bounded Autonomy, Typed Handoffs, Agentic Circuit Breakers, Dead-Letter Queues, Semantic Routing Gateways, A2A Perimeter Checks, Theory of Mind Memory, ChatDev Self-Repair, Fugu Dynamic Routing.
 
 Instructor delivery materials live in [instructor/](instructor/). Use that folder for rubrics, solution guides, delivery checklists, verification commands, and teaching support.
