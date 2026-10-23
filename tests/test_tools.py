@@ -13,6 +13,23 @@ from src.enterprise_agent_team import (
     check_teamlog_commitments,
 )
 
+pytestmark = pytest.mark.unit
+
+
+@pytest.mark.parametrize("clearance", list(TrustTier))
+@pytest.mark.parametrize("sensitivity", list(TrustTier))
+def test_tool_policy_enforces_the_complete_clearance_order(clearance, sensitivity):
+    order = [TrustTier.PUBLIC, TrustTier.CONFIDENTIAL, TrustTier.RESTRICTED]
+    caller = AgentIdentity(agent_id="reader", role=AgentRole.CODER, org_id="training",
+                           scopes={ToolName.SEARCH_MEMORY}, clearance=clearance)
+    request = ToolRequest(caller=caller, tool=ToolName.SEARCH_MEMORY,
+                          args={"query": "task"}, data_sensitivity=sensitivity)
+    if order.index(clearance) < order.index(sensitivity):
+        with pytest.raises(PermissionError):
+            ToolPolicy().authorize(request)
+    else:
+        ToolPolicy().authorize(request)
+
 
 def test_tool_policy_allows_scoped_confidential_request() -> None:
     policy = ToolPolicy()

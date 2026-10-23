@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1080" viewBox="0 0 1440 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Lab 2: team boundaries and a local typed QA handoff</title>
+  <desc id="desc">The human delivery manager supervises an Engineering Manager who coordinates a writing Coder and a separate read and verify QA Auditor. The Architect task carries rules from team_log as an artifact, not an agent. Dashed arrows indicate configured relationships only. The actual local path is a synthetic Coder payload through the supplied manager audit gate. The gate checks role tools, task context, owners, output contracts, and strict CodePatch validation. PASS_TO_QA admits one typed proposal to a simulated local inbox. BLOCK returns to repair and leaves the inbox empty. No agent kickoff, QA task, real test, git operation, or deployment runs.</desc>
+  <defs>
+    <marker id="solid-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#225847"/></marker>
+    <marker id="config-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#53657a"/></marker>
+    <marker id="block-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#9c3a30"/></marker>
+    <style>
+      text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; fill: #172b3a; }
+      .title { font-size: 32px; font-weight: 750; }
+      .subtitle { font-size: 18px; fill: #4a5b6c; }
+      .section { font-size: 15px; font-weight: 750; letter-spacing: 1px; fill: #40566a; }
+      .heading { font-size: 22px; font-weight: 700; }
+      .body { font-size: 17px; }
+      .small { font-size: 15px; fill: #40566a; }
+      .mono { font-family: "SFMono-Regular", Consolas, monospace; font-size: 16px; }
+      .label { font-size: 15px; font-weight: 650; fill: #40566a; }
+      .card { fill: #fff; stroke: #a6b4c1; stroke-width: 1.5; }
+      .config { fill: none; stroke: #53657a; stroke-width: 2; stroke-dasharray: 7 6; marker-end: url(#config-arrow); }
+      .flow { fill: none; stroke: #225847; stroke-width: 3; marker-end: url(#solid-arrow); }
+      .block { fill: none; stroke: #9c3a30; stroke-width: 3; marker-end: url(#block-arrow); }
+    </style>
+  </defs>
+  <rect width="1440" height="1080" rx="22" fill="#f5f8fb"/>
+  <text x="52" y="59" class="title">Lab 2 · Who writes, who verifies, who decides</text>
+  <text x="52" y="91" class="subtitle">A deterministic management exercise: configured CrewAI roles, local fixtures, and an inspectable audit.</text>
+
+  <text x="52" y="132" class="section">01 / CONFIGURED RESPONSIBILITIES</text>
+  <rect x="52" y="154" width="322" height="118" rx="12" fill="#e7eef7" stroke="#7b95b1" stroke-width="1.5"/>
+  <text x="72" y="186" class="heading">HUMAN · Delivery manager</text>
+  <text x="72" y="215" class="body">Inspect checks and record evidence.</text>
+  <text x="72" y="242" class="body">Decide the next owner.</text>
+
+  <path d="M374 210 H452" class="config"/>
+  <text x="382" y="195" font-size="14" font-weight="650" fill="#40566a">supervise</text>
+  <rect x="456" y="154" width="350" height="118" rx="12" fill="#e7eef7" stroke="#7b95b1" stroke-width="1.5"/>
+  <text x="476" y="186" class="heading">Engineering Manager</text>
+  <text x="476" y="215" class="body">Coordinate, review, and delegate.</text>
+  <text x="476" y="242" class="mono">approve_code_tool only</text>
+
+  <path d="M631 272 V326" class="config"/>
+  <text x="644" y="308" class="label">coordinate</text>
+  <path d="M806 210 H1200 V326" class="config"/>
+  <text x="912" y="197" class="label">coordinate separate verification</text>
+
+  <rect x="52" y="330" width="322" height="178" rx="12" fill="#fff7e7" stroke="#b69c62" stroke-width="1.5"/>
+  <text x="72" y="363" class="heading">Architect TASK</text>
+  <text x="72" y="391" class="body">Prior artifact, not a fourth agent.</text>
+  <text x="72" y="422" class="mono">team_log → ArchitectBrief</text>
+  <text x="72" y="452" class="body">Carries the approved rules:</text>
+  <text x="72" y="480" class="mono">user_id must be a string</text>
+
+  <path d="M374 420 H452" class="config"/>
+  <text x="382" y="403" class="label">context</text>
+  <rect x="456" y="330" width="350" height="178" rx="12" class="card"/>
+  <text x="476" y="363" class="heading">Senior Coder · WRITE</text>
+  <text x="476" y="391" class="mono">write_code_tool only</text>
+  <text x="476" y="422" class="body">Receives the Architect task.</text>
+  <text x="476" y="452" class="body">Declares typed patch output:</text>
+  <text x="476" y="480" class="mono">output_pydantic=CodePatch</text>
+
+  <path d="M806 420 H1036" class="config"/>
+  <text x="825" y="400" class="label">typed task dependency</text>
+  <text x="853" y="448" class="small">configuration only</text>
+  <rect x="1040" y="330" width="348" height="178" rx="12" class="card"/>
+  <text x="1060" y="363" class="heading">QA · READ / VERIFY</text>
+  <text x="1060" y="391" class="mono">run_tests_tool only</text>
+  <text x="1060" y="422" class="body">Owns the separate QA task.</text>
+  <text x="1060" y="452" class="mono">QAReport declared</text>
+  <text x="1060" y="480" class="body">Not executed in this lab.</text>
+
+  <path d="M52 554 H1388" stroke="#cbd6df" stroke-width="1.5"/>
+  <text x="52" y="590" class="section">02 / ACTUAL REQUIRED PATH · LOCAL PYTHON, NO AGENT EXECUTION</text>
+  <path d="M897 583 H949" class="flow"/>
+  <text x="961" y="589" class="small">local flow</text>
+  <path d="M1099 583 H1151" class="config"/>
+  <text x="1163" y="589" class="small">configured relationship</text>
+
+  <rect x="52" y="650" width="322" height="176" rx="12" class="card"/>
+  <text x="72" y="684" class="heading">Local Coder fixture</text>
+  <text x="72" y="715" class="mono">mock_coder_output</text>
+  <text x="72" y="746" class="body">Context present → string "101".</text>
+  <text x="72" y="774" class="body">Context missing → integer 101.</text>
+  <text x="72" y="802" class="small">Synthetic payload; no model call.</text>
+
+  <path d="M374 736 H452" class="flow"/>
+  <text x="384" y="716" class="label">inspect</text>
+  <rect x="456" y="650" width="440" height="176" rx="12" fill="#e9f4ee" stroke="#628e7b" stroke-width="1.5"/>
+  <text x="476" y="684" class="heading">Manager's audit gate · supplied</text>
+  <text x="476" y="715" class="body">Role tools · owners · task context</text>
+  <text x="476" y="746" class="body">Output models · current payload</text>
+  <text x="476" y="774" class="mono">Strict CodePatch validation</text>
+  <text x="476" y="802" class="small">All checks must pass to admit a proposal.</text>
+
+  <path d="M896 736 H1036" class="flow"/>
+  <text x="907" y="715" font-size="16" font-weight="750" fill="#225847">PASS_TO_QA</text>
+  <rect x="1040" y="650" width="348" height="176" rx="12" fill="#e9f4ee" stroke="#628e7b" stroke-width="1.5"/>
+  <text x="1060" y="684" class="heading">Local QA inbox</text>
+  <text x="1060" y="715" class="mono">qa_inbox</text>
+  <text x="1060" y="746" class="body">One typed CodePatch on pass.</text>
+  <text x="1060" y="774" class="body">Empty on block; reset each run.</text>
+  <text x="1060" y="802" class="small">Simulated handoff, not QA execution.</text>
+
+  <path d="M676 826 V856 H220 V888" class="block"/>
+  <rect x="466" y="840" width="74" height="30" rx="5" fill="#f5f8fb"/>
+  <text x="476" y="861" font-size="16" font-weight="750" fill="#9c3a30">BLOCK</text>
+  <rect x="52" y="892" width="428" height="126" rx="12" fill="#fff1ee" stroke="#c28b82" stroke-width="1.5"/>
+  <text x="72" y="927" class="heading">Repair and rerun</text>
+  <text x="72" y="958" class="body">Fix the Manager allowlist or Coder context.</text>
+  <text x="72" y="987" class="body">Rerun config → fixture → audit.</text>
+
+  <rect x="520" y="892" width="868" height="126" rx="12" fill="#e7eef7"/>
+  <text x="540" y="927" class="heading">A passed handoff still needs independent review.</text>
+  <text x="540" y="958" class="body">No kickoff, QA task, real test, git operation, or deployment runs here.</text>
+  <text x="540" y="987" class="body">Live extension: evidence for the exact revision + human approval.</text>
+  <text x="52" y="1054" class="small">Learner evidence: observed checks + decision sentence + unchanged /15 grader. This diagram adds no new code or marks.</text>
+</svg>

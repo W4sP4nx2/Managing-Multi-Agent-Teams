@@ -1,0 +1,40 @@
+{
+  "mode": "simulation",
+  "actual_cost": "0.00",
+  "provider_calls": 0,
+  "default_simulated_budget": "0.50",
+  "local_publish_cost": "0.05",
+  "notes": "All outputs are checked-in deterministic fixtures and local checks. Model names are illustrative historical labels, not running models, current availability promises, or claims of actual thinking. Costs are configurable teaching units only; actual API cost and provider calls stay zero. No keys, endpoints, paid profiles, or provider setup are accepted.",
+  "roles": {
+    "manager": {
+      "provider": "offline",
+      "model": "GPT-4 (simulated label)",
+      "purpose": "Engineering manager plans and routes work",
+      "simulated_cost": "0.05"
+    },
+    "coder": {
+      "provider": "offline",
+      "model": "Claude 3.5 (simulated label)",
+      "purpose": "Coder returns the checked-in travel HTML/CSS fixture",
+      "simulated_cost": "0.15"
+    },
+    "security": {
+      "provider": "offline",
+      "model": "GPT-4 Turbo (simulated label)",
+      "purpose": "Auditor demonstrates review with local security checks",
+      "simulated_cost": "0.10"
+    },
+    "ui_ux": {
+      "provider": "offline",
+      "model": "GPT-4 Vision (simulated label)",
+      "purpose": "UI/UX reviewer inspects bounded source properties",
+      "simulated_cost": "0.10"
+    },
+    "qa": {
+      "provider": "offline",
+      "model": "GPT-3.5 (simulated label)",
+      "purpose": "QA returns declarative cases executed by local checks",
+      "simulated_cost": "0.05"
+    }
+  }
+}

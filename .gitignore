@@ -1,6 +1,11 @@
 .DS_Store
 __pycache__/
 .pytest_cache/
+.test-results/
+dist/
+output/software-factory/
+output/reference-preview/
+*.factory-publish.lock
 *.pyc
 .ipynb_checkpoints/
 node_modules/

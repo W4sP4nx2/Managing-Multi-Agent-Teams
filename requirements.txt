@@ -1,15 +1,7 @@
-pydantic>=2.7
-fastapi>=0.110
-pytest>=8.0
-pytest-asyncio>=0.23
-pytest-cov>=5.0
-pytest-timeout>=2.3
-
-# Optional production integrations used in the course narrative.
-# Install these when converting the offline teaching adapter into a live system:
-# uvicorn
-# pydantic-ai
-# langgraph
-# crewai
-# pyautogen
-# mcp
+# Required offline course. Use Python 3.12. No provider SDK or API key required.
+# One install: python -m pip install -r requirements.txt
+pydantic==2.12.5
+jupyterlab==4.6.4
+ipykernel==7.4.0
+crewai==1.15.23
+pytest==9.1.1

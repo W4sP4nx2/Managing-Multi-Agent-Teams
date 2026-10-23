@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="1760" viewBox="0 0 1760 1760" role="img" aria-labelledby="erd-title erd-description">
+<title id="erd-title">Capstone ERD: implemented local factory evidence and simulated costs</title>
+<desc id="erd-description">Read from the run to its candidate artifact, reviews and QA, approval, and local publication receipt. The factory.sqlite evidence database has factory_runs as the parent of artifacts, stage_approvals, reviews, qa_cases, deployments, and factory_events through real foreign keys. Reviews, QA cases, and deployments also reference artifacts. Deployments reference stage approvals. These ten relationships each permit one parent to zero or many children. The separate simulated_costs.sqlite database contains simulated_cost_runs and simulated_cost_events. Their run_id association, and the run_id association across databases, are logical joins without SQLite foreign keys. A SQLite insert trigger checks matching approved publication, run, artifact SHA-256, and Git revision; application code also checks committed bytes and local target. Notebook approvals use a named fixture actor, while the terminal asks a person. The travel page is static HTML containing Kyoto, Lisbon, and Chiang Mai; no travel-domain tables exist.</desc>
+<defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#172b44}.title{font-size:32px;font-weight:700}.subtitle{font-size:19px}.panel{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.panel-title{font-size:23px;font-weight:700}.table{fill:#fff;stroke:#334155;stroke-width:2}.header{fill:#e6edf5;stroke:#334155;stroke-width:2}.name{font-size:23px;font-weight:700}.field{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:19px}.note{font-size:17px}.legend{font-size:18px}.run{fill:none;stroke:#3878a5;stroke-width:3;marker-end:url(#blue-arrow)}.artifact{fill:none;stroke:#26745d;stroke-width:3;marker-end:url(#green-arrow)}.approval{fill:none;stroke:#a46808;stroke-width:3;marker-end:url(#gold-arrow)}.logical{fill:none;stroke:#7c6094;stroke-width:3;stroke-dasharray:9 7;marker-end:url(#purple-arrow)}</style>
+<marker id="blue-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#3878a5"/></marker>
+<marker id="green-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#26745d"/></marker>
+<marker id="gold-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#a46808"/></marker>
+<marker id="purple-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7c6094"/></marker>
+</defs><rect width="1760" height="1760" fill="#fff"/>
+<text x="50" y="53" class="title">Capstone · Local factory evidence model</text>
+<text x="50" y="88" class="subtitle">Read: run → candidate → reviews / QA → approval → local publication. PK identifies a row; FK references a parent.</text>
+<rect x="35" y="120" width="1690" height="1150" rx="16" class="panel"/>
+<text x="65" y="158" class="panel-title">factory.sqlite</text>
+<text x="300" y="157" class="legend">Solid arrows = declared foreign keys, parent 1 → child 0..many</text>
+<rect x="35" y="1320" width="1690" height="355" rx="16" class="panel"/>
+<text x="65" y="1358" class="panel-title">simulated_costs.sqlite</text>
+<text x="350" y="1357" class="legend">Separate file · simulated teaching amounts only · actual API cost $0.00</text>
+
+<path d="M880 422V480H290V520" class="run"/>
+<path d="M880 422V520" class="run"/>
+<path d="M880 480H1470V520" class="run"/>
+<path d="M290 480H48V866H290V900" class="run"/>
+<path d="M880 480H585V866H880V900" class="run"/>
+<path d="M1470 480H1195V866H1470V900" class="run"/>
+<text x="635" y="466" class="note" style="fill:#3878a5">run_id → all six child tables</text>
+<path d="M880 710V818H290V900" class="artifact"/>
+<path d="M880 710V900" class="artifact"/>
+<path d="M880 818H1470V900" class="artifact"/>
+<text x="638" y="800" class="note" style="fill:#26745d">artifact_id → review / QA / publication</text>
+<path d="M510 655H548V1238H1708V1045H1690" class="approval"/>
+<text x="1010" y="1227" class="note" style="fill:#8a5700">approval_id → deployment (1 → 0..many)</text>
+<path d="M660 300H18V1300H780V1475H730" class="logical"/>
+<text x="65" y="1290" class="note" style="fill:#6c4d85">Dashed purple = logical run_id association; no SQLite foreign key across files</text>
+<path d="M400 1518V1635H1320V1598" class="logical"/>
+<text x="725" y="1660" class="note" style="fill:#6c4d85">run_id: logical 1 → 0..many; ledger schema declares no FK</text>
+<rect x="660" y="180" width="440" height="242" rx="9" class="table"/>
+<path d="M669 180H1091Q1100 180 1100 189V227H660V189Q660 180 669 180Z" class="header"/>
+<text x="678" y="212" class="name">factory_runs</text>
+<text x="678" y="257" class="field">PK  run_id : TEXT</text>
+<text x="678" y="283" class="field">    mode : TEXT</text>
+<text x="678" y="309" class="field">    request_sha256 : TEXT</text>
+<text x="678" y="335" class="field">    status : TEXT</text>
+<text x="678" y="361" class="field">    branch : TEXT (nullable)</text>
+<text x="678" y="387" class="field">    created_at : TEXT</text>
+<text x="678" y="413" class="field">    config_json : TEXT</text>
+<rect x="70" y="520" width="440" height="242" rx="9" class="table"/>
+<path d="M79 520H501Q510 520 510 529V567H70V529Q70 520 79 520Z" class="header"/>
+<text x="88" y="552" class="name">stage_approvals</text>
+<text x="88" y="597" class="field">PK  approval_id : INTEGER</text>
+<text x="88" y="623" class="field">FK  run_id : TEXT</text>
+<text x="88" y="649" class="field">    stage : TEXT</text>
+<text x="88" y="675" class="field">    subject_sha256 : TEXT</text>
+<text x="88" y="701" class="field">    approved : INTEGER (0/1)</text>
+<text x="88" y="727" class="field">    actor : TEXT</text>
+<text x="88" y="753" class="field">    created_at : TEXT</text>
+<rect x="650" y="520" width="460" height="190" rx="9" class="table"/>
+<path d="M659 520H1101Q1110 520 1110 529V567H650V529Q650 520 659 520Z" class="header"/>
+<text x="668" y="552" class="name">artifacts</text>
+<text x="668" y="597" class="field">PK  artifact_id : TEXT</text>
+<text x="668" y="623" class="field">FK  run_id : TEXT</text>
+<text x="668" y="649" class="field">    sha256 : TEXT</text>
+<text x="668" y="675" class="field">    source_commit : TEXT *</text>
+<text x="668" y="701" class="field">    path : TEXT</text>
+<rect x="1250" y="520" width="440" height="190" rx="9" class="table"/>
+<path d="M1259 520H1681Q1690 520 1690 529V567H1250V529Q1250 520 1259 520Z" class="header"/>
+<text x="1268" y="552" class="name">factory_events</text>
+<text x="1268" y="597" class="field">PK  event_id : INTEGER</text>
+<text x="1268" y="623" class="field">FK  run_id : TEXT</text>
+<text x="1268" y="649" class="field">    stage : TEXT</text>
+<text x="1268" y="675" class="field">    payload_json : TEXT</text>
+<text x="1268" y="701" class="field">    created_at : TEXT</text>
+<rect x="70" y="900" width="440" height="242" rx="9" class="table"/>
+<path d="M79 900H501Q510 900 510 909V947H70V909Q70 900 79 900Z" class="header"/>
+<text x="88" y="932" class="name">reviews</text>
+<text x="88" y="977" class="field">PK  review_id : INTEGER</text>
+<text x="88" y="1003" class="field">FK  run_id : TEXT</text>
+<text x="88" y="1029" class="field">FK  artifact_id : TEXT</text>
+<text x="88" y="1055" class="field">    role : TEXT</text>
+<text x="88" y="1081" class="field">    approved : INTEGER (0/1)</text>
+<text x="88" y="1107" class="field">    issues_json : TEXT</text>
+<text x="88" y="1133" class="field">    summary : TEXT</text>
+<rect x="650" y="900" width="460" height="294" rx="9" class="table"/>
+<path d="M659 900H1101Q1110 900 1110 909V947H650V909Q650 900 659 900Z" class="header"/>
+<text x="668" y="932" class="name">qa_cases</text>
+<text x="668" y="977" class="field">PK  case_id : INTEGER</text>
+<text x="668" y="1003" class="field">FK  run_id : TEXT</text>
+<text x="668" y="1029" class="field">FK  artifact_id : TEXT</text>
+<text x="668" y="1055" class="field">    name : TEXT</text>
+<text x="668" y="1081" class="field">    selector : TEXT</text>
+<text x="668" y="1107" class="field">    assertion : TEXT</text>
+<text x="668" y="1133" class="field">    expected : TEXT</text>
+<text x="668" y="1159" class="field">    passed : INTEGER (0/1)</text>
+<text x="668" y="1185" class="field">    observed : TEXT</text>
+<rect x="1250" y="900" width="440" height="294" rx="9" class="table"/>
+<path d="M1259 900H1681Q1690 900 1690 909V947H1250V909Q1250 900 1259 900Z" class="header"/>
+<text x="1268" y="932" class="name">deployments</text>
+<text x="1268" y="977" class="field">PK  deployment_id : INTEGER</text>
+<text x="1268" y="1003" class="field">FK  run_id : TEXT</text>
+<text x="1268" y="1029" class="field">FK  artifact_id : TEXT</text>
+<text x="1268" y="1055" class="field">FK  approval_id : INTEGER</text>
+<text x="1268" y="1081" class="field">    target_path : TEXT</text>
+<text x="1268" y="1107" class="field">    sha256 : TEXT</text>
+<text x="1268" y="1133" class="field">    commit_sha : TEXT</text>
+<text x="1268" y="1159" class="field">    status : TEXT **</text>
+<text x="1268" y="1185" class="field">    created_at : TEXT</text>
+<text x="75" y="1170" class="note">* source_commit nullable before commit</text>
+<text x="75" y="1198" class="note">** status: PREPARED or PUBLISHED</text>
+<rect x="70" y="1400" width="660" height="112" rx="9" class="table"/>
+<path d="M79 1400H721Q730 1400 730 1409V1447H70V1409Q70 1400 79 1400Z" class="header"/>
+<text x="88" y="1432" class="name">simulated_cost_runs</text>
+<text x="88" y="1477" class="field">PK  run_id : TEXT</text>
+<text x="88" y="1503" class="field">    budget_cents : INTEGER (nonnegative)</text>
+<rect x="960" y="1382" width="730" height="216" rx="9" class="table"/>
+<path d="M969 1382H1681Q1690 1382 1690 1391V1429H960V1391Q960 1382 969 1382Z" class="header"/>
+<text x="978" y="1414" class="name">simulated_cost_events</text>
+<text x="978" y="1459" class="field">PK  event_id : INTEGER</text>
+<text x="978" y="1485" class="field">    run_id : TEXT (logical key, no FK)</text>
+<text x="978" y="1511" class="field">    stage : TEXT</text>
+<text x="978" y="1537" class="field">    amount_cents : INTEGER (nonnegative)</text>
+<text x="978" y="1563" class="field">    idempotency_key : TEXT</text>
+<text x="978" y="1589" class="field">    recorded_at : TEXT</text>
+<text x="90" y="1544" class="note">UNIQUE(run_id, idempotency_key) on cost events</text>
+<text x="90" y="1572" class="note">A retry cannot invent another simulated cost entry.</text>
+<text x="50" y="1700" class="legend">Approval and DB trigger: artifact hash + Git revision. Application also checks target path. Static travel page: Kyoto / Lisbon / Chiang Mai.</text>
+<text x="50" y="1740" class="legend">Notebook 05: inspect generated evidence; do not edit this schema. Decisions use a notebook fixture; the terminal run asks a person.</text>
+</svg>

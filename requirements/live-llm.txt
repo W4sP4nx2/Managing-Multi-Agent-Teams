@@ -1,0 +1,3 @@
+# Compatibility path retained for earlier course links.
+# The current factory is deterministic, requires no API keys, and makes no provider calls.
+-r ../requirements.txt

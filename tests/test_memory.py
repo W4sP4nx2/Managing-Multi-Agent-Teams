@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import pytest
+
 from src.enterprise_agent_team import (
     AgentIdentity,
     AgentRole,
@@ -7,6 +9,8 @@ from src.enterprise_agent_team import (
     SharedAgenticMemory,
     TrustTier,
 )
+
+pytestmark = pytest.mark.unit
 
 
 def test_memory_visibility_by_sensitivity() -> None:

@@ -1,0 +1,69 @@
+{
+  "verified_on": "2026-10-20",
+  "pricing_scope": "USD per one million text tokens, standard synchronous direct API, short context; configured estimates, not a provider invoice. Cache discounts are deliberately not deducted. No tools, cache writes, regional routing, batch, priority service, or automatic retries are requested.",
+  "notes": "Explicit example model selection. Confirm your account has access and verify current rates before approving live mode. Routes are never silently substituted. Input limits are deliberately below long-context pricing thresholds. Output limits include billed reasoning tokens. The original GPT-4 / Claude 3.5 / GPT-4 Turbo / GPT-3.5 list is retained below as historical intent, not a runnable profile.",
+  "sources": [
+    "https://developers.openai.com/api/docs/models/gpt-6-sol",
+    "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+    "https://developers.openai.com/api/docs/models/gpt-6-luna",
+    "https://developers.openai.com/api/docs/pricing",
+    "https://developers.openai.com/api/docs/guides/structured-outputs",
+    "https://platform.claude.com/docs/en/models/overview",
+    "https://platform.claude.com/docs/en/about-claude/pricing",
+    "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+    "https://platform.claude.com/docs/en/api/messages/create"
+  ],
+  "legacy_request": {
+    "GPT-4": "Historical requested model; verify availability and API compatibility before manually selecting it.",
+    "Claude 3.5": "Claude Sonnet 3.5 retired on October 28, 2025; the live harness rejects its retired model IDs. No silent replacement.",
+    "GPT-4 Turbo": "Historical requested model marked deprecated in official documentation; no automatic mapping to a newer model.",
+    "GPT-3.5": "Historical requested GPT-3.5 Turbo marked deprecated in official documentation; no automatic mapping to a newer model."
+  },
+  "routes": {
+    "manager": {
+      "provider": "openai",
+      "model": "gpt-6-sol",
+      "max_input_tokens": 24000,
+      "max_output_tokens": 4000,
+      "input_rate": "2.00",
+      "output_rate": "10.00",
+      "reasoning_effort": "low"
+    },
+    "coder": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-5-5",
+      "max_input_tokens": 48000,
+      "max_output_tokens": 12000,
+      "input_rate": "2.00",
+      "output_rate": "10.00",
+      "reasoning_effort": "low"
+    },
+    "security": {
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "max_input_tokens": 64000,
+      "max_output_tokens": 4000,
+      "input_rate": "4.00",
+      "output_rate": "20.00",
+      "reasoning_effort": "low"
+    },
+    "ui_ux": {
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "max_input_tokens": 64000,
+      "max_output_tokens": 4000,
+      "input_rate": "2.00",
+      "output_rate": "12.00",
+      "reasoning_effort": "low"
+    },
+    "qa": {
+      "provider": "openai",
+      "model": "gpt-6-luna",
+      "max_input_tokens": 64000,
+      "max_output_tokens": 4000,
+      "input_rate": "0.10",
+      "output_rate": "0.50",
+      "reasoning_effort": "low"
+    }
+  }
+}

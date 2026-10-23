@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 
+import pytest
+
 from src.enterprise_agent_team import (
     AgentRole,
     CodeFile,
@@ -13,6 +15,8 @@ from src.enterprise_agent_team import (
     product_manager_parse_issue,
     run_python_patch_tests,
 )
+
+pytestmark = pytest.mark.integration
 
 
 def test_pm_to_coder_handoff() -> None:

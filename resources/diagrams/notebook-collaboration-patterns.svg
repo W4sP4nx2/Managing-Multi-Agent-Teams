@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">Four collaboration architectures in the local routing exercise</title>
+  <desc id="desc">Independent workers keep private readiness reports and make no shared handoff decision. Decentralized peers exchange readiness reports with each other and each applies the same packet and readiness rule. A centralized coordinator receives all three reports and makes the handoff decision. The hybrid model combines local specialist gates with a central packet policy gate. These are synchronous Python records, not running CrewAI agents or language models. The learner changes Security readiness and packet validity while fixed assertions prove that failed evidence blocks every coordinated route.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+    <style>
+      text { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #172554; }
+      .title { font-size: 27px; font-weight: 700; }
+      .heading { font-size: 21px; font-weight: 700; }
+      .body { font-size: 17px; }
+      .small { font-size: 16px; }
+      .node { fill: #ffffff; stroke: #64748b; stroke-width: 2; }
+      .gate { fill: #e0e7ff; stroke: #4338ca; stroke-width: 2; }
+      .line { fill: none; stroke: #475569; stroke-width: 2; marker-end: url(#arrow); }
+      .peer { fill: none; stroke: #475569; stroke-width: 2; marker-start: url(#arrow); marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="780" rx="18" fill="#f8fafc"/>
+  <text x="32" y="43" class="title">Roles describe responsibility · Rules gate handoffs · Topology routes evidence</text>
+  <text x="32" y="74" class="body">Local Python records only · same acceptance rule across the three coordinated models</text>
+
+  <rect x="24" y="96" width="1152" height="142" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="46" y="130" class="heading">Independent</text>
+  <text x="46" y="158" class="body">Private readiness reports</text>
+  <text x="46" y="186" class="body">No shared decision</text>
+  <rect x="390" y="122" width="190" height="64" rx="8" class="node"/>
+  <rect x="655" y="122" width="190" height="64" rx="8" class="node"/>
+  <rect x="920" y="122" width="190" height="64" rx="8" class="node"/>
+  <text x="485" y="161" text-anchor="middle" class="heading">Coder</text>
+  <text x="750" y="161" text-anchor="middle" class="heading">QA</text>
+  <text x="1015" y="161" text-anchor="middle" class="heading">Security</text>
+  <text x="390" y="216" class="small">No evidence paths connect the workers in this model.</text>
+
+  <rect x="24" y="250" width="1152" height="142" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="46" y="284" class="heading">Decentralized</text>
+  <text x="46" y="312" class="body">Peers exchange reports</text>
+  <text x="46" y="340" class="body">Each peer applies the rule</text>
+  <rect x="390" y="277" width="190" height="52" rx="8" class="node"/>
+  <rect x="655" y="277" width="190" height="52" rx="8" class="node"/>
+  <rect x="920" y="277" width="190" height="52" rx="8" class="node"/>
+  <text x="485" y="310" text-anchor="middle" class="heading">Coder</text>
+  <text x="750" y="310" text-anchor="middle" class="heading">QA</text>
+  <text x="1015" y="310" text-anchor="middle" class="heading">Security</text>
+  <path d="M586,303 H649" class="peer"/>
+  <path d="M851,303 H914" class="peer"/>
+  <path d="M485,335 V354 H1015 V335" class="peer"/>
+  <text x="390" y="378" class="small">All three must agree · no central decision owner.</text>
+
+  <rect x="24" y="404" width="1152" height="142" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="46" y="438" class="heading">Centralized</text>
+  <text x="46" y="466" class="body">Reports flow to one owner</text>
+  <text x="46" y="494" class="body">Coordinator applies the rule</text>
+  <rect x="635" y="416" width="230" height="42" rx="8" class="gate"/>
+  <text x="750" y="444" text-anchor="middle" class="heading">Coordinator</text>
+  <rect x="390" y="497" width="190" height="35" rx="8" class="node"/>
+  <rect x="655" y="497" width="190" height="35" rx="8" class="node"/>
+  <rect x="920" y="497" width="190" height="35" rx="8" class="node"/>
+  <text x="485" y="521" text-anchor="middle" class="body">Coder report</text>
+  <text x="750" y="521" text-anchor="middle" class="body">QA report</text>
+  <text x="1015" y="521" text-anchor="middle" class="body">Security report</text>
+  <path d="M485,493 V477 H690 V464" class="line"/>
+  <path d="M750,493 V464" class="line"/>
+  <path d="M1015,493 V477 H810 V464" class="line"/>
+
+  <rect x="24" y="558" width="1152" height="142" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="46" y="592" class="heading">Hybrid</text>
+  <text x="46" y="620" class="body">Local veto + central policy</text>
+  <text x="46" y="648" class="body">Both must permit handoff</text>
+  <rect x="610" y="570" width="280" height="42" rx="8" class="gate"/>
+  <text x="750" y="598" text-anchor="middle" class="heading">Central packet policy</text>
+  <rect x="390" y="651" width="190" height="35" rx="8" class="gate"/>
+  <rect x="655" y="651" width="190" height="35" rx="8" class="gate"/>
+  <rect x="920" y="651" width="190" height="35" rx="8" class="gate"/>
+  <text x="485" y="675" text-anchor="middle" class="body">Coder gate</text>
+  <text x="750" y="675" text-anchor="middle" class="body">QA gate</text>
+  <text x="1015" y="675" text-anchor="middle" class="body">Security gate</text>
+  <path d="M485,647 V631 H690 V618" class="line"/>
+  <path d="M750,647 V618" class="line"/>
+  <path d="M1015,647 V631 H810 V618" class="line"/>
+
+  <text x="32" y="731" class="heading">Edit Security readiness, then packet validity. Inspect who can block the same handoff.</text>
+  <text x="32" y="759" class="small">HANDOFF means next review · no LLM, tool execution, real release, or added dependency</text>
+</svg>

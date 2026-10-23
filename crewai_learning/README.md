@@ -1,776 +1,188 @@
-# Multi-Agent AI Systems: A Practical CrewAI Learning Guide
+# CrewAI learning bridge: Manager, Coder, QA
 
-## Self-Contained Study Material
+[Open the notebook](01_Bridge_Sequential_Crew.ipynb) · [Setup and verification](#run-and-verify) · [Course learner paths](../README.md#learner-paths) · [Slide index](../README.md#main-deck-slide-index)
 
-This folder is a **self-contained CrewAI learning track**. It is intentionally separate from the core notebook sequence in `notebooks/`.
+Run a three-agent coding team with real CrewAI execution and deterministic local fixture responses. No trained language model, reasoning model, provider API, or API key is used. The example proves that malformed output is rejected and three failed attempts produce a typed escalation instead of continuing indefinitely.
 
-Use this guide when you want to study CrewAI-style orchestration, CrewAI Studio/UI workflow design, task context chains, guardrails, quality gates, manager review, and clean document delivery without changing the main "Managing Multi-Agent Teams" notebook path.
+**Course learning bridge. No separate point scale.** Start with [Lab 2](../notebooks/02_lab_crewai.ipynb); use this notebook for [Lecture 8: Debugging and SDLC](../ASSIGNMENTS.md#assignment-08-debugging-sdlc) and [Assignment 09: Framework Comparison](../ASSIGNMENTS.md#assignment-09-framework-comparison).
 
-The runnable CrewAI project lives here:
+## How coding_team.py teaches
 
-```text
-crewai_learning/academic_research_crewai_project/
-```
+[`coding_team.py`](coding_team.py) is the reusable implementation imported by the notebook's `bridge-setup` cell. Open [the notebook](01_Bridge_Sequential_Crew.ipynb) in JupyterLab to run the lesson. Running the Python file alone defines its classes and functions but starts no demonstration.
 
-The original archive is preserved here:
-
-```text
-crewai_learning/academic_research_crewai-project.zip
-```
-
-Start with the setup and learning-experience guide:
-
-[SETUP_AND_LEARNING_EXPERIENCE.md](/Users/lwinnaingkyaw/Documents/Training%20Managing%20Multi-Agent%20Teams/crewai_learning/SETUP_AND_LEARNING_EXPERIENCE.md)
-
-That guide explains how to run, audit, and learn from the unzipped CrewAI project without mutating the original extracted work.
-
-## Mission Alignment
-
-This guide supports the original course mission:
-
-> Managing Multi-Agent Teams means learning how to design, govern, debug, and deliver reliable agent workflows that survive contact with production reality.
-
-The main course teaches the governance layer: Pydantic contracts, MCP gateways, shared memory, bounded repair, A2A perimeters, and auditability.
-
-This self-contained CrewAI guide teaches the orchestration layer: role design, task dependencies, sequential vs hierarchical process choice, guardrails, failure analysis, and clean delivery.
-
-The two tracks fit together:
-
-- Main course: **why safe AI workforces need governance**.
-- CrewAI guide: **how to shape production crews and task pipelines**.
-
-## Course Philosophy
-
-> "Don't wait until you feel ready. Start building, break things, fix them.
-> That's how you actually learn AI systems."
-> — Inspired by Andrew Ng
-
-This guide follows the journey of building a production-grade multi-agent research pipeline from a blank crew to a 7-agent CrewAI research writer and evaluator with guardrails, structured outputs, quality gates, recovery patterns, and clean document delivery.
-
-Every concept is taught in the order it appears during a real build, not in the order a textbook would present it.
-
-## Alignment Reflection
-
-This track is aligned with the current extracted CrewAI project, not an abstract idealized crew.
-
-| Check | Current State | Teaching Decision |
+| Read in the module | Run in the notebook | Explain from the output |
 | --- | --- | --- |
-| Project type | CrewAI crew generated project | Keep this as a self-contained framework study track. |
-| Process mode | `Process.sequential` in `crew.py` | Teach hierarchy as a comparison concept, but run this fixed quality-gate pipeline sequentially. |
-| Agent count | 7 agents in `agents.yaml` and `crew.py` | Use the 7-role pipeline as the concrete teaching artifact. |
-| Task count | 7 tasks in `tasks.yaml` and `crew.py` | Treat clean delivery as a first-class task, not post-processing. |
-| Governance fit | Guardrails, quality gates, context chains, retry budgets | Map each CrewAI concept back to Managing Multi-Agent Teams. |
-| Runtime boundary | Live run requires API keys and network tools | Separate offline structural tests from live LLM/tool execution. |
+| Contracts, `strict_guardrail`, and `build_crew` | Create a crew, run `kickoff`, and display the final task as Markdown | Which controls CrewAI executes and why final-task text alone is not application approval |
+| Strict guardrail and `run_team` exception policy | Reject malformed output, then compare stopping with bounded recovery | Which handoff fails, and why QA never consumes it |
+| `run_team` and `escalate_to_human` | Run the always-failing tool | Why three total attempts produce one typed escalation |
+| Matching task IDs, patch hash, QA, and Manager checks | Run the successful fixture | Why valid evidence permits approval after one attempt |
 
-The key reflection: this folder is not another notebook module. It is a separate CrewAI learning lab. The main course teaches the governance shell; this folder teaches how a production framework expresses roles, tasks, context, tools, and delivery.
+Follow the [guided read/run/explain exercise](../ASSIGNMENTS.md#assignment-09-guided-bridge-exercise). Lab 2 teaches the configuration and fixture boundary; this optional follow-up executes real CrewAI tasks with local fixture responses. It adds no marks or submission.
 
-## Official CrewAI Positioning
+## Learner path
 
-CrewAI fits this course when learners need more than a single prompt or chatbot: multi-step work, specialized agents, tool use, structured outputs, human review, and workflows that combine autonomous reasoning with explicit business logic.
+1. Use the existing [Python 3.12 course environment](../SETUP.md). No extra framework package or API key is needed.
+2. Open [01_Bridge_Sequential_Crew.ipynb](01_Bridge_Sequential_Crew.ipynb) in JupyterLab and run all cells in order.
+3. Inspect the three roles and four tasks: **Manager brief → Coder patch → QA evidence → Manager review**.
+4. Run the direct `Crew.kickoff` cell; inspect the four-task trace and the final Manager task displayed with `Markdown(result.raw)` inside a fenced JSON block.
+5. Observe `ValidationError` for garbage output; QA must not run afterward.
+6. Compare **3 tool failures, 3 kickoffs, 1 EscalationReport** with a tool that recovers on attempt three and a valid fixture that succeeds on attempt one.
+7. Return to [Lecture 8](../ASSIGNMENTS.md#assignment-08-debugging-sdlc) or the [framework comparison](../ASSIGNMENTS.md#assignment-09-framework-comparison) to explain which controls are supplied by CrewAI and which are enforced by the application.
 
-This folder uses CrewAI as the practical framework layer for those patterns while preserving the main course's governance lessons:
+## Creating and running the crew
 
-- **Crews** express role-based collaboration among specialized agents.
-- **Flows** are the production control layer when learners need state, branching, and event-driven orchestration.
-- **This extracted project** is intentionally kept as a sequential crew so learners can see task context chains and quality gates before introducing dynamic Flow control.
+The notebook's **Creating the Crew** section shows the `Crew(...)` constructor used by `build_crew`. For pinned CrewAI 1.15.23, `verbose` is Boolean. `memory=False` keeps this exercise on explicit `Task.context` and typed failure feedback; no embedding service or persistent memory setup is required.
 
-References:
+The **Running the Crew** cell creates a fresh crew and actually executes it:
 
-- [CrewAI: When to Use CrewAI](https://github.com/crewAIInc/crewAI#when-to-use-crewai)
-- [CrewAI Installation](https://docs.crewai.com/en/installation)
-- [CrewAI Quickstart](https://docs.crewai.com/v1.15.1/en/quickstart)
-- [CrewAI current Quickstart](https://docs.crewai.com/en/quickstart)
-- [CrewAI LLM Configuration](https://docs.crewai.com/en/concepts/llms#setting-up-your-llm)
+```python
+crew = build_crew(order, kickoff_state, attempt=1)
+result = await asyncio.to_thread(crew.kickoff, inputs={"task_id": order.task_id})
+display(Markdown("### Final Crew task: Manager decision\n\n```json\n" + result.raw + "\n```"))
+```
 
-## Personal Coding Agent Team Track
+Run the notebook setup first; it supplies these names and wraps execution in `blocked_network`. `result` is a `CrewOutput`; `.raw` supplies the final task's text for Markdown. That final task is the Manager decision. The separate `run_team` wrapper checks all four typed outputs, task identity, patch hash, QA, and approval before returning `ApprovedResult`.
 
-This section answers the course question: **Are learners ready to create their own AI coding team?**
+The course does not choose between video or platform GPT models. `FixtureLLM` supplies scripted local responses, so unchanged fixtures repeat the same output. An actual language-model integration could return different outputs for the same input; that would require separate provider setup and tests.
 
-Yes, but with one important boundary. The course does **not** require every learner to configure a live LLM backend inside the core exercise. Individual API keys, provider choice, and CLI authentication are environment-specific. The required class deliverable is an offline, governed coding-agent skeleton. Learners with keys can then run the CrewAI CLI path as an optional extension.
+## Exception handling: stop or bounded recovery
 
-### Learning Outcomes
+The malformed-output example directly calls `kickoff`. Its strict guardrail raises `ValidationError`, stopping that task chain before QA. The notebook catches the expected error to inspect the trace and continue the lesson.
 
-By the end of this track, each learner can:
+For governed recovery, `run_team` catches only `ValidationError`, `SimulatedInfrastructureError`, and `ReviewNeedsChanges`. Each recognized failure is recorded; a fresh crew can retry, with a maximum of three total attempts. The notebook demonstrates both recovery on attempt three and escalation after three failures. An unexpected programming exception propagates immediately. These are tested application policies, rather than a blanket rule that CrewAI continues after every exception.
 
-1. Explain CrewAI basics: agents, tasks, crews, process modes, context, guardrails, and outputs.
-2. Document a safe setup path for Python, the CrewAI CLI, and LLM environment variables.
-3. Design a personal coding team with Coder, QA, and Review agents.
-4. Implement a bounded retry loop: if review fails, route back to the Coder with typed feedback.
-5. Package the coding team as a reusable class template with setup instructions and a showcase script.
+## What the code enforces
 
-### Setup Boundary
+| Control | Implementation | Visible proof |
+| --- | --- | --- |
+| Strict task output | Every task has `output_pydantic` plus a callable strict Pydantic guardrail. | Invalid JSON, fields, or types raise `ValidationError` before the next task. |
+| Bounded recovery | Python owns `max_attempts = 3`; native agent/guardrail retries are disabled. | Three total failed kickoffs, followed by a typed escalation. |
+| Approval boundary | Task IDs, current-patch hash, QA pass, and Manager approval are checked. | Failed or stale evidence cannot produce an approved result. |
+| Offline execution | Local fixture LLMs and a temporary external-network block. | No model-provider credentials or network calls are needed. |
+| Early success | The wrapper returns immediately after validated approval. | Valid fixture completes in one attempt. |
 
-Required for design and offline grading:
+The failing tool raises on its third call too. Returning an escalation string from the tool would count as a successful tool response; the Python wrapper must produce the escalation after catching the third failure. `escalate_to_human()` creates a local report and sends no message.
 
-- Python environment.
-- Course schemas and offline mocks.
-- CrewAI concepts from the official installation and quickstart docs.
-- Written `.env` safety plan.
+## Files and curriculum connections
 
-Optional for live execution:
+| File | Purpose |
+| --- | --- |
+| [Notebook](01_Bridge_Sequential_Crew.ipynb) | Readable, runnable demonstration with a failing tool and assertions |
+| [Reusable coding team](coding_team.py) | Schemas, fixture LLM, three-agent graph, validation, bounded wrapper, and escalation |
+| [Offline boundary](offline.py) | Blocks external DNS and connections during the examples |
+| [Regression tests](../tests/test_crewai_reference.py) | Negative paths, exact counts, recovery, and real Jupyter-kernel execution |
+| [Verification record](#historical-verification) | Checked requirements, observed notebook results, and full readiness evidence |
+| [Editable notebook source](../tools/notebook_sources/01_Bridge_Sequential_Crew.py) | Regenerate with `python tools/build_core_notebooks.py` |
+| [Lecture 8](../ASSIGNMENTS.md#assignment-08-debugging-sdlc) | Trace failures, evidence, and stopping behavior |
+| [Assignment 09](../ASSIGNMENTS.md#assignment-09-framework-comparison) | Ungraded framework comparison using the working example |
+| [Archived seven-agent material](../_archive/crewai_learning/README.md) | Historical research crew and superseded Homework G material |
 
-- CrewAI CLI installed locally.
-- LLM configured with provider API keys.
-- Real CrewAI scaffold created from the CLI.
-- Live `crewai run` or Flow execution.
+## Evidence limits
 
-Useful commands to document:
+The notebook uses `Process.sequential`. Manager/Coder/QA demonstrate a hierarchy of responsibilities, not dynamic hierarchical delegation. `FixtureLLM` replaces model responses while the real Agent, Task, guardrail, context, and Crew executors run. Its Coder response invokes the injected tool once; autonomous tool selection and native tool-repair behavior are outside this proof.
+
+QA checks an exact supplied code fixture; it does not execute generated code. The example demonstrates production-oriented control patterns, not production certification, model reliability, process isolation, or deployment readiness. The course factory also stays deterministic and uses no provider API.
+
+The [earlier audit](../_archive/crewai_learning/CURRICULUM_DELIVERY_AUDIT.md) describes the archived project's pre-fix state. This focused reference replaces that active teaching route under the agreed three-agent scope.
+
+[Return to course home](../README.md) · [Required practical sequence](../README.md#required-practical-sequence)
+
+## Continue into the factory
+
+Open [05 · Software Factory Simulation](../notebooks/05_live_software_factory.ipynb), then [06 · Local CI/CD](../notebooks/06_local_cicd.ipynb). The bridge executes real CrewAI task machinery with fixture LLMs. The factory presents pre-generated role collaboration and performs actual local artifact, review, Git, and publication operations. Historical model labels are illustrative and actual API cost is $0.00. Read [the factory guide](../extensions/live_software_factory.md) for human gates and simulated cost accounting.
+
+## Run and verify
+
+<a id="run-and-verify"></a>
+
+<a id="run-and-verify-run-and-verify-the-crewai-reference"></a>
+### Run and verify the CrewAI reference
+
+[Reference home](README.md) · [Notebook](01_Bridge_Sequential_Crew.ipynb) · [Course setup](../SETUP.md)
+
+This learning bridge uses the existing Python 3.12 course environment with CrewAI 1.15.23. The seven-agent research project's older environment is archived and is not used here. Installing dependencies needs internet or a prepared package bundle; executing the reference is offline.
+
+<a id="run-and-verify-run-in-jupyterlab"></a>
+#### Run in JupyterLab
+
+From the repository root, activate the environment described in [Setup](../SETUP.md), then run:
 
 ```bash
-# Official CLI-oriented path used by current CrewAI docs
-uv tool install crewai
-
-# Package-level experimentation when appropriate
-pip install crewai
-
-# Common crew scaffold
-crewai create crew my_coding_team
-
-# Flow scaffold, if supported by the installed CLI version
-crewai create flow my_coding_flow
+python -m pip install -r requirements.txt
+python -m jupyterlab
 ```
 
-If `crewai create flow` is not available in a learner's CLI version, the learner should scaffold a crew first and add a Flow wrapper manually. The concept matters more than the exact CLI subcommand.
+Open `crewai_learning/01_Bridge_Sequential_Crew.ipynb` and run all cells in order. Select the course Python kernel. The notebook creates temporary CrewAI storage, disables telemetry, uses fixture LLMs, and blocks external network access around execution. It never needs a `.env` file or provider key.
 
-### Coding Agent Building Blocks
+Expected results:
 
-| Building Block | Course Primitive | CrewAI Expression |
-| --- | --- | --- |
-| Coder agent | `CodePatch` contract | Agent role, coding task, patch output |
-| QA agent | `TestResult` contract | Test task, tool call, evidence output |
-| Review agent | `ReviewDecision` contract | Review task, approval gate |
-| Retry loop | Bounded self-repair | Flow/router logic or explicit orchestration wrapper |
-| State | `TeamState` / TeamLog | Flow state, task context, audit trail |
-| Guardrails | Pydantic + policy checks | Task guardrails and structured outputs |
-| Reusable template | Capstone pattern | CrewAI project scaffold and README |
+- Exactly Manager, Coder, and QA agents; four tasks all declare an output model and callable guardrail.
+- Malformed Coder output raises `ValidationError`; QA and review do not run.
+- The failing tool raises three times; the wrapper returns `EscalationReport` with `ESCALATION_TRIGGERED`, `attempts: 3`, and three failure records.
+- The recovery fixture fails twice, then returns `ApprovedResult` on attempt three with both earlier failures supplied as feedback.
+- The valid fixture returns `ApprovedResult` after one attempt.
+- The direct kickoff displays the final Manager task as Markdown; this is distinct from the wrapper's approved result.
 
-### Readiness Checklist and Score
+Restart the kernel and run all cells to repeat the complete demonstration. The failing-tool cell resets its counter before each run.
 
-Score out of 100.
+<a id="run-and-verify-automated-verification"></a>
+#### Automated verification
 
-| Area | Evidence | Points |
-| --- | --- | ---: |
-| CrewAI basics | Learner can explain agents, tasks, crews, process modes, and task context. | 15 |
-| Environment plan | Learner documents Python, CrewAI CLI, LLM key requirements, and `.env` safety. | 15 |
-| Coding agents | Learner designs Coder, QA, and Review agents with non-overlapping roles. | 20 |
-| Guardrails and state | Learner defines typed state, review decisions, retry budget, and approval logic. | 20 |
-| Orchestration loop | Learner shows `review fails -> back to coder` with a bounded retry path. | 15 |
-| Reusable template | Learner packages setup instructions, project structure, and peer demo checklist. | 15 |
-
-Readiness interpretation:
-
-- 90-100: Ready to run a personal CrewAI coding team with live keys.
-- 75-89: Ready for offline skeleton and guided live setup.
-- 60-74: Understands pieces but needs help connecting state, guardrails, and retry.
-- Below 60: Revisit the core governance notebooks before running CrewAI live.
-
-### Student Showcase
-
-Each learner should be able to demo:
-
-1. A typed coding task enters the system.
-2. The Coder returns a patch.
-3. QA returns test evidence.
-4. Review approves, rejects, or requests changes.
-5. A failed review routes back to the Coder within a retry budget.
-6. The final result is either shipped or escalated with a typed ticket.
-
-Peer review questions:
-
-- Are the Coder, QA, and Review responsibilities separated?
-- Is every handoff typed?
-- Where are LLM/API keys kept out of the repo?
-- What happens when QA fails twice?
-- Can another student run the offline skeleton without your private setup?
-
-## Required Inputs
-
-Before running or adapting this CrewAI pipeline, collect these inputs:
-
-| Input | Required | Default / Example | Why It Matters |
-| --- | --- | --- | --- |
-| `research_topic` | Yes | `"AI agent orchestration trends"` | Primary variable that drives the whole research pipeline. |
-| CrewAI project path | Yes | `crewai_learning/academic_research_crewai_project/` | All run commands should execute from this folder. |
-| Process mode | Yes | `Process.sequential` | The extracted project is a fixed quality-gate pipeline, so sequential execution is safer and easier to debug. |
-| LLM | Yes for live build | `openai/gpt-4o-mini` | Used by each agent and by `chat_llm` in `crew.py`. |
-| `OPENAI_API_KEY` | Yes for live build | Stored in local `.env`, never committed | Required for live LLM calls. |
-| `EXA_API_KEY` | Yes for live build | Stored in local `.env`, never committed | Required by `ExaSearchTool`. |
-| `BRAVE_API_KEY` | Yes if using writer search | Stored in local `.env`, never committed | Required by `BraveSearchTool`. |
-| `SERPLY_API_KEY` | Yes if using Serply tools | Stored in local `.env`, never committed | Required by `SerplyScholarSearchTool`. |
-| Research tools | Yes for live build | Exa, ScrapeWebsite, Semantic Scholar, arXiv, Serply, Brave | Determines source quality and retrieval coverage. |
-| Academic source allowlist | Yes | `arxiv.org`, `semanticscholar.org`, `.edu` | Prevents fake or low-quality citations. |
-| Confidence threshold | Yes | `0.8` | Decides when research is strong enough to stop. |
-| Evaluation pass threshold | Yes | `40/50` | Prevents one minor citation issue from overriding a strong article. |
-| Retry budget | Yes | Research `2`, Writing `2`, Evaluation `1`, Manager `0` | Keeps autonomy bounded. |
-| Output format | Yes | Clean `.md` report | Ensures reader-facing delivery, not pipeline metadata. |
-| Guardrail schema style | Yes | XML, JSON Schema, or Pydantic | Makes every handoff machine-checkable. |
-| Human override policy | Recommended | Manager can approve `BEST_EFFORT` with notes | Prevents dead-end pipelines when partial delivery is acceptable. |
-
-## Local Verification Status
-
-The extracted project has been checked locally.
-
-| Verification | Result |
-| --- | --- |
-| Zip safety check | Passed: no unsafe paths. |
-| Dependency sync | Passed with `uv sync --locked`. |
-| CrewAI version in project venv | `1.15.0`. |
-| Python syntax check | Passed with `uv run python -m compileall -q src`. |
-| YAML config parse | Passed: 7 agents and 7 tasks. |
-| Crew graph construction | Passed with dummy API keys: 7 agents, 7 tasks, `Process.sequential`. |
-| Full live kickoff | Not run without real API keys and network access. |
-| Project tests | No tests are currently present in the extracted `tests/` folder. |
-
-Recommended structural checks:
+Maintainers use the same pinned environment plus the existing test dependencies:
 
 ```bash
-cd crewai_learning/academic_research_crewai_project
-uv sync --locked
-uv run python -m compileall -q src
+python -m pip install -r requirements/maintenance.txt
+python tools/build_core_notebooks.py --check
+python -m pytest tests/test_crewai_reference.py -q --notebook-artifacts=.test-results/crewai-reference
 ```
 
-Recommended graph-build check without spending LLM credits:
+The tests run actual CrewAI tasks with local model fixtures and verify failure at every typed task boundary. They cover direct kickoff and final-task text, exact retry counts, fail-twice-then-pass recovery, early success, invalid QA/approval evidence, unexpected-error propagation, and a real Jupyter-kernel run. Kernel tests remove inherited provider credentials and block outbound networking. Jupyter still needs localhost sockets; a restricted executor must permit those local sockets.
 
-```bash
-cd crewai_learning/academic_research_crewai_project
-OPENAI_API_KEY=dummy EXA_API_KEY=dummy BRAVE_API_KEY=dummy SERPLY_API_KEY=dummy \
-uv run python -c "from academic_research_writer_evaluator.crew import AcademicResearchWriterEvaluatorCrew; crew=AcademicResearchWriterEvaluatorCrew().crew(); print(len(crew.agents), len(crew.tasks), crew.process)"
-```
+For the full distribution gate, run `python tools/check_readiness.py`. The advanced reference is included in its source fingerprint and test collection while remaining alongside the seven-notebook course route without extra marks.
 
-For a real run, add a local, uncommitted `.env` file with the required keys, then run:
+Executed notebook copies belong under ignored `.test-results/`. Distributed notebooks keep empty outputs and null execution counts. Edit [the source cells](../tools/notebook_sources/01_Bridge_Sequential_Crew.py), then regenerate using `python tools/build_core_notebooks.py`.
 
-```bash
-cd crewai_learning/academic_research_crewai_project
-uv run crewai run
-```
+<a id="run-and-verify-facilitation"></a>
+#### Facilitation
 
-## Learning Map
+Use the bridge after Lab 2 or during trace-diagnosis discussion. Predict the next task after malformed output, run the failure fixture, inspect the typed report, then explain the early-success case. Use [Assignment 09](../ASSIGNMENTS.md#assignment-09-framework-comparison) to separate role/task orchestration from application-owned retry policy.
 
-```text
-research_topic
-      |
-      v
-Research Mission
-      |
-      v
-Write Article
-      |
-      v
-Evaluate Content
-      |
-      v
-Quality Gate
-      |
-      v
-Manager Review and Score
-      |
-      v
-Compile Final Report
-      |
-      v
-Deliver Clean Report
-```
+The third failure belongs to the tool; escalation belongs to the wrapper. Three attempts means at most three kickoffs, not four. The local escalation stub does not contact a human or grant approval for another run.
 
-# Academic Research Writer & Evaluator
 
-## Sequential CrewAI Workflow With Manager Review
+<a id="run-and-verify-factory-continuation"></a>
+#### Factory continuation
 
-### Overview
+Run `python live_simulation_orchestrator.py` from the course root for paced deterministic collaboration, or add `--mode replay --delay-seconds 0` for fast rehearsal. No API key or provider setup is required. Explicit human gates control the real local publication. See [local factory verification](../SETUP.md#verify-the-local-factory).
 
-- **Process:** Sequential, using `Process.sequential` in `crew.py`.
-- **Manager role:** `workflow_manager` task performs review, scoring, diagnostics, and routing after upstream tasks complete.
-- **LLM:** `openai/gpt-4o-mini`.
-- **Input Variable:** `{research_topic}`.
-- **Agents:** 7.
-- **Tasks:** 7.
-- **Flow:** Sequential pipeline with gate-based routing.
-- **Output:** Clean reader-facing `.md` document.
+## Historical verification receipt
 
-## Pipeline Architecture
+This receipt records its dated source snapshot. Run the current readiness gate for current evidence; historical counts are not the present suite total.
 
-```text
-┌─────────────────────────────────────────────────────┐
-│ INPUT: {research_topic}                             │
-└──────────────────────────┬──────────────────────────┘
-                           ↓
-┌─────────────────────────────────────────────────────┐
-│ 1. Research Mission                                 │
-│ Academic Research Specialist                        │
-│ ReAct loop, max 5 iterations, confidence >= 0.8     │
-│ Tools: Exa, scrape, Semantic Scholar, arXiv, Serply │
-└──────────────────────────┬──────────────────────────┘
-                           ↓
-┌─────────────────────────────────────────────────────┐
-│ 2. Write Article                                    │
-│ Senior Content Writer                               │
-│ 1000+ words, 8+ sources, inline APA citations       │
-└──────────────────────────┬──────────────────────────┘
-                           ↓
-┌─────────────────────────────────────────────────────┐
-│ 3. Evaluate Content                                 │
-│ Content Quality Evaluator                           │
-│ 5 dimensions x 10, threshold 40/50                  │
-└──────────────────────────┬──────────────────────────┘
-                           ↓
-┌─────────────────────────────────────────────────────┐
-│ 4. Quality Gate                                     │
-│ Routes only: PROCEED, RETRY, PIPELINE_ERROR         │
-│ Never modifies content                              │
-└──────────────────────────┬──────────────────────────┘
-                           ↓
-┌─────────────────────────────────────────────────────┐
-│ 5. Manager Review and Score                         │
-│ Workflow Manager                                    │
-│ Metrics, multi-dim score, state, diagnostics, route │
-└──────────────────────────┬──────────────────────────┘
-                           ↓
-┌─────────────────────────────────────────────────────┐
-│ 6. Compile Final Report                             │
-│ Report Compiler                                     │
-│ Verbatim copy engine, no rewriting                  │
-└──────────────────────────┬──────────────────────────┘
-                           ↓
-┌─────────────────────────────────────────────────────┐
-│ 7. Deliver Clean Report                             │
-│ Document Delivery Agent                             │
-│ Strip metadata, deliver clean markdown              │
-└──────────────────────────┬──────────────────────────┘
-                           ↓
-┌─────────────────────────────────────────────────────┐
-│ OUTPUT: Clean .md document                          │
-└─────────────────────────────────────────────────────┘
-```
+<a id="historical-verification"></a>
 
-## Agents
+<a id="historical-verification-three-agent-reference-verification"></a>
+### Three-agent reference verification
 
-| # | Role | Model | Tools | Design Decision |
-| --- | --- | --- | --- | --- |
-| 1 | Academic Research Specialist | `gpt-4o-mini` | ExaSearchTool, ScrapeWebsiteTool, SemanticScholarSearchTool, ArxivPaperTool, SerplyScholarSearchTool | ReAct loop, mandatory multi-tool coverage. |
-| 2 | Senior Content Writer | `gpt-4o-mini` | BraveSearchTool, SerplyScholarSearchTool | Zero-tolerance inline citation rule with supplemental search support. |
-| 3 | Content Quality Evaluator | `gpt-4o-mini` | SerplyScholarSearchTool | Total score decides approval. |
-| 4 | Quality Gate | `gpt-4o-mini` | None | Routes only, never modifies. |
-| 5 | Workflow Manager | `gpt-4o-mini` | None | 5-skill sequential framework. |
-| 6 | Report Compiler | `gpt-4o-mini` | None | Photocopier, not editor. |
-| 7 | Document Delivery Agent | `gpt-4o-mini` | None | Strip pipeline noise, deliver clean `.md`. |
+Verified **20 October 2026, Asia/Bangkok**. The [notebook](01_Bridge_Sequential_Crew.ipynb) is an optional reference for Lecture 8 and Assignment 09, alongside the seven required notebooks without extra marks.
 
-## Task Blueprint
-
-### Task 1: Research Mission
-
-**Agent:** Academic Research Specialist  
-**Context:** none  
-**Logic:** ReAct loop: `THOUGHT -> ACTION -> OBSERVATION`, max 5 iterations.
-
-Rules:
-
-- Break early if confidence >= `0.8`.
-- Query the three primary research tools each iteration: Semantic Scholar, arXiv, and Exa.
-- Use scrape, Serply, and Brave-style search as supporting tools where the CrewAI tool configuration allows it.
-- Require credibility >= `0.85` per source where available.
-- Return `PARTIAL_RESULTS = true` if iteration 5 still has confidence below `0.8`.
-
-Confidence formula:
-
-```text
-confidence =
-  (num_sources / 9) * 0.25
-+ (sources_with_url / num_sources) * 0.25
-+ avg_credibility * 0.25
-+ coverage_score * 0.25
-```
-
-Coverage score:
-
-- `1.0`: 3+ subtopics.
-- `0.5`: partial coverage.
-- `0.0`: single subtopic.
-
-Output:
-
-- `confidence_score`
-- `sources[]`
-- APA citations
-- `iterations`
-- `PARTIAL_RESULTS`
-- `error_log`
-
-### Task 2: Write Article
-
-**Agent:** Senior Content Writer  
-**Context:** Research Mission
-
-Requirements:
-
-- Minimum 1000 words.
-- Minimum 8 unique sources.
-- Target distribution: 3 arXiv, 3 Semantic Scholar, and at least 1 ExaSearch source where available.
-- If a tool returns too few sources, use all available sources and record the gap in `quality_notes`.
-- Every claim needs an inline APA citation.
-- References must use academic URLs only: arXiv, Semantic Scholar, or `.edu`.
-- Real-world examples must be labeled `Illustrative Example`.
-- No invented URLs.
-
-Graceful degradation:
-
-| Missing Field | Replacement |
+| Requirement | Verified evidence |
 | --- | --- |
-| Author | `Unknown Author` |
-| Year | `n.d.` |
-| URL | `[URL_NOT_AVAILABLE]` |
-| Title | `Untitled Paper` |
-
-Structure:
-
-```text
-Abstract -> 4-6 sections -> Key Takeaways -> References
-```
-
-### Task 3: Evaluate Content
-
-**Agent:** Content Quality Evaluator  
-**Context:** Research Mission, Write Article
-
-Scoring rubric:
-
-| Dimension | Score | Deductions |
-| --- | ---: | --- |
-| Accuracy | 0-10 | Non-academic URL: -3 each |
-| Citation Completeness | 0-10 | Missing citation: -1 each |
-| Source Quality | 0-10 | Non-academic source: -2 each |
-| URL Validity | 0-10 | Broken/non-academic URL: -2 each |
-| Structure | 0-10 | Missing abstract, sections, key takeaways, or references |
-
-Retry logic:
-
-```text
-score < 40 and retry_count < 2  -> RETRY_RESEARCH
-score < 40 and retry_count >= 2 -> BEST_EFFORT
-score >= 40                    -> approved
-```
-
-### Task 4: Quality Gate Check
-
-**Agent:** Quality Gate  
-**Context:** Research Mission, Write Article, Evaluate Content
-
-Routing:
-
-```text
-approved or BEST_EFFORT         -> PROCEED_TO_DELIVERY
-RETRY_RESEARCH                  -> RETRY_NEEDED
-ERROR or missing approval_status -> PROCEED_TO_DELIVERY with BEST_EFFORT warning
-confirmed infrastructure failure -> PIPELINE_ERROR
-```
-
-Hard rule: exactly one decision. No content modification.
-
-### Task 5: Manager Review and Score
-
-**Agent:** Workflow Manager  
-**Context:** Research Mission, Write Article, Evaluate Content, Quality Gate Check
-
-5-skill framework:
-
-1. **Metrics Recorder:** Extract and timestamp scores from upstream agents.
-2. **Multi-Dimension Scorer:** Calculate final quality score.
-3. **Workflow State Tracker:** Track retry budgets and hard-stop flags.
-4. **Diagnostic Reporter:** Explain gaps, root causes, recommended actions, and suggested queries.
-5. **Decision Router:** Approve, approve with notes, reject/retry, or error.
-
-Quality formula:
-
-```text
-overall_quality =
-  research.confidence * 0.30
-+ (min(citations, 8) / 8) * 0.25
-+ (accuracy / 10) * 0.25
-+ (structure / 10) * 0.20
-```
-
-Decision:
-
-```text
->= 0.8 -> APPROVE
->= 0.6 -> APPROVE_WITH_NOTES
-<  0.6 -> REJECT_AND_RETRY
-```
-
-### Task 6: Compile Final Report
-
-**Agent:** Report Compiler  
-**Context:** Quality Gate Check, Manager Review and Score, Write Article, Evaluate Content
-
-Only proceeds if manager decision is `APPROVE` or `APPROVE_WITH_NOTES`.
-
-Output structure:
-
-```text
-⚠️ Disclaimer
-🎯 Executive Summary
-📚 Key Findings
-📰 Full Article (verbatim)
-🔗 Sources
-📊 Evaluation Scorecard
-🧠 Manager Review and Log
-💡 Recommendations
-```
-
-### Task 7: Deliver Clean Report
-
-**Agent:** Document Delivery Agent  
-**Context:** Compile Final Report
-
-Responsibilities:
-
-- Remove JSON execution logs.
-- Remove routing decisions.
-- Remove duplicate article copies.
-- Preserve the full article verbatim.
-- Deliver only reader-facing markdown.
-
-## Guardrails
-
-| Task | Guard Condition |
-| --- | --- |
-| Research Mission | `confidence_score` present, 0-1; sources list >= 3 with live URL and APA |
-| Write Article | `word_count >= 1000`; >= 6 inline citations; academic references; abstract present |
-| Evaluate Content | `overall_score` 0-50; all 5 dimensions present; valid `approval_status` |
-| Quality Gate | Exactly one routing decision from valid set |
-| Manager Review | `overall_quality` 0-1; valid decision; execution log >= 4 timestamped entries |
-| Compile Final Report | All required sections present; full article not summarized |
-| Deliver Clean Report | No execution metadata; no duplicate article; clean `.md` only |
-
-## Known Risks And Teaching Failures From The Build
-
-| Issue | Detail | Fix |
-| --- | --- | --- |
-| Hallucinated sources | `example.com` URLs appeared | Propagate real tool results and enforce URL allowlist |
-| Guardrails not yet set in UI | Studio task guardrails were missing | Add task-level guardrails manually |
-| Manager goal/backstory incomplete in early UI drafts | The extracted YAML now defines `workflow_manager` clearly | Keep role and backstory explicit in Crew settings |
-| Quality Gate bypassed error | Manager overrode `PIPELINE_ERROR` | Tighten decision router |
-| Context starvation | Report Compiler could not see article | Fix task context chain |
-| Concurrent execution crash | Hierarchical manager invoked same executor twice | Use sequential process for fixed pipelines |
-
-## Retry and Error Boundaries
-
-| Stage | Max Retries | On Exceed |
-| --- | ---: | --- |
-| Research | 2 | `PARTIAL_RESULTS = true` |
-| Writing | 2 | `BEST_EFFORT` delivery |
-| Evaluation | 1 | `BEST_EFFORT` delivery |
-| Manager | 0 | `HARD_STOP` flag |
-
-## Six-Week Applied Pipeline Engineering Path
-
-### Week 1: Agent Design and Role Clarity
-
-Core concept: An agent is not just a prompt. It is role + goal + backstory + tools.
-
-Andrew Ng-style insight:
-
-> Think of backstory as the system prompt on steroids. It encodes not just instructions but how to think.
-
-Assignments:
-
-- **1.1 Role Audit:** For each agent, verify role clarity, measurable goal, decision-framework backstory, and minimal tools.
-- **1.2 Anti-Pattern Identification:** Identify at least three issues in an overly broad "Research and Writing Assistant" agent.
-
-Study keywords:
-
-`agent role definition`, `ReAct framework`, `tool selection principle`, `single responsibility`, `backstory engineering`
-
-### Week 2: Task Design and Context Chains
-
-Core concept: Tasks define data flow. A broken context chain creates hallucination or downstream failure.
-
-Andrew Ng-style insight:
-
-> Think of context as function arguments. If you do not pass the data in, the function cannot use it.
-
-Assignments:
-
-- **2.1 Context Chain Design:** Design a 5-agent website summarization and fact-checking pipeline.
-- **2.2 Expected Output Contract:** Write the contract for an academic article evaluator, including fields, data types, and fail conditions.
-
-Study keywords:
-
-`DAG`, `context propagation`, `task dependency management`, `contract-first task design`, `context starvation`
-
-### Week 3: Hierarchical vs Sequential Process
-
-Core concept: Hierarchy sounds powerful, but fixed pipelines are usually more reliable as sequential workflows.
-
-Comparison:
-
-| Dimension | Sequential | Hierarchical |
-| --- | --- | --- |
-| Execution order | Fixed | Manager decides |
-| Manager agent | None | Auto-created or custom LLM manager |
-| Debugging | Easier | Harder |
-| Best for | Defined pipelines | Dynamic routing |
-| Risk | Low | Concurrent calls, opaque delegation |
-
-Assignments:
-
-- **3.1 Process Selection:** Choose sequential or hierarchical for four scenarios and justify.
-- **3.2 Debug the Crash:** Diagnose `Executor is already running. Cannot invoke the same executor instance concurrently.`
-
-Study keywords:
-
-`sequential process`, `hierarchical process`, `manager LLM`, `concurrent execution`, `delegation loop`
-
-### Week 4: Guardrails and Output Validation
-
-Core concept: Guardrails are contracts between tasks. They reject malformed responses before they cascade.
-
-Andrew Ng-style insight:
-
-> Guardrails are not optional polish. They are error boundaries.
-
-Assignments:
-
-- **4.1 Design a SQL Guardrail:** Validate safe query shape and reject destructive SQL.
-- **4.2 Cascade Failure Trace:** Compare what downstream agents receive with and without guardrails.
-
-Study keywords:
-
-`schema validation`, `XML schema`, `JSON schema`, `error boundary`, `fail-fast`, `graceful degradation`
-
-### Week 5: Failure Analysis and Recovery Patterns
-
-Core concept: Failures are expected events. Production pipelines define recovery behavior.
-
-Failure taxonomy:
-
-| Failure Type | Example | Recovery Pattern |
-| --- | --- | --- |
-| Cascade | Evaluator wrong status causes gate failure | Fix root decision rule |
-| Context starvation | Agent cannot see upstream output | Fix context chain |
-| Concurrent execution | Same agent called twice | Switch to sequential |
-| Hallucinated sources | `example.com` references | URL verification |
-| Token overload | Truncated response | Simplify task |
-| Score fabrication | Compiler recalculates score | Copy-verbatim rule |
-| Wrong routing | Strong score becomes retry | Total score is only decider |
-| Tool rate limiting | HTTP 429 | Retry once, fallback |
-
-Assignments:
-
-- **5.1 Failure Mode Matrix:** Create a 12-failure matrix for Research -> Write -> Review -> Publish.
-- **5.2 Root Cause Analysis:** Trace `[ERROR: Article not in context]` backward to at least five possible causes.
-
-Study keywords:
-
-`FMEA`, `circuit breaker`, `retry with backoff`, `BEST_EFFORT`, `PARTIAL_RESULTS`, `dead letter queue`
-
-### Week 6: Pipeline Architecture and Clean Delivery
-
-Core concept: A pipeline is finished only when it produces clean reader-facing output.
-
-Separation of concerns:
-
-```text
-Agent Role      -> what it does
-Task Description -> how it does it
-Expected Output -> what it returns
-Guardrail       -> what makes output valid
-Context         -> what it can see
-```
-
-Assignments:
-
-- **6.1 Pipeline Design:** Design a 5-agent competitor blog monitoring pipeline.
-- **6.2 Clean Delivery Layer:** Design a Document Delivery Agent that strips metadata and duplicates from a 2000-word report.
-
-Study keywords:
-
-`separation of concerns`, `pipeline architecture`, `clean output design`, `metadata stripping`, `formatting engine`
-
-## Capstone Project: Build a Multi-Agent Research Pipeline
-
-Requirements:
-
-- Minimum 5 agents.
-- Sequential process unless the task order is genuinely unknown.
-- At least one guardrail per task.
-- Correct context chain.
-- Recovery pattern for at least 3 failure modes.
-- Final clean `.md` delivery.
-- Documented required inputs.
-- One quality gate that routes without modifying content.
-
-Grading rubric:
-
-| Criterion | Points |
-| --- | ---: |
-| Agent role clarity | 20 |
-| Context chain correctness | 20 |
-| Guardrail coverage | 20 |
-| Failure recovery defined | 20 |
-| Clean output delivery | 20 |
-| Total | 100 |
-
-## Master Keyword Index
-
-Agent design:
-
-`role definition`, `goal specification`, `backstory engineering`, `tool selection`, `single responsibility`, `allow_delegation`
-
-Task and context:
-
-`context chain`, `DAG`, `task dependency`, `expected output contract`, `async execution`, `context starvation`
-
-Process and orchestration:
-
-`sequential process`, `hierarchical process`, `manager LLM`, `concurrent execution`, `workflow routing`
-
-Validation and guardrails:
-
-`XML schema validation`, `JSON schema output contract`, `error boundary`, `cascade failure`, `fail-fast`, `verbatim copy rule`
-
-Failure patterns:
-
-`root cause analysis`, `FMEA`, `BEST_EFFORT`, `PARTIAL_RESULTS`, `retry with backoff`, `dead letter queue`
-
-Architecture:
-
-`pipeline architecture`, `separation of concerns`, `clean document delivery`, `metadata vs content`, `reader-facing output`
-
-## Recommended Study Path
-
-Foundational:
-
-- Andrew Ng: AI For Everyone.
-- Andrew Ng: AI Agentic Design Patterns.
-- CrewAI official documentation.
-
-Intermediate:
-
-- ReAct: Synergizing Reasoning and Acting in Language Models.
-- Toolformer: Language Models Can Teach Themselves to Use Tools.
-- AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation.
-
-Advanced:
-
-- ChatDev: Communicative Agents for Software Development.
-- AgentBench: Evaluating LLMs as Agents.
-- LLM-based Multi-Agent Systems for Software Engineering.
-
-Pipeline engineering:
-
-- Designing Machine Learning Systems, Chip Huyen.
-- Building LLM Applications for Production, Chip Huyen.
-- Patterns for Building LLM-based Systems, Eugene Yan.
-
-## Lessons From This Build
-
-| Principle | How It Appeared |
-| --- | --- |
-| Iterate fast, do not over-plan | Pipeline evolved from 3 to 7 agents through failures |
-| Understand failure modes | Each run revealed one new failure to fix |
-| Simple beats clever | Sequential beat hierarchical for a fixed pipeline |
-| Data quality matters most | Real arXiv URLs beat `example.com` every time |
-| Measure what matters | 5-dimension rubric with 40/50 pass threshold |
-| Build error recovery first | `BEST_EFFORT`, fallbacks, and override rules |
-| Separate concerns cleanly | 7 agents, each doing exactly one thing |
-
-Build it. Break it. Fix it. That is how you learn.
+| Three agents | Manager, Coder, QA; one Manager handles brief and review tasks. |
+| Archive the old example | Seven-agent project moved under `_archive/crewai_learning/`; 14 source/configuration files retain their hashes. |
+| Strict output for every task | WorkOrder, CodePatch, QAReport, and ManagerDecision; callable guards reject invalid JSON before the next task. Tests inject garbage at all four boundaries. |
+| Hard maximum of three attempts | Python wrapper owns the bound; agent and guardrail retries are disabled. Fresh crew per attempt. |
+| Third failure escalates | Actual notebook output: `Tool failures: 3 | kickoffs: 3 | stopped: True`; typed `EscalationReport` contains three failures and `ESCALATION_TRIGGERED`. |
+| No downstream work after malformed output | `ValidationError` observed; QA and Manager review call counts remain zero. |
+| Useful success path | Valid fixture succeeds after one kickoff; a separate test recovers after two tool failures. |
+| Invalid approval cannot pass | Tests reject failed QA, stale patch evidence, mismatched task identity, and Manager rejection. |
+| Offline notebook | Executed in a real Jupyter kernel with credentials removed and external network tripwires; zero external attempts and unhandled cell errors. |
+| Navigation and scope | Active README paths, Lecture 8, Assignment 09, syllabus, course map, and manifest point to the ungraded reference. |
+
+The full `python tools/check_readiness.py` gate passed: **95 unit + 46 integration = 141 tests**, with zero failures, errors, or skips. Exact requirement pins and `pip check` passed. Python 3.12.3; CrewAI 1.15.23; Pydantic 2.12.5; nbclient 0.10.2; nbformat 5.10.4.
+
+Run ID: `20261019T185734Z-495da39a` (UTC timestamp). Verification source fingerprint: `bc68688ef31f5d4fea2f0f90b0dda356620258c3b58ec6d21288f3f0772f19b7`.
+
+[Recorded evidence and hashes](audit_evidence/2026-10-20-reference.json) identify the checked sources. Local executed copies and detailed logs are under `.test-results/readiness/20261019T185734Z-495da39a/`; they are intentionally excluded from distribution. The handout's code outputs and execution counts remain empty.
+
+These results concern the supplied fixture scenarios. The example uses sequential execution and a hierarchy of responsibilities, not native hierarchical delegation. QA compares the supplied fixture rather than running generated code. Live provider behavior and deployment readiness were not tested. The pinned CrewAI version emits deprecation warnings and an event-pairing diagnostic for intentionally raised validation errors; execution assertions still verify the stop behavior.

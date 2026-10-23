@@ -1,0 +1,8 @@
+{
+  "artifact_sha256": "5d47cff0713a31cc8da19651e359245ae9d86b2e5a6d2d42320b6160166def21",
+  "review": {
+    "approved": true,
+    "issues": [],
+    "summary": "Pre-generated source review: semantic landmarks, one h1, internal navigation, responsive CSS, visible focus styling, and a reduced-motion rule. Full accessibility and visual quality still require browser and human review."
+  }
+}

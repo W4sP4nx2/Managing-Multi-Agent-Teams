@@ -1,0 +1,8 @@
+{
+  "artifact_sha256": "5d47cff0713a31cc8da19651e359245ae9d86b2e5a6d2d42320b6160166def21",
+  "review": {
+    "approved": true,
+    "issues": [],
+    "summary": "Pre-generated fixture review: self-contained static travel HTML with no forms, scripts, remote assets, or credential storage. Local source checks must also pass. This is not a complete vulnerability assessment."
+  }
+}

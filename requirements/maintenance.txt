@@ -1,0 +1,6 @@
+# Instructor/maintainer verification; learners only need ../requirements.txt.
+-r ../requirements.txt
+nbclient==0.10.2
+nbformat==5.10.4
+PyYAML==6.0.3
+markdown-it-py==4.2.0

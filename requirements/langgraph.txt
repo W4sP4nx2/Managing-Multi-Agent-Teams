@@ -1,0 +1,2 @@
+# Optional framework exploration; not needed for the course or design reading.
+langgraph==1.2.12

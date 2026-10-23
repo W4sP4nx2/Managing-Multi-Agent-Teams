@@ -3,11 +3,10 @@
 This is a minimal working baseline learners can run, inspect, and extend. It
 maps directly to the production agentic lifecycle:
 
-1. Perception: PM ingests the raw issue and extracts requirements.
-2. Reasoning: Tech Lead decomposes requirements into subtasks.
-3. Execution: Coder and QA produce code, tests, and feedback.
-4. Learning: Repair loop stores failures and improves the next attempt.
-5. Governance: Security and Release enforce compliance before output.
+1. Planning: Engineering Manager turns the issue into a typed task and subtasks.
+2. Execution: Senior Coder produces a patch; QA Auditor runs tests and security checks.
+3. Learning: Repair loop stores failures and improves the next attempt.
+4. Governance: Manager approves delivery or escalates unresolved risk.
 
 WARNING: This file starts as a deterministic governance shell. The "agents"
 below are mocked on purpose so the schemas, tool gateway, audit trail, and
@@ -21,12 +20,12 @@ from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_valida
 
 
 class Role(str, Enum):
-    PM = "pm"
-    TECH_LEAD = "tech_lead"
+    MANAGER = "manager"
+    PM = "manager"  # legacy alias for the same Manager role; it is not a fourth agent
     CODER = "coder"
     QA = "qa"
-    SECURITY = "security"
-    RELEASE = "release"
+    SECURITY_MANAGER = "security_manager"
+    PEN_TESTER = "pen_tester"
 
 
 class Tool(str, Enum):
@@ -34,6 +33,9 @@ class Tool(str, Enum):
     WRITE_PATCH = "write_patch"
     RUN_TESTS = "run_tests"
     SECURITY_SCAN = "security_scan"
+    AUDIT_DEV_DELIVERABLE = "audit_dev_deliverable"
+    APPROVE_CODE = "approve_code"
+    ESCALATE_TO_HUMAN = "escalate_to_human"
 
 
 class StrictModel(BaseModel):
@@ -64,6 +66,21 @@ class CodePatch(StrictModel):
             if path.startswith("/") or ".." in path.split("/"):
                 raise ValueError(f"Unsafe patch path: {path}")
         return files
+
+
+class DevDeliverable(StrictModel):
+    """Validated Development-Team output handed to the Security Team."""
+
+    code_snippet: str = Field(min_length=1)
+    unit_tests_passed: bool
+    dev_team_signature: str = Field(min_length=1)
+
+    @field_validator("unit_tests_passed")
+    @classmethod
+    def tests_must_pass_before_handoff(cls, passed: bool) -> bool:
+        if not passed:
+            raise ValueError("The Security Team only accepts deliverables that passed unit tests")
+        return passed
 
 
 def mock_llm_code_patch_payload(task: str, attempt: int = 0) -> dict[str, Any]:
@@ -119,6 +136,12 @@ class SecurityReview(StrictModel):
     findings: list[str] = Field(default_factory=list)
 
 
+class SecurityAuditResult(StrictModel):
+    approved: bool
+    findings: list[str] = Field(default_factory=list)
+    security_team_signature: str = Field(min_length=1)
+
+
 class PullRequestSummary(StrictModel):
     status: Literal["SHIPPED", "ESCALATED_TO_HUMAN"]
     title: str
@@ -126,6 +149,8 @@ class PullRequestSummary(StrictModel):
     tests: list[str]
     risks: list[str]
     audit_trail: list[str] = Field(default_factory=list)
+    dev_deliverable: DevDeliverable | None = None
+    security_audit: SecurityAuditResult | None = None
 
 
 class AgentIdentity(StrictModel):
@@ -161,10 +186,27 @@ class ToolGateway:
             return {"test_result": run_tests(patch)}
 
         if request.tool == Tool.SECURITY_SCAN:
-            if request.caller.role != Role.SECURITY:
-                raise PermissionError("Only security may scan patches")
+            if request.caller.role != Role.QA:
+                raise PermissionError("Only QA may run security checks")
             patch = CodePatch.model_validate(request.args["patch"])
             return {"security_review": security_scan(patch)}
+
+        if request.tool == Tool.AUDIT_DEV_DELIVERABLE:
+            if request.caller.role != Role.PEN_TESTER:
+                raise PermissionError("Only the Pen Tester may audit a Development-Team deliverable")
+            deliverable = DevDeliverable.model_validate(request.args["dev_deliverable"])
+            return {"security_audit": security_team_audit(deliverable)}
+
+        if request.tool == Tool.APPROVE_CODE:
+            if request.caller.role != Role.MANAGER:
+                raise PermissionError("Only the Manager may approve delivery")
+            approved = bool(request.args.get("tests_passed") and request.args.get("security_approved"))
+            return {"approved": approved}
+
+        if request.tool == Tool.ESCALATE_TO_HUMAN:
+            if request.caller.role != Role.MANAGER:
+                raise PermissionError("Only the Manager may escalate to a human")
+            return {"status": "ESCALATED_TO_HUMAN", "reason": str(request.args.get("reason", ""))}
 
         if request.tool == Tool.SEARCH_MEMORY:
             query = str(request.args.get("query", "")).lower()
@@ -213,8 +255,29 @@ def security_scan(patch: CodePatch) -> SecurityReview:
     return SecurityReview(approved=not findings, findings=findings)
 
 
+def security_team_audit(deliverable: DevDeliverable) -> SecurityAuditResult:
+    """Security-Team mock: inspect only the validated Development-Team artifact."""
+
+    code = deliverable.code_snippet.lower()
+    patterns = {
+        "sql injection marker": ("drop table", "union select", "select * from"),
+        "cross-site scripting marker": ("innerhtml", "document.write", "<script"),
+    }
+    findings = [
+        f"Potential {label}: {marker}"
+        for label, markers in patterns.items()
+        for marker in markers
+        if marker in code
+    ]
+    return SecurityAuditResult(
+        approved=not findings,
+        findings=findings,
+        security_team_signature="Security & Compliance Team",
+    )
+
+
 def parse_issue(issue: str) -> TaskSpec:
-    # [DETERMINISTIC MOCK] PM agent behavior. In a real system, this calls an
+    # [DETERMINISTIC MOCK] Engineering Manager planning behavior. In a real system, this calls an
     # LLM with response_model=TaskSpec. For this exercise, implement rule-based
     # extraction from the issue string or integrate a live LLM if keys are
     # available. Do not return static filler data.
@@ -238,23 +301,22 @@ def parse_issue(issue: str) -> TaskSpec:
 
 
 def decompose(task: TaskSpec) -> list[SubTask]:
-    # [DETERMINISTIC MOCK] Tech Lead agent behavior. In production, this is a
+    # [DETERMINISTIC MOCK] Manager planning behavior. In production, this is a
     # planning LLM constrained to list[SubTask].
-    # LEARNER TASK: Expand this into a real Tech Lead agent.
-    # The Tech Lead should decompose the TaskSpec into SubTasks, assign owners,
+    # LEARNER TASK: Expand this into the Engineering Manager's planning step.
+    # The Manager should decompose the TaskSpec into SubTasks, assign owners,
     # and attach acceptance criteria to each subtask.
     return [
         SubTask(title="Implement utility", owner=Role.CODER, done_when=["slugify.py contains slugify"]),
         SubTask(title="Test behavior", owner=Role.QA, done_when=task.acceptance_criteria),
-        SubTask(title="Review safety", owner=Role.SECURITY, done_when=["No unsafe imports or filesystem access"]),
     ]
 
 
 def route(task: TaskSpec) -> str:
-    # [DETERMINISTIC MOCK] Fugu-style routing behavior. In production, this can
-    # be learned/observed routing across model classes with cost and latency.
-    # LEARNER TASK: Replace this rule-based router with a Fugu-style router.
-    # Add task complexity, estimated cost, latency, and model-class selection.
+    # [DETERMINISTIC MOCK] Starter route policy for local Python exercises.
+    # LEARNER TASK: Replace this with your own transparent, typed policy for
+    # cost, latency, and risk. This is an explicit local policy, not a learned
+    # orchestration method or a hosted routing service.
     if task.risk == "high":
         return "reasoning_model"
     if len(task.acceptance_criteria) >= 4:
@@ -279,53 +341,83 @@ def code(task: TaskSpec, feedback: list[str]) -> CodePatch:
     )
 
 
+def build_agent_identities() -> dict[Role, AgentIdentity]:
+    """Return both teams' identities with separate tool scopes."""
+    return {
+        Role.MANAGER: AgentIdentity(
+            role=Role.MANAGER,
+            allowed_tools={Tool.APPROVE_CODE, Tool.ESCALATE_TO_HUMAN},
+            trust_tier="confidential",
+        ),
+        Role.CODER: AgentIdentity(
+            role=Role.CODER,
+            allowed_tools={Tool.SEARCH_MEMORY, Tool.WRITE_PATCH},
+            trust_tier="confidential",
+        ),
+        Role.QA: AgentIdentity(
+            role=Role.QA,
+            allowed_tools={Tool.SEARCH_MEMORY, Tool.RUN_TESTS, Tool.SECURITY_SCAN},
+            trust_tier="confidential",
+        ),
+        Role.SECURITY_MANAGER: AgentIdentity(
+            role=Role.SECURITY_MANAGER,
+            allowed_tools={Tool.SEARCH_MEMORY},
+            trust_tier="confidential",
+        ),
+        Role.PEN_TESTER: AgentIdentity(
+            role=Role.PEN_TESTER,
+            allowed_tools={Tool.AUDIT_DEV_DELIVERABLE},
+            trust_tier="confidential",
+        ),
+    }
+
+
 def run_company(issue: str, max_repairs: int = 2) -> PullRequestSummary:
     """
-    Orchestrates the Agentic Lifecycle for a Virtual Software Company:
-    1. Perception (PM): Ingests raw issue, extracts requirements.
-    2. Reasoning (Tech Lead): Decomposes into sub-tasks, plans execution.
-    3. Execution (Coder/QA): Writes code, runs tests, gathers feedback.
-    4. Learning (Repair Loop): Evaluates outcome, refines strategy via memory.
-    5. Governance (Security/Release): Enforces compliance before final output.
+    Run a Development Team (Manager, Coder, QA), then pass its validated
+    deliverable to the Security Team (Security Manager, Pen Tester).
     """
     task = parse_issue(issue)
     subtasks = decompose(task)
     route_choice = route(task)
 
-    identities = {
-        # LEARNER TASK: Add PM, Tech Lead, and Release identities, then enforce
-        # that each stage can only call the tools it owns.
-        Role.CODER: AgentIdentity(
-            role=Role.CODER,
-            allowed_tools={Tool.WRITE_PATCH, Tool.SEARCH_MEMORY},
-            trust_tier="confidential",
-        ),
-        Role.QA: AgentIdentity(
-            role=Role.QA,
-            allowed_tools={Tool.RUN_TESTS, Tool.SEARCH_MEMORY},
-            trust_tier="confidential",
-        ),
-        Role.SECURITY: AgentIdentity(
-            role=Role.SECURITY,
-            allowed_tools={Tool.SECURITY_SCAN, Tool.SEARCH_MEMORY},
-            trust_tier="restricted",
-        ),
-    }
+    identities = build_agent_identities()
 
     gateway = ToolGateway()
     repair_memory: list[str] = []
     audit_trail = [
-        f"PM produced TaskSpec: {task.goal}",
-        f"Tech Lead produced {len(subtasks)} subtasks",
+        f"Engineering Manager produced TaskSpec: {task.goal}",
+        f"Engineering Manager produced {len(subtasks)} subtasks",
         f"Router selected {route_choice}",
     ]
+
+    def escalate(reason: str, title: str, body: str, tests: list[str], risks: list[str]) -> PullRequestSummary:
+        response = gateway.call(
+            ToolRequest(
+                caller=identities[Role.MANAGER],
+                tool=Tool.ESCALATE_TO_HUMAN,
+                args={"reason": reason},
+                sensitivity="confidential",
+            )
+        )
+        audit_trail.append(f"Engineering Manager escalated: {response['reason']}")
+        return PullRequestSummary(
+            status=response["status"],
+            title=title,
+            body=body,
+            tests=tests,
+            risks=risks,
+            audit_trail=audit_trail,
+        )
 
     final_patch: CodePatch | None = None
     final_test: TestResult | None = None
     final_security: SecurityReview | None = None
+    final_dev_deliverable: DevDeliverable | None = None
+    final_security_audit: SecurityAuditResult | None = None
 
     for attempt in range(max_repairs + 1):
-        # PM -> Tech Lead -> Coder happens before this loop. The loop is the
+        # Manager -> Coder -> QA happens inside this loop. The loop is the
         # ChatDev-style repair reflex: Coder submits, QA tests, feedback goes
         # back into memory, and the next Coder attempt uses that evidence.
         patch = code(task, feedback=repair_memory)
@@ -354,26 +446,21 @@ def run_company(issue: str, max_repairs: int = 2) -> PullRequestSummary:
         if not test_result.passed:
             repair_memory.append(test_result.log)
             if attempt >= max_repairs:
-                audit_trail.append("Repair budget exhausted; escalating to human reviewer")
-                return PullRequestSummary(
-                    status="ESCALATED_TO_HUMAN",
+                return escalate(
+                    reason="Repair budget exhausted after QA failure.",
                     title="Escalation required: slugify utility",
-                    body=(
-                        f"Repair budget exhausted. Task `{task.goal}` failed after {attempt + 1} attempts. "
-                        f"Last failure: {test_result.log}"
-                    ),
+                    body=(f"Repair budget exhausted. Task `{task.goal}` failed after {attempt + 1} attempts. "
+                          f"Last failure: {test_result.log}"),
                     tests=[test_result.log],
                     risks=["Repair budget exhausted"],
-                    audit_trail=audit_trail,
                 )
             continue
 
-        # LEARNER TASK: Add more governed tools here, such as linting,
-        # dependency scanning, or documentation generation. Each tool should be
-        # authorized through ToolGateway before it can run.
+        # QA performs security checks as part of its validation duties; this is
+        # a tool capability, not an additional Security Reviewer agent.
         security_payload = gateway.call(
             ToolRequest(
-                caller=identities[Role.SECURITY],
+                caller=identities[Role.QA],
                 tool=Tool.SECURITY_SCAN,
                 args={"patch": patch.model_dump(mode="json")},
                 sensitivity="confidential",
@@ -387,24 +474,81 @@ def run_company(issue: str, max_repairs: int = 2) -> PullRequestSummary:
         )
 
         if security_review.approved:
+            dev_deliverable = DevDeliverable(
+                code_snippet=patch.files.get("slugify.py", ""),
+                unit_tests_passed=test_result.passed,
+                dev_team_signature="Development Team: Manager/Coder/QA",
+            )
+            audit_trail.append("Development Team issued Pydantic DevDeliverable")
+            security_payload = gateway.call(
+                ToolRequest(
+                    caller=identities[Role.PEN_TESTER],
+                    tool=Tool.AUDIT_DEV_DELIVERABLE,
+                    args={"dev_deliverable": dev_deliverable.model_dump(mode="json")},
+                    sensitivity="confidential",
+                )
+            )
+            security_audit: SecurityAuditResult = security_payload["security_audit"]
+            audit_trail.append("Security Team received validated DevDeliverable")
+            audit_trail.append(
+                "Security Team approved deliverable"
+                if security_audit.approved
+                else f"Security Team rejected deliverable: {security_audit.findings}"
+            )
+
+            if not security_audit.approved:
+                repair_memory.extend(security_audit.findings)
+                if attempt >= max_repairs:
+                    return escalate(
+                        reason="Security Team repair budget exhausted.",
+                        title="Escalation required: Security Team findings",
+                        body=f"Task `{task.goal}` could not pass the Security Team audit.",
+                        tests=[test_result.log],
+                        risks=security_audit.findings,
+                    )
+                continue
+
+            approval = gateway.call(
+                ToolRequest(
+                    caller=identities[Role.MANAGER],
+                    tool=Tool.APPROVE_CODE,
+                    args={"tests_passed": test_result.passed, "security_approved": security_audit.approved},
+                    sensitivity="confidential",
+                )
+            )
+            if not approval["approved"]:
+                return escalate(
+                    reason="Manager approval requirements were not met.",
+                    title="Escalation required: approval gate",
+                    body=f"Task `{task.goal}` did not pass the Manager approval gate.",
+                    tests=[test_result.log],
+                    risks=["Approval gate rejected delivery"],
+                )
+            audit_trail.append("Engineering Manager approved delivery")
             final_patch = patch
             final_test = test_result
             final_security = security_review
+            final_dev_deliverable = dev_deliverable
+            final_security_audit = security_audit
             break
 
         repair_memory.extend(security_review.findings)
         if attempt >= max_repairs:
-            audit_trail.append("Security repair budget exhausted; escalating")
-            return PullRequestSummary(
-                status="ESCALATED_TO_HUMAN",
+            return escalate(
+                reason="Security repair budget exhausted.",
                 title="Escalation required: security findings",
-                body=f"Task `{task.goal}` could not pass security review.",
+                body=f"Task `{task.goal}` could not pass QA security checks.",
                 tests=[test_result.log],
                 risks=security_review.findings,
-                audit_trail=audit_trail,
             )
 
-    if final_patch is None or final_test is None or final_security is None:
+    if (
+        final_patch is None
+        or final_test is None
+        or final_security is None
+        or final_dev_deliverable is None
+        or final_security_audit is None
+    ):
         raise RuntimeError("Orchestration ended without release or escalation")
 
     return PullRequestSummary(
@@ -419,18 +563,16 @@ def run_company(issue: str, max_repairs: int = 2) -> PullRequestSummary:
         tests=[final_test.log],
         risks=final_security.findings or ["No security findings"],
         audit_trail=audit_trail,
+        dev_deliverable=final_dev_deliverable,
+        security_audit=final_security_audit,
     )
 
 
-# LEARNER TASK: Wrap `run_company()` in a FastAPI gateway.
-# Required API layer:
-# - POST /tasks accepts raw external JSON from a GitHub webhook, Slack command,
-#   or Jira ticket and returns 202 Accepted plus a task_id.
-# - GET /tasks/{task_id} returns PENDING, RUNNING, SHIPPED, or ESCALATED status.
-# - Map the incoming X-API-Key or Authorization header to an AgentIdentity.
-# - Reject external_vendor identities that request high-risk work or restricted
-#   memory access.
-# - Run the orchestration in a BackgroundTask or simulated async worker.
+# The required workshop stops at the deterministic team handoff above.
+# The older FastAPI gateway solution is retained only as a historical supplement:
+# _archive/advanced_scaling/assignments/starter_code/ex5_capstone_solution.py
+# For optional API-boundary study, use the separate extensions/ notebook after
+# completing the assessed labs and Capstone.
 
 
 if __name__ == "__main__":

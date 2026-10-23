@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Lab 1: typed contract at the Coder-to-QA artifact boundary</title>
+  <desc id="desc">A manager defines acceptance criteria. First, an untrusted fixed local fixture enters WeakResearchOutput, which accepts a confidence score of 150.5 and ignores an undeclared secret_backdoor field. After the learner repairs StrictResearchOutput, the grader submits valid and malformed probes. Valid required fields with confidence from zero to one produce a typed artifact. Missing or malformed fields, out-of-range scores, and undeclared fields produce a validation error and must be repaired before downstream consumption. The local deterministic grader awards fifteen points. No agent team, provider call, git operation, or deployment executes in this lab.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#475569"/></marker>
+    <style>
+      text { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #172554; }
+      .title { font-size: 28px; font-weight: 700; }
+      .heading { font-size: 20px; font-weight: 700; }
+      .body { font-size: 17px; }
+      .small { font-size: 16px; }
+      .label { font-size: 16px; font-weight: 700; letter-spacing: 1px; }
+      .line { fill: none; stroke: #475569; stroke-width: 2.5; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="680" rx="18" fill="#f8fafc"/>
+  <text x="32" y="46" class="title">Lab 1 · Typed contracts before the team handoff</text>
+  <text x="32" y="77" class="body">Local, deterministic validation · manager sets criteria · learner repairs one boundary</text>
+
+  <rect x="32" y="104" width="1136" height="70" rx="10" fill="#e0e7ff" stroke="#a5b4fc"/>
+  <text x="52" y="132" class="heading">Manager's acceptance criteria</text>
+  <text x="52" y="158" class="body">Require topic, confidence_score, findings · confidence 0.0–1.0 inclusive · forbid extra fields</text>
+
+  <text x="32" y="212" class="label">1 · OBSERVE THE WEAK GATE</text>
+  <rect x="32" y="232" width="338" height="110" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="52" y="262" class="heading">Untrusted local fixture</text>
+  <text x="52" y="292" class="body">confidence_score = 150.5</text>
+  <text x="52" y="319" class="body">secret_backdoor = True</text>
+  <path d="M370,287 H419" class="line"/>
+  <rect x="430" y="232" width="310" height="110" rx="10" fill="#fff7ed" stroke="#c2410c" stroke-width="2"/>
+  <text x="450" y="262" class="heading">WeakResearchOutput</text>
+  <text x="450" y="292" class="body">Accepts invalid score</text>
+  <text x="450" y="319" class="body">Silently ignores extra field</text>
+  <path d="M740,287 H791" class="line"/>
+  <rect x="802" y="232" width="366" height="110" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="822" y="262" class="heading">Inspect displayed result</text>
+  <text x="822" y="292" class="body">Input defects cross the gate.</text>
+  <text x="822" y="319" class="body">State the downstream risk.</text>
+
+  <text x="32" y="382" class="label">2 · REPAIR THE CONTRACT AND CHECK BOTH OUTCOMES</text>
+  <rect x="32" y="410" width="338" height="140" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="52" y="442" class="heading">Grader's fixed probes</text>
+  <text x="52" y="474" class="body">Valid shape and range boundaries</text>
+  <text x="52" y="503" class="body">Missing or malformed fields</text>
+  <text x="52" y="532" class="body">Bad scores and extra fields</text>
+  <path d="M370,480 H419" class="line"/>
+  <rect x="430" y="410" width="310" height="140" rx="10" fill="#e0e7ff" stroke="#4338ca" stroke-width="2"/>
+  <text x="450" y="442" class="heading">StrictResearchOutput</text>
+  <text x="450" y="474" class="body">Learner repairs the TODOs</text>
+  <text x="450" y="503" class="body">model_validate(payload)</text>
+  <text x="450" y="532" class="body">Enforces acceptance criteria</text>
+  <path d="M585,174 V193 H760 V400 H585 V408" fill="none" stroke="#6366f1" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M740,480 H772 V438 H791" class="line"/>
+  <path d="M772,480 V537 H791" class="line"/>
+  <rect x="802" y="396" width="366" height="82" rx="10" fill="#f0fdf4" stroke="#15803d" stroke-width="2"/>
+  <text x="822" y="426" class="heading">ACCEPT · typed artifact</text>
+  <text x="822" y="455" class="body">Valid probes can cross the boundary.</text>
+  <rect x="802" y="496" width="366" height="82" rx="10" fill="#fff1f2" stroke="#be123c" stroke-width="2"/>
+  <text x="822" y="526" class="heading">REJECT · validation error</text>
+  <text x="822" y="555" class="body">Repair before downstream use.</text>
+
+  <line x1="32" y1="604" x2="1168" y2="604" stroke="#cbd5e1"/>
+  <text x="32" y="632" class="heading">Evidence: 15/15 from the notebook grader</text>
+  <text x="32" y="659" class="small">Required shapes first · score bounds 5 points · extra-field rejection 10 points · then continue to Lab 2</text>
+</svg>

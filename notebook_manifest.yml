@@ -1,0 +1,71 @@
+course: Managing Multi-Agent Teams
+runtime_mode: offline_deterministic
+network_access: disabled_for_required_notebooks
+live_llm_default: false
+output_policy: clear_outputs_before_commit
+instructor_output_policy: rendered_outputs_allowed_in_instructor_copies
+
+package_tiers:
+  base_runtime:
+    - pydantic
+    - jupyterlab
+    - ipykernel
+  required_frameworks:
+    - crewai
+  required_verification:
+    - pytest
+  reference_extensions:
+    - fastapi
+    - httpx
+    - langgraph
+
+required_sequence:
+  - order: 0
+    file: 00_sandbox_preflight.ipynb
+    purpose: Confirm the local Python environment and notebook kernel.
+  - order: 1
+    file: 01_lab_pydantic.ipynb
+    lab: Lab 1 - Context Engineering - Typed Contracts
+    purpose: Predict what the weak schema accepts, repair the contract, use grader feedback, and explain what the rejection evidence does not prove.
+    grader_raw_marks: 15
+  - order: 2
+    file: 02_lab_crewai.ipynb
+    lab: Lab 2 - Multi-Agent Management - Code Auditing and Team Oversight
+    purpose: Predict a role-boundary failure, repair Manager tools and Coder context, inspect the audit and local QA inbox, and explain the decision without executing a Crew.
+    grader_raw_marks: 15
+  - order: 3
+    file: 03_lab_security.ipynb
+    lab: Lab 3 - Manager Oversight - Code Validation and Bounded Repair
+    purpose: Predict the unsafe call and retry risk, repair input and retry controls, inspect calls/cost/escalation, and explain the management decision.
+    grader_raw_marks: 15
+  - order: 4
+    file: 04_capstone.ipynb
+    purpose: Integrate the contracts and role boundaries, inspect a deterministic Development-to-Security handoff, and defend one residual risk and next step in the ADR.
+    grader_raw_marks: 20
+  - order: 5
+    file: 05_live_software_factory.ipynb
+    lab: Software Factory - Deterministic Collaboration
+    purpose: Inspect offline role labels and simulated costs, block malicious input, execute actual local checks and Git operations, and distinguish fixture decisions from human approval.
+    runtime_mode: deterministic_simulation
+    actual_api_cost: "0.00"
+  - order: 6
+    file: 06_local_cicd.ipynb
+    lab: Local CI/CD - Release Gates
+    purpose: Prove missing approval and stale evidence cannot publish a candidate; inspect actual temporary files and simulated cost records.
+    runtime_mode: deterministic_simulation
+    actual_api_cost: "0.00"
+
+compatibility_demo:
+  file: extensions/bonus_live_demo.ipynb
+  purpose: Redirect historical provider-demo links to the no-cost simulation.
+  required: false
+  use_live_llm_default: false
+
+advanced_reference:
+  file: crewai_learning/01_Bridge_Sequential_Crew.ipynb
+  purpose: Execute a Manager-Coder-QA crew with strict task outputs, a three-attempt Python bound, and typed escalation.
+  curriculum: Lecture 8 and Assignment 09 framework comparison
+  required: false
+  graded: false
+  runtime_mode: real_crewai_with_local_fixture_llms
+  external_network: blocked

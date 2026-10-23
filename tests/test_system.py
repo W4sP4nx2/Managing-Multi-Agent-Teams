@@ -5,6 +5,8 @@ import pytest
 from assignments.starter_code.ex5_capstone_starter import run_company
 from src.enterprise_agent_team import run_virtual_software_company
 
+pytestmark = pytest.mark.integration
+
 
 @pytest.mark.system
 def test_virtual_software_company_flow() -> None:

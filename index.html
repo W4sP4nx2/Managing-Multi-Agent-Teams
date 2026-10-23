@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Wanderlight: thoughtful journeys for curious travelers.">
+<title>Wanderlight | Travel slowly</title>
+<style>
+:root{color-scheme:light;--ink:#183b38;--paper:#faf7f0;--accent:#a44224;--line:#b8c9be}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,sans-serif;line-height:1.6}
+a{color:inherit;text-underline-offset:.25em}a:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+.skip{position:absolute;left:1rem;top:-5rem;background:white;padding:.6rem}.skip:focus{top:1rem}
+header,main,footer{max-width:70rem;margin:auto;padding:1.5rem}header{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;border-bottom:1px solid var(--line)}
+.brand{font-size:1.4rem;font-weight:800;text-decoration:none}nav{display:flex;gap:1.3rem;flex-wrap:wrap}
+.hero{padding:5rem 0 4rem;max-width:48rem}.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:.8rem;font-weight:700}
+h1{font-size:clamp(2.4rem,7vw,5rem);line-height:1.07;letter-spacing:-.045em;margin:1rem 0 1.5rem}h2{font-size:2rem;line-height:1.2}h3{font-size:1.3rem}
+.intro{font-size:1.2rem;max-width:36rem}.cta{display:inline-block;margin-top:1rem;padding:.8rem 1.3rem;background:var(--ink);color:white;border-radius:.3rem;text-decoration:none;font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.3rem}.card{border:1px solid var(--line);border-radius:.5rem;padding:1.5rem;background:#fffefa}
+.number{color:var(--accent);font-weight:700}.about{margin:4rem 0;padding:2rem;border-left:4px solid var(--accent);background:#eef2e9}
+footer{border-top:1px solid var(--line);font-size:.9rem}@media(max-width:42rem){header{align-items:flex-start;flex-direction:column}.cards{grid-template-columns:1fr}.hero{padding:3rem 0}header,main,footer{padding:1rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><a class="brand" href="#main" aria-label="Wanderlight home">Wanderlight</a>
+<nav aria-label="Main navigation"><a href="#destinations">Destinations</a><a href="#approach">Our approach</a><a href="#contact">Contact</a></nav></header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title"><p class="eyebrow">Less rush. More wonder.</p>
+<h1 id="hero-title">Find your next<br>little adventure.</h1>
+<p class="intro">Quiet coastlines, mountain mornings, and cities best explored on foot. Make room for the journey.</p>
+<a class="cta" href="#destinations">Explore destinations</a></section>
+<section id="destinations" aria-labelledby="destinations-title"><h2 id="destinations-title">Three places to begin</h2>
+<div class="cards">
+<article class="card" id="kyoto"><p class="number">01 / Japan</p><h3>Kyoto, at your pace</h3><p>Wander through garden paths and small neighborhood tea houses.</p><a href="#approach">Plan a mindful city escape</a></article>
+<article class="card" id="lisbon"><p class="number">02 / Portugal</p><h3>A softer side of Lisbon</h3><p>Follow tiled streets toward ocean air and unhurried afternoons.</p><a href="#approach">Discover a coastal city break</a></article>
+<article class="card" id="chiang-mai"><p class="number">03 / Thailand</p><h3>Chiang Mai mornings</h3><p>Start with mountain views, local markets, and a warm bowl of noodles.</p><a href="#approach">Explore a mountain retreat</a></article>
+</div></section>
+<section class="about" id="approach" aria-labelledby="approach-title"><h2 id="approach-title">Leave space for discovery.</h2><p>Choose fewer stops. Stay a little longer. Support local businesses. Our travel ideas are a starting point for your own thoughtful journey.</p><a href="#destinations">Return to destinations</a></section>
+<section id="contact" aria-labelledby="contact-title"><p class="eyebrow">Begin with curiosity</p><h2 id="contact-title">Your next chapter starts here.</h2><p>Choose a place that speaks to you, gather your favorite people, and leave a little room for the unexpected.</p><a class="cta" href="#destinations">Find your place</a></section>
+</main><footer><p>Wanderlight · Thoughtful journeys, closer to the world.</p></footer>
+</body></html>

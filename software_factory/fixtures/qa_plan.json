@@ -1,0 +1,55 @@
+{
+  "artifact_sha256": "5d47cff0713a31cc8da19651e359245ae9d86b2e5a6d2d42320b6160166def21",
+  "plan": {
+    "test_cases": [
+      {
+        "name": "Primary content exists",
+        "selector": "main",
+        "assertion": "visible",
+        "expected": "true"
+      },
+      {
+        "name": "Exactly one primary heading",
+        "selector": "h1",
+        "assertion": "count",
+        "expected": "1"
+      },
+      {
+        "name": "Primary navigation exists",
+        "selector": "nav",
+        "assertion": "visible",
+        "expected": "true"
+      },
+      {
+        "name": "Destinations section exists",
+        "selector": "#destinations",
+        "assertion": "visible",
+        "expected": "true"
+      },
+      {
+        "name": "Three destination cards",
+        "selector": "article",
+        "assertion": "count",
+        "expected": "3"
+      },
+      {
+        "name": "Contact section exists",
+        "selector": "#contact",
+        "assertion": "visible",
+        "expected": "true"
+      },
+      {
+        "name": "Page language is English",
+        "selector": "html",
+        "assertion": "attribute",
+        "expected": "lang=en"
+      },
+      {
+        "name": "Hero invitation is present",
+        "selector": "h1",
+        "assertion": "text",
+        "expected": "Find your next"
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1120" viewBox="0 0 1200 1120" role="img" aria-labelledby="factory-title factory-description">
+<title id="factory-title">Deterministic travel software factory: six human approvals</title>
+<desc id="factory-description">A local feature request first meets deterministic deny rules. Six human decisions approve the manager, coder, security, UI/UX, QA, and final local publication stages. The coder loads a pre-generated Wanderlight travel page into a real isolated Git feature worktree. Security and UI perform bounded source checks, then QA executes eight declarative DOM assertions. Evidence binds the candidate HTML hash to its reviewed Git revision. Only final approval publishes the exact reviewed page to a local index.html and stores receipts. A complete default run uses 0.50 dollars of simulated teaching units, costs 0.00 dollars in actual API charges, and makes zero provider calls. No models, external services, GitHub deployment, or production environment run.</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#334155"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#172b44}.title{font-size:30px;font-weight:700}.subtitle{font-size:17px}.label{font-size:19px;font-weight:700}.body{font-size:16px}.small{font-size:15px}.lane{fill:#f8fafc;stroke:#cbd5e1;stroke-width:1.5}.box{fill:#fff;stroke:#334155;stroke-width:2}.gate{fill:#fff4d6;stroke:#8a5700;stroke-width:2}.evidence{fill:#e7f4ef;stroke:#25624d;stroke-width:2}.flow{fill:none;stroke:#334155;stroke-width:2.5;marker-end:url(#arrow)}
+</style></defs>
+<rect width="1200" height="1120" fill="#fff"/>
+<text x="40" y="48" class="title">Software Factory · Offline Simulation</text>
+<text x="40" y="77" class="subtitle">Five fixture roles · six human decisions · real local files and Git · zero provider calls</text>
+<rect x="30" y="340" width="1140" height="325" rx="14" class="lane"/>
+<rect x="30" y="825" width="1140" height="202" rx="14" class="lane"/>
+<rect x="30" y="105" width="1140" height="195" rx="14" class="lane"/>
+<text x="50" y="134" class="label">Intake and construction</text>
+<rect x="55" y="155" width="300" height="120" rx="10" class="box"/>
+<text x="75" y="185" class="label">Local feature request</text><text x="75" y="212" class="body">Untrusted text → local deny rules</text><text x="75" y="238" class="body">Malicious request → blocked</text><text x="75" y="260" class="small">No approval or work on denial</text>
+<path d="M355 215H410" class="flow"/>
+<rect x="415" y="155" width="370" height="120" rx="10" class="gate"/>
+<text x="435" y="185" class="label">1  Human → Manager</text><text x="435" y="212" class="body">Approve brief and teaching budget</text><text x="435" y="238" class="body">Load the typed fixture plan</text><text x="435" y="260" class="small">Simulated $0.05 · actual $0.00</text>
+<path d="M785 215H840" class="flow"/>
+<rect x="845" y="155" width="300" height="120" rx="10" class="gate"/>
+<text x="865" y="185" class="label">2  Human → Coder</text><text x="865" y="212" class="body">Prepare fixed travel HTML/CSS</text><text x="865" y="238" class="body">No dynamic code generation</text><text x="865" y="260" class="small">Simulated $0.15 · actual $0.00</text>
+<path d="M995 275V318H600V366" class="flow"/>
+
+<rect x="55" y="370" width="1090" height="95" rx="10" class="box"/>
+<text x="75" y="400" class="label">Actual local Git repository → isolated feature worktree</text><text x="75" y="429" class="body">Wanderlight: one responsive page, three destinations, no scripts or external assets</text><text x="75" y="452" class="small">Typed fixture data only · candidate hash recorded · no remote repository or production credentials</text>
+<path d="M600 465V490H226V510" class="flow"/>
+<rect x="55" y="515" width="342" height="120" rx="10" class="gate"/>
+<text x="75" y="545" class="label">3  Human → Security</text><text x="75" y="573" class="body">Local policy + HTML source checks</text><text x="75" y="598" class="small">Bounded evidence; not a full audit</text><text x="75" y="622" class="small">Simulated $0.10 · actual $0.00</text>
+<path d="M397 575H424" class="flow"/>
+<rect x="429" y="515" width="342" height="120" rx="10" class="gate"/>
+<text x="449" y="545" class="label">4  Human → UI/UX</text><text x="449" y="573" class="body">Landmarks + responsive CSS checks</text><text x="449" y="598" class="small">Source evidence; human review still needed</text><text x="449" y="622" class="small">Simulated $0.10 · actual $0.00</text>
+<path d="M771 575H798" class="flow"/>
+<rect x="803" y="515" width="342" height="120" rx="10" class="gate"/>
+<text x="823" y="545" class="label">5  Human → QA</text><text x="823" y="573" class="body">Execute eight typed DOM assertions</text><text x="823" y="598" class="small">Observed pass/fail; no invented test results</text><text x="823" y="622" class="small">Simulated $0.05 · actual $0.00</text>
+<path d="M974 635V690H600V700" class="flow"/>
+<rect x="55" y="705" width="1090" height="95" rx="10" class="evidence"/>
+<text x="75" y="736" class="label">Same artifact, reviews, acceptance cases, and Git revision</text><text x="75" y="764" class="body">Commit the checked page and test cases. Final approval binds its HTML SHA-256 and Git commit.</text><text x="75" y="788" class="small">Any failed check, denied gate, exhausted simulated budget, or changed candidate stops the transition.</text>
+<path d="M226 800V851" class="flow"/>
+
+<rect x="55" y="855" width="342" height="145" rx="10" class="gate"/>
+<text x="75" y="886" class="label">6  Human → Local publish</text><text x="75" y="916" class="body">Approve exact hash + Git revision</text><text x="75" y="943" class="body">Approve the target HTML file</text><text x="75" y="977" class="small">Simulated $0.05 · actual $0.00</text>
+<path d="M397 928H424" class="flow"/>
+<rect x="429" y="855" width="342" height="145" rx="10" class="evidence"/>
+<text x="449" y="886" class="label">Actual local index.html</text><text x="449" y="916" class="body">Publish reviewed bytes atomically</text><text x="449" y="943" class="body">Open the page in your browser</text><text x="449" y="977" class="small">Local publication; no remote deployment</text>
+<path d="M771 928H798" class="flow"/>
+<rect x="803" y="855" width="342" height="145" rx="10" class="evidence"/>
+<text x="823" y="886" class="label">Real evidence and receipts</text><text x="823" y="916" class="body">SQLite approvals + stage costs</text><text x="823" y="943" class="body">Security / UI / QA JSON reports</text><text x="823" y="977" class="small">Commit + artifact hash + run summary</text>
+<text x="40" y="1060" class="label">Default complete run: simulated $0.50 · actual API cost $0.00</text>
+<text x="40" y="1088" class="small">Yellow = human gate. Green = evidence or local output. “Thinking” indicators and model labels are illustrative.</text>
+</svg>

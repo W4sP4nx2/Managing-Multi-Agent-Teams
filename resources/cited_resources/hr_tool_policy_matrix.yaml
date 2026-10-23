@@ -1,6 +1,8 @@
 version: "1.0"
+# Optional Homework D design reference; no current notebook or runtime loads this file.
+# These rules require an implementation to enforce them. They are not a legal compliance standard.
 course_module: "Homework D: HR Governance"
-description: "Teaching policy matrix for zero-trust HR agent tool access."
+description: "Illustrative HR tool-access policy for optional design work; not part of the required workshop."
 trust_tiers:
   public: 0
   confidential: 1

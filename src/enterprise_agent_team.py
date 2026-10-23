@@ -130,7 +130,7 @@ class ReviewDecision(StrictModel):
 
 
 class RouteDecision(StrictModel):
-    """Fugu-style heterogeneous routing decision."""
+    """Cost-aware heterogeneous routing decision."""
 
     selected_worker: Literal["fast_small_model", "deep_reasoning_model", "security_specialist"]
     reason: str
@@ -201,8 +201,13 @@ class ToolPolicy:
             raise PermissionError(
                 f"{request.caller.role} is not allowed to call {request.tool}."
             )
-        if request.data_sensitivity == TrustTier.RESTRICTED and request.caller.clearance != TrustTier.RESTRICTED:
-            raise PermissionError("Restricted data requires restricted clearance.")
+        clearance_order = {
+            TrustTier.PUBLIC: 0,
+            TrustTier.CONFIDENTIAL: 1,
+            TrustTier.RESTRICTED: 2,
+        }
+        if clearance_order[request.caller.clearance] < clearance_order[request.data_sensitivity]:
+            raise PermissionError("Data sensitivity exceeds the caller's clearance.")
 
 
 def check_teamlog_commitments(
@@ -316,7 +321,7 @@ def product_manager_parse_issue(issue: str) -> TaskSpec:
     )
 
 
-def fugu_route(task: TaskSpec) -> RouteDecision:
+def cost_aware_route(task: TaskSpec) -> RouteDecision:
     """Heterogeneous routing: choose model class by risk and complexity."""
 
     # [DETERMINISTIC MOCK] Replace with an observed model/router in production.
@@ -433,7 +438,7 @@ def run_virtual_software_company(issue: str) -> TeamState:
         )
     )
 
-    state.route_trace.append(fugu_route(state.task))
+    state.route_trace.append(cost_aware_route(state.task))
 
     while state.repair_attempts <= 2:
         search_result = gateway.call_tool(

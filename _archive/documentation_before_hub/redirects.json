@@ -1,0 +1,715 @@
+[
+  {
+    "source": "resources/curated_resource_library.md",
+    "target": "README.md",
+    "anchor": "readings",
+    "fragments": {
+      "curated-resource-library-course-topics": "readings-curated-resource-library-course-topics",
+      "teaching-design-and-ai-literacy": "readings-teaching-design-and-ai-literacy",
+      "framework-literacy-presentation-reference": "readings-framework-literacy-presentation-reference",
+      "start-here-multi-agent-systems-applications--rag": "readings-start-here-multi-agent-systems-applications--rag",
+      "agent-building-discussions": "readings-agent-building-discussions",
+      "required-practical-route": "readings-required-practical-route",
+      "topics-12-ai-orchestration-workspace--strategic-prompt-engineering": "readings-topics-12-ai-orchestration-workspace--strategic-prompt-engineering",
+      "topics-35-contracts-team-memory--code-auditing": "readings-topics-35-contracts-team-memory--code-auditing",
+      "topic-6-safety-nets-tool-validation--evals": "readings-topic-6-safety-nets-tool-validation--evals",
+      "topics-78-context-debugging--sdlc": "readings-topics-78-context-debugging--sdlc",
+      "topic-9-capstone--orchestration": "readings-topic-9-capstone--orchestration",
+      "resource-notes": "readings-resource-notes"
+    }
+  },
+  {
+    "source": "resources/diagrams/README.md",
+    "target": "README.md",
+    "anchor": "diagram-guide",
+    "fragments": {
+      "lab-diagrams-and-control-guide": "diagram-guide-lab-diagrams-and-control-guide",
+      "lab-1-contract-before-handoff": "diagram-guide-lab-1-contract-before-handoff",
+      "lab-2-roles-context-and-audit": "diagram-guide-lab-2-roles-context-and-audit",
+      "standards-and-implementation-references": "diagram-guide-standards-and-implementation-references",
+      "transfer-to-the-software-factory": "diagram-guide-transfer-to-the-software-factory"
+    }
+  },
+  {
+    "source": "PLAYBOOK.md",
+    "target": "README.md",
+    "anchor": "golden-path",
+    "fragments": {
+      "managing-multi-agent-teams-learner-playbook": "golden-path",
+      "core-course-focus-managed-team-delivery": "core-course-focus-managed-team-delivery",
+      "learner-path": "golden-path",
+      "your-management-decisions": "human-decisions",
+      "model-and-cost-decisions": "software-factory",
+      "factory-execution": "software-factory",
+      "assessment-and-gradebook": "runtime-and-assessment",
+      "capstone-three-question-adr": "capstone-adr",
+      "submission-checklist": "submission-checklist",
+      "standards-and-evidence-limits": "standards-and-evidence-limits"
+    }
+  },
+  {
+    "source": "assignments/assignment_syllabus.md",
+    "target": "README.md",
+    "anchor": "course-topics",
+    "fragments": {
+      "course-syllabus": "course-topics",
+      "course-outcome": "course-overview",
+      "measurable-learning-outcomes": "learning-outcomes",
+      "course-topic-map": "course-topics",
+      "practice-and-feedback": "learning-outcomes",
+      "assessment": "runtime-and-assessment"
+    }
+  },
+  {
+    "source": "assignments/index.md",
+    "target": "ASSIGNMENTS.md",
+    "anchor": "assignment-index",
+    "fragments": {
+      "course-exercises": "assignment-index",
+      "topic-linked-briefs": "assignment-index",
+      "assessment": "assignment-index",
+      "historical-assignments": "assignment-index"
+    }
+  },
+  {
+    "source": "resources/framework_comparison.md",
+    "target": "README.md",
+    "anchor": "framework-comparison",
+    "fragments": {
+      "multi-agent-framework-comparison": "framework-comparison",
+      "what-counts-as-a-multi-agent-system": "framework-literacy",
+      "framework-shortlist": "framework-comparison",
+      "lecture-8-discussion-why-this-course-uses-crewai": "why-crewai",
+      "optional-capstone-architecture-extension-langgraph": "langgraph-architecture-reading",
+      "broader-ecosystem": "broader-ecosystem",
+      "official-repository-and-name-check": "framework-sources",
+      "production-decision-starting-points": "framework-comparison",
+      "cross-framework-pattern-a-contract-with-executable-checks": "standards-and-evidence-limits",
+      "course-vocabulary-same-three-labs": "course-topics",
+      "four-core-frameworks": "four-core-frameworks"
+    }
+  },
+  {
+    "source": "resources/README.md",
+    "target": "README.md",
+    "anchor": "personal-resources",
+    "fragments": {
+      "course-resources": "personal-resources"
+    }
+  },
+  {
+    "source": "resources/cited_resources/README.md",
+    "target": "README.md",
+    "anchor": "resource-files",
+    "fragments": {
+      "optional-design-fixtures": "resource-files",
+      "reference-scope": "resource-files",
+      "contribution-rules": "resource-files"
+    }
+  },
+  {
+    "source": "resources/papers/README.md",
+    "target": "README.md",
+    "anchor": "resource-files",
+    "fragments": {
+      "-papers": "resource-files",
+      "rules": "resource-files",
+      "local-pdf-exception": "resource-files"
+    }
+  },
+  {
+    "source": "resources/videos/README.md",
+    "target": "README.md",
+    "anchor": "resource-files",
+    "fragments": {
+      "-video-index": "resource-files",
+      "video-format-standard": "resource-files",
+      "current-video-notes": "resource-files"
+    }
+  },
+  {
+    "source": "slides/README.md",
+    "target": "README.md",
+    "anchor": "main-deck-slide-index",
+    "fragments": {
+      "course-slides": "main-deck-slide-index"
+    }
+  },
+  {
+    "source": "slides/managing_multi_agent_teams_mindmap.md",
+    "target": "README.md",
+    "anchor": "main-deck-slide-index",
+    "fragments": {
+      "managing-multi-agent-teams": "main-deck-slide-index",
+      "core-philosophy": "architecture-and-design-decisions",
+      "practical-sequence": "golden-path",
+      "developer-and-agent-experience": "governance-controls",
+      "governance-and-delivery": "human-decisions"
+    }
+  },
+  {
+    "source": "extensions/README.md",
+    "target": "README.md",
+    "anchor": "reference-and-maintenance",
+    "fragments": {
+      "factory-and-supporting-simulations": "reference-and-maintenance",
+      "optional-capstone-architecture-reading": "langgraph-architecture-reading"
+    }
+  },
+  {
+    "source": "crewai_learning/SETUP_AND_LEARNING_EXPERIENCE.md",
+    "target": "crewai_learning/README.md",
+    "anchor": "run-and-verify",
+    "fragments": {
+      "run-and-verify-the-crewai-reference": "run-and-verify-run-and-verify-the-crewai-reference",
+      "run-in-jupyterlab": "run-and-verify-run-in-jupyterlab",
+      "automated-verification": "run-and-verify-automated-verification",
+      "facilitation": "run-and-verify-facilitation",
+      "factory-continuation": "run-and-verify-factory-continuation"
+    }
+  },
+  {
+    "source": "crewai_learning/VERIFICATION.md",
+    "target": "crewai_learning/README.md",
+    "anchor": "historical-verification",
+    "fragments": {
+      "three-agent-reference-verification": "historical-verification-three-agent-reference-verification"
+    }
+  },
+  {
+    "source": "requirements/README.md",
+    "target": "SETUP.md",
+    "anchor": "dependency-profiles",
+    "fragments": {
+      "course-and-maintainer-dependencies": "dependency-profiles-course-and-maintainer-dependencies"
+    }
+  },
+  {
+    "source": "assignments/assignment_01_strategic_prompt_engineering.md",
+    "target": "ASSIGNMENTS.md",
+    "anchor": "assignment-01-strategic-prompt-engineering",
+    "fragments": {
+      "assignment-01-strategic-prompt-engineering": "assignment-01-strategic-prompt-engineering",
+      "objective": "assignment-01-strategic-prompt-engineering-objective",
+      "task": "assignment-01-strategic-prompt-engineering-task",
+      "submit": "assignment-01-strategic-prompt-engineering-submit",
+      "passfail": "assignment-01-strategic-prompt-engineering-passfail"
+    }
+  },
+  {
+    "source": "assignments/assignment_02_ai_workspace_and_role_context.md",
+    "target": "ASSIGNMENTS.md",
+    "anchor": "assignment-02-ai-workspace-and-role-context",
+    "fragments": {
+      "assignment-02-ai-workspace-and-role-aware-context": "assignment-02-ai-workspace-and-role-context",
+      "objective": "assignment-02-ai-workspace-and-role-context-objective",
+      "task": "assignment-02-ai-workspace-and-role-context-task",
+      "submit": "assignment-02-ai-workspace-and-role-context-submit",
+      "passfail": "assignment-02-ai-workspace-and-role-context-passfail"
+    }
+  },
+  {
+    "source": "assignments/assignment_03_architectural_supervision.md",
+    "target": "ASSIGNMENTS.md",
+    "anchor": "assignment-03-architectural-supervision",
+    "fragments": {
+      "assignment-03-context-engineering--typed-contracts": "assignment-03-architectural-supervision",
+      "objective": "assignment-03-architectural-supervision-objective",
+      "architecture-and-flow": "assignment-03-architectural-supervision-architecture-and-flow",
+      "task": "assignment-03-architectural-supervision-task",
+      "passfail": "assignment-03-architectural-supervision-passfail",
+      "transfer-checkpoint-ungraded": "assignment-03-architectural-supervision-transfer-checkpoint-ungraded"
+    }
+  },
+  {
+    "source": "assignments/assignment_04_code_auditing.md",
+    "target": "ASSIGNMENTS.md",
+    "anchor": "assignment-04-code-auditing",
+    "fragments": {
+      "assignment-04-multi-agent-management--code-auditing-and-team-oversight": "assignment-04-code-auditing",
+      "objective": "assignment-04-code-auditing-objective",
+      "team-map": "assignment-04-code-auditing-team-map",
+      "skill-transparency--least-privilege": "assignment-04-code-auditing-skill-transparency--least-privilege",
+      "task": "assignment-04-code-auditing-task",
+      "managers-audit-action": "assignment-04-code-auditing-managers-audit-action",
+      "passfail": "assignment-04-code-auditing-passfail",
+      "submit": "assignment-04-code-auditing-submit",
+      "factory-simulation-mapping": "assignment-04-code-auditing-factory-simulation-mapping"
+    }
+  },
+  {
+    "source": "assignments/assignment_06_code_validation.md",
+    "target": "ASSIGNMENTS.md",
+    "anchor": "assignment-06-code-validation",
+    "fragments": {
+      "assignment-06-manager-oversight--code-validation-and-bounded-repair": "assignment-06-code-validation",
+      "objective": "assignment-06-code-validation-objective",
+      "task": "assignment-06-code-validation-task",
+      "management-oversight-action": "assignment-06-code-validation-management-oversight-action",
+      "passfail": "assignment-06-code-validation-passfail"
+    }
+  },
+  {
+    "source": "assignments/assignment_07_context_engineering_access_lists.md",
+    "target": "ASSIGNMENTS.md",
+    "anchor": "assignment-07-context-engineering-access-lists",
+    "fragments": {
+      "assignment-07-context-engineering-and-access-lists": "assignment-07-context-engineering-access-lists",
+      "objective": "assignment-07-context-engineering-access-lists-objective",
+      "the-obsidian-vault-analogy": "assignment-07-context-engineering-access-lists-the-obsidian-vault-analogy",
+      "task": "assignment-07-context-engineering-access-lists-task",
+      "submit": "assignment-07-context-engineering-access-lists-submit",
+      "passfail": "assignment-07-context-engineering-access-lists-passfail"
+    }
+  },
+  {
+    "source": "assignments/assignment_08_debugging_sdlc.md",
+    "target": "ASSIGNMENTS.md",
+    "anchor": "assignment-08-debugging-sdlc",
+    "fragments": {
+      "assignment-08-debugging-in-the-agentic-age--sdlc-operations": "assignment-08-debugging-sdlc",
+      "objective": "assignment-08-debugging-sdlc-objective",
+      "task": "assignment-08-debugging-sdlc-task",
+      "submit": "assignment-08-debugging-sdlc-submit",
+      "passfail": "assignment-08-debugging-sdlc-passfail",
+      "lecture-8-reference-discussion-choosing-an-orchestration-pattern": "assignment-08-debugging-sdlc-lecture-8-reference-discussion-choosing-an-orchestration-pattern"
+    }
+  },
+  {
+    "source": "assignments/ex5_capstone_virtual_software_company.md",
+    "target": "ASSIGNMENTS.md",
+    "anchor": "ex5-capstone-virtual-software-company",
+    "fragments": {
+      "capstone-a-governed-travel-site-factory": "ex5-capstone-virtual-software-company",
+      "product-brief": "ex5-capstone-virtual-software-company-product-brief",
+      "contract-and-team-boundary": "ex5-capstone-virtual-software-company-contract-and-team-boundary",
+      "factory-and-local-release-tasks": "ex5-capstone-virtual-software-company-factory-and-local-release-tasks",
+      "entity-relationship-diagram": "ex5-capstone-virtual-software-company-entity-relationship-diagram",
+      "assessment-40-points": "ex5-capstone-virtual-software-company-assessment-40-points",
+      "capstone-code-20-points": "ex5-capstone-virtual-software-company-capstone-code-20-points",
+      "architecture-decision-record-20-points": "ex5-capstone-virtual-software-company-architecture-decision-record-20-points",
+      "optional-architecture-extension-a-langgraph-state-machine": "ex5-capstone-virtual-software-company-optional-architecture-extension-a-langgraph-state-machine"
+    }
+  },
+  {
+    "source": "assignments/agent_building_design_guide.md",
+    "target": "ASSIGNMENTS.md",
+    "anchor": "agent-building-design-guide",
+    "fragments": {
+      "building-a-managed-agent-team": "agent-building-design-guide",
+      "start-with-one-agent": "agent-building-design-guide-start-with-one-agent",
+      "context-engineering": "agent-building-design-guide-context-engineering",
+      "one-main-agent-and-specialist-helpers": "agent-building-design-guide-one-main-agent-and-specialist-helpers",
+      "choosing-a-capability-and-pairing-with-the-human": "agent-building-design-guide-choosing-a-capability-and-pairing-with-the-human",
+      "stable-tools-and-loading-on-demand": "agent-building-design-guide-stable-tools-and-loading-on-demand",
+      "state-changes-and-actionable-errors": "agent-building-design-guide-state-changes-and-actionable-errors",
+      "takeaways-and-evidence": "agent-building-design-guide-takeaways-and-evidence",
+      "source-notes": "agent-building-design-guide-source-notes"
+    }
+  },
+  {
+    "source": "assignments/workshop_simulations.md",
+    "target": "ASSIGNMENTS.md",
+    "anchor": "workshop-simulations",
+    "fragments": {
+      "multi-agent-systems-in-context-two-course-simulations": "workshop-simulations",
+      "what-is-a-multi-agent-system": "workshop-simulations-what-is-a-multi-agent-system",
+      "facilitation-start-with-learner-reasoning": "workshop-simulations-facilitation-start-with-learner-reasoning",
+      "simulation-1-automating-a-procurement-recommendation": "workshop-simulations-simulation-1-automating-a-procurement-recommendation",
+      "fixed-business-request-and-evidence": "workshop-simulations-fixed-business-request-and-evidence",
+      "coordination-trace": "workshop-simulations-coordination-trace",
+      "typed-outcome-and-deterministic-decisions": "workshop-simulations-typed-outcome-and-deterministic-decisions",
+      "simulation-2-enhancing-an-hr-virtual-assistant-with-rag": "workshop-simulations-simulation-2-enhancing-an-hr-virtual-assistant-with-rag",
+      "synthetic-policy-collection": "workshop-simulations-synthetic-policy-collection",
+      "coordination-trace-1": "workshop-simulations-coordination-trace-1",
+      "typed-outcome-and-deterministic-decisions-1": "workshop-simulations-typed-outcome-and-deterministic-decisions-1",
+      "how-these-demonstrations-connect-to-the-required-course": "workshop-simulations-how-these-demonstrations-connect-to-the-required-course"
+    }
+  },
+  {
+    "source": "assignments/multi_agent_systems_foundations.md",
+    "target": "ASSIGNMENTS.md",
+    "anchor": "multi-agent-systems-foundations",
+    "fragments": {
+      "assignment-00a-multi-agent-systems-foundations": "multi-agent-systems-foundations",
+      "credits--alignment": "multi-agent-systems-foundations-credits--alignment",
+      "design-context": "multi-agent-systems-foundations-design-context",
+      "learning-objectives": "multi-agent-systems-foundations-learning-objectives",
+      "building-blocks": "multi-agent-systems-foundations-building-blocks",
+      "exercise-00a1-the-single-agent-stress-test": "multi-agent-systems-foundations-exercise-00a1-the-single-agent-stress-test",
+      "story": "multi-agent-systems-foundations-story",
+      "mission": "multi-agent-systems-foundations-mission",
+      "required-evidence": "multi-agent-systems-foundations-required-evidence",
+      "production-takeaway": "multi-agent-systems-foundations-production-takeaway",
+      "exercise-00a2-classify-the-interaction-pattern": "multi-agent-systems-foundations-exercise-00a2-classify-the-interaction-pattern",
+      "story-1": "multi-agent-systems-foundations-story-1",
+      "mission-1": "multi-agent-systems-foundations-mission-1",
+      "required-evidence-1": "multi-agent-systems-foundations-required-evidence-1",
+      "production-takeaway-1": "multi-agent-systems-foundations-production-takeaway-1",
+      "exercise-00a3-architecture-decision-matrix": "multi-agent-systems-foundations-exercise-00a3-architecture-decision-matrix",
+      "story-2": "multi-agent-systems-foundations-story-2",
+      "mission-2": "multi-agent-systems-foundations-mission-2",
+      "required-evidence-2": "multi-agent-systems-foundations-required-evidence-2",
+      "production-takeaway-2": "multi-agent-systems-foundations-production-takeaway-2",
+      "exercise-00a4-build-a-minimal-pattern-catalog": "multi-agent-systems-foundations-exercise-00a4-build-a-minimal-pattern-catalog",
+      "story-3": "multi-agent-systems-foundations-story-3",
+      "mission-3": "multi-agent-systems-foundations-mission-3",
+      "required-evidence-3": "multi-agent-systems-foundations-required-evidence-3",
+      "production-takeaway-3": "multi-agent-systems-foundations-production-takeaway-3",
+      "exercise-00a5-failure-mode-map": "multi-agent-systems-foundations-exercise-00a5-failure-mode-map",
+      "story-4": "multi-agent-systems-foundations-story-4",
+      "mission-4": "multi-agent-systems-foundations-mission-4",
+      "required-evidence-4": "multi-agent-systems-foundations-required-evidence-4",
+      "production-takeaway-4": "multi-agent-systems-foundations-production-takeaway-4",
+      "grading-rubric": "multi-agent-systems-foundations-grading-rubric",
+      "submission-checklist": "multi-agent-systems-foundations-submission-checklist",
+      "references": "multi-agent-systems-foundations-references"
+    }
+  },
+  {
+    "source": "assignments/foundational_architecture_design.md",
+    "target": "ASSIGNMENTS.md",
+    "anchor": "foundational-architecture-design",
+    "fragments": {
+      "foundational-exercise-design-a-governed-agent-roster": "foundational-architecture-design",
+      "prompt": "foundational-architecture-design-prompt",
+      "deliverables": "foundational-architecture-design-deliverables",
+      "technical-constraints": "foundational-architecture-design-technical-constraints",
+      "grading-rubric": "foundational-architecture-design-grading-rubric"
+    }
+  },
+  {
+    "source": "assignments/basic_agent_governance_labs.md",
+    "target": "ASSIGNMENTS.md",
+    "anchor": "basic-agent-governance-labs",
+    "fragments": {
+      "supplemental-governance-practice-exercises": "basic-agent-governance-labs",
+      "optional-exercise-1-governed-logistics-weather-agent": "basic-agent-governance-labs-optional-exercise-1-governed-logistics-weather-agent",
+      "optional-exercise-2-bounded-writer-agent": "basic-agent-governance-labs-optional-exercise-2-bounded-writer-agent",
+      "optional-exercise-3-security--compliance-team-audit": "basic-agent-governance-labs-optional-exercise-3-security--compliance-team-audit",
+      "optional-exercise-4-ceo-directed-project-planning": "basic-agent-governance-labs-optional-exercise-4-ceo-directed-project-planning"
+    }
+  },
+  {
+    "source": "assignments/assignment_09_framework_comparison.md",
+    "target": "ASSIGNMENTS.md",
+    "anchor": "assignment-09-framework-comparison",
+    "fragments": {
+      "assignment-09-framework-comparison": "assignment-09-framework-comparison"
+    }
+  },
+  {
+    "source": "assignments/module14_crewai_orchestration_patterns.md",
+    "target": "ASSIGNMENTS.md",
+    "anchor": "module14-crewai-orchestration-patterns",
+    "fragments": {
+      "crewai-orchestration-advanced-reference": "module14-crewai-orchestration-patterns"
+    }
+  },
+  {
+    "source": "instructor/course_manager_notebook_assignment_path.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "course-manager-notebook-assignment-path",
+    "fragments": {
+      "instructor-notebook-and-assignment-path": "course-manager-notebook-assignment-path",
+      "skill-transparency-matrix-in-lab-2": "course-manager-notebook-assignment-path--skill-transparency-matrix-in-lab-2",
+      "executive-brief-evidence-audit": "course-manager-notebook-assignment-path--executive-brief-evidence-audit",
+      "team-boundary": "course-manager-notebook-assignment-path--team-boundary",
+      "grading": "course-manager-notebook-assignment-path--grading",
+      "preparation-and-maintenance-resources": "course-manager-notebook-assignment-path--preparation-and-maintenance-resources"
+    }
+  },
+  {
+    "source": "instructor/course_delivery_readiness_checklist.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "course-delivery-readiness-checklist",
+    "fragments": {
+      "two-day-course-delivery-readiness-checklist": "course-delivery-readiness-checklist",
+      "day-1-opening-script": "course-delivery-readiness-checklist--day-1-opening-script",
+      "gono-go-checklist": "course-delivery-readiness-checklist--gono-go-checklist",
+      "two-day-delivery": "course-delivery-readiness-checklist--two-day-delivery",
+      "instructor-guardrails": "course-delivery-readiness-checklist--instructor-guardrails",
+      "grade-and-submissions": "course-delivery-readiness-checklist--grade-and-submissions",
+      "readiness-record": "course-delivery-readiness-checklist--readiness-record"
+    }
+  },
+  {
+    "source": "instructor/teaching_notes.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "teaching-notes",
+    "fragments": {
+      "instructor-teaching-notes": "teaching-notes",
+      "facilitate-the-practice-and-feedback-cycle": "teaching-notes--facilitate-the-practice-and-feedback-cycle",
+      "discussion-prompts-for-the-application-slides": "teaching-notes--discussion-prompts-for-the-application-slides",
+      "facilitate-the-agent-building-checkpoints": "teaching-notes--facilitate-the-agent-building-checkpoints",
+      "day-1-opening-deterministic-mode": "teaching-notes--day-1-opening-deterministic-mode",
+      "why-a-native-virtual-environment": "teaching-notes--why-a-native-virtual-environment",
+      "why-separate-coder-and-qa-roles": "teaching-notes--why-separate-coder-and-qa-roles",
+      "slide-17-script-universal-patterns-across-frameworks": "teaching-notes--slide-17-script-universal-patterns-across-frameworks",
+      "three-classroom-guardrails": "teaching-notes--three-classroom-guardrails",
+      "preparation-and-distribution": "teaching-notes--preparation-and-distribution",
+      "grading-and-feedback": "teaching-notes--grading-and-feedback",
+      "course-maintenance-and-handover": "teaching-notes--course-maintenance-and-handover",
+      "optional-track-delivery-notes": "teaching-notes--optional-track-delivery-notes",
+      "module10_hr_governancemd": "teaching-notes--module10_hr_governancemd",
+      "module11_marketing_orchestrationmd": "teaching-notes--module11_marketing_orchestrationmd",
+      "module12_advanced_orchestrationmd": "teaching-notes--module12_advanced_orchestrationmd"
+    }
+  },
+  {
+    "source": "instructor/demo_script.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "demo-script",
+    "fragments": {
+      "instructor-demo-deterministic-software-factory": "demo-script",
+      "preparation": "demo-script--preparation",
+      "five-minute-walkthrough": "demo-script--five-minute-walkthrough"
+    }
+  },
+  {
+    "source": "instructor/GRADING.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "grading",
+    "fragments": {
+      "assessment-files": "grading",
+      "marks": "grading--marks",
+      "rubric-maintenance": "grading--rubric-maintenance"
+    }
+  },
+  {
+    "source": "instructor/capstone_paper_adr_quick_sheet.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "capstone-paper-adr-quick-sheet",
+    "fragments": {
+      "capstone-paper-adr---offline-fallback": "capstone-paper-adr-quick-sheet",
+      "three-questions": "capstone-paper-adr-quick-sheet--three-questions",
+      "score": "capstone-paper-adr-quick-sheet--score",
+      "instructor-scoring-anchors": "capstone-paper-adr-quick-sheet--instructor-scoring-anchors"
+    }
+  },
+  {
+    "source": "instructor/delivery_schedule.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "delivery-schedule",
+    "fragments": {
+      "instructor-delivery-schedule": "delivery-schedule",
+      "day-1--mas-foundations-contracts-and-team-context": "delivery-schedule--day-1--mas-foundations-contracts-and-team-context",
+      "day-2--security-bounded-repair-and-team-to-team-delivery": "delivery-schedule--day-2--security-bounded-repair-and-team-to-team-delivery",
+      "integrated-factory-facilitation": "delivery-schedule--integrated-factory-facilitation"
+    }
+  },
+  {
+    "source": "instructor/agent_building_slide_alignment.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "agent-building-slide-alignment",
+    "fragments": {
+      "agent-building-slide-and-exercise-alignment": "agent-building-slide-alignment",
+      "content-crosswalk": "agent-building-slide-alignment--content-crosswalk",
+      "assessment-and-scope": "agent-building-slide-alignment--assessment-and-scope",
+      "18-october-verification-historical": "agent-building-slide-alignment--18-october-verification-historical"
+    }
+  },
+  {
+    "source": "instructor/stanford_teaching_guide_alignment.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "stanford-teaching-guide-alignment",
+    "fragments": {
+      "teaching-design-alignment-stanford-teaching-commons": "stanford-teaching-guide-alignment",
+      "design-commitments": "stanford-teaching-guide-alignment--design-commitments",
+      "learning-cycle-used-in-the-workshop": "stanford-teaching-guide-alignment--learning-cycle-used-in-the-workshop",
+      "observable-course-outcomes": "stanford-teaching-guide-alignment--observable-course-outcomes",
+      "practice-feedback-and-assessment": "stanford-teaching-guide-alignment--practice-feedback-and-assessment",
+      "suggested-learner-facing-ai-use-policy": "stanford-teaching-guide-alignment--suggested-learner-facing-ai-use-policy",
+      "where-the-design-is-implemented": "stanford-teaching-guide-alignment--where-the-design-is-implemented",
+      "references": "stanford-teaching-guide-alignment--references"
+    }
+  },
+  {
+    "source": "instructor/management_principle_matrix.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "management-principle-matrix",
+    "fragments": {
+      "management-principle-matrix": "management-principle-matrix",
+      "notebook-exercise-narrative-standard": "management-principle-matrix--notebook-exercise-narrative-standard",
+      "instructor-rule": "management-principle-matrix--instructor-rule"
+    }
+  },
+  {
+    "source": "instructor/technical_implementation_playbook.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "technical-implementation-playbook",
+    "fragments": {
+      "instructor-technical-implementation-playbook": "technical-implementation-playbook",
+      "delivery-pattern": "technical-implementation-playbook--delivery-pattern",
+      "instructor-qa-read-and-write-roles": "technical-implementation-playbook--instructor-qa-read-and-write-roles",
+      "1-mcp-zero-trust-tool-boundary": "technical-implementation-playbook--1-mcp-zero-trust-tool-boundary",
+      "management-principle": "technical-implementation-playbook--management-principle",
+      "business-impact": "technical-implementation-playbook--business-impact",
+      "historical-advanced-files": "technical-implementation-playbook--historical-advanced-files",
+      "technical-implementation": "technical-implementation-playbook--technical-implementation",
+      "assessment-question": "technical-implementation-playbook--assessment-question",
+      "teaching-script": "technical-implementation-playbook--teaching-script",
+      "2-agentic-rag-and-theory-of-mind-governed-shared-memory": "technical-implementation-playbook--2-agentic-rag-and-theory-of-mind-governed-shared-memory",
+      "management-principle-1": "technical-implementation-playbook--management-principle-1",
+      "business-impact-1": "technical-implementation-playbook--business-impact-1",
+      "current-files": "technical-implementation-playbook--current-files",
+      "technical-implementation-1": "technical-implementation-playbook--technical-implementation-1",
+      "assessment-question-1": "technical-implementation-playbook--assessment-question-1",
+      "teaching-script-1": "technical-implementation-playbook--teaching-script-1",
+      "3-teamlog-collective-commitment-engine": "technical-implementation-playbook--3-teamlog-collective-commitment-engine",
+      "management-principle-2": "technical-implementation-playbook--management-principle-2",
+      "business-impact-2": "technical-implementation-playbook--business-impact-2",
+      "current-files-1": "technical-implementation-playbook--current-files-1",
+      "technical-implementation-2": "technical-implementation-playbook--technical-implementation-2",
+      "assessment-question-2": "technical-implementation-playbook--assessment-question-2",
+      "teaching-script-2": "technical-implementation-playbook--teaching-script-2",
+      "4-chatdev-self-repair-bounded-quality-loop": "technical-implementation-playbook--4-chatdev-self-repair-bounded-quality-loop",
+      "management-principle-3": "technical-implementation-playbook--management-principle-3",
+      "business-impact-3": "technical-implementation-playbook--business-impact-3",
+      "current-files-2": "technical-implementation-playbook--current-files-2",
+      "technical-implementation-3": "technical-implementation-playbook--technical-implementation-3",
+      "assessment-question-3": "technical-implementation-playbook--assessment-question-3",
+      "teaching-script-3": "technical-implementation-playbook--teaching-script-3",
+      "5-api-boundary-governance-perimeter-and-async-orchestration": "technical-implementation-playbook--5-api-boundary-governance-perimeter-and-async-orchestration",
+      "management-principle-4": "technical-implementation-playbook--management-principle-4",
+      "business-impact-4": "technical-implementation-playbook--business-impact-4",
+      "current-files-3": "technical-implementation-playbook--current-files-3",
+      "technical-implementation-4": "technical-implementation-playbook--technical-implementation-4",
+      "assessment-question-4": "technical-implementation-playbook--assessment-question-4",
+      "teaching-script-4": "technical-implementation-playbook--teaching-script-4",
+      "6-basic-agent-governance-labs-logistics-weather-writer-qa-and-ceo": "technical-implementation-playbook--6-basic-agent-governance-labs-logistics-weather-writer-qa-and-ceo",
+      "management-principle-5": "technical-implementation-playbook--management-principle-5",
+      "business-impact-5": "technical-implementation-playbook--business-impact-5",
+      "current-files-4": "technical-implementation-playbook--current-files-4",
+      "technical-implementation-5": "technical-implementation-playbook--technical-implementation-5",
+      "assessment-question-5": "technical-implementation-playbook--assessment-question-5",
+      "teaching-script-5": "technical-implementation-playbook--teaching-script-5",
+      "advanced-expansion-roadmap": "technical-implementation-playbook--advanced-expansion-roadmap"
+    }
+  },
+  {
+    "source": "instructor/verification_pyramid.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "verification-pyramid",
+    "fragments": {
+      "verification-pyramid-for-managing-multi-agent-teams": "verification-pyramid",
+      "1-unit-tests-individual-rules": "verification-pyramid--1-unit-tests-individual-rules",
+      "2-integration-tests-handoffs-and-workflow": "verification-pyramid--2-integration-tests-handoffs-and-workflow",
+      "3-curriculum-integration-real-jupyter-kernels": "verification-pyramid--3-curriculum-integration-real-jupyter-kernels",
+      "4-readiness-and-ci": "verification-pyramid--4-readiness-and-ci",
+      "review-that-still-needs-an-instructor": "verification-pyramid--review-that-still-needs-an-instructor",
+      "instructor-diagnosis-order": "verification-pyramid--instructor-diagnosis-order"
+    }
+  },
+  {
+    "source": "instructor/curriculum_maintenance_checklist.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "curriculum-maintenance-checklist",
+    "fragments": {
+      "curriculum-maintenance-checklist": "curriculum-maintenance-checklist",
+      "1-schema-synchronization": "curriculum-maintenance-checklist--1-schema-synchronization",
+      "2-optional-advanced-identity-and-tool-matrix": "curriculum-maintenance-checklist--2-optional-advanced-identity-and-tool-matrix",
+      "3-notebook-hygiene": "curriculum-maintenance-checklist--3-notebook-hygiene",
+      "4-assignment-and-rubric-alignment": "curriculum-maintenance-checklist--4-assignment-and-rubric-alignment",
+      "5-secret-and-key-scrubbing": "curriculum-maintenance-checklist--5-secret-and-key-scrubbing",
+      "6-starter-code-vs-solution-drift": "curriculum-maintenance-checklist--6-starter-code-vs-solution-drift",
+      "7-release-hygiene": "curriculum-maintenance-checklist--7-release-hygiene"
+    }
+  },
+  {
+    "source": "instructor/scope_alignment_verification.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "scope-alignment-verification",
+    "fragments": {
+      "scope-alignment-verification": "scope-alignment-verification",
+      "deliverable-scope": "scope-alignment-verification--deliverable-scope",
+      "required-learner-path": "scope-alignment-verification--required-learner-path",
+      "academic-framing": "scope-alignment-verification--academic-framing",
+      "verification-record-and-earlier-rehearsal-notes": "scope-alignment-verification--verification-record-and-earlier-rehearsal-notes",
+      "scope-controls": "scope-alignment-verification--scope-controls"
+    }
+  },
+  {
+    "source": "instructor/assessment_compliance_checklist.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "assessment-compliance-checklist",
+    "fragments": {
+      "curriculum-assessment-compliance-checklist": "assessment-compliance-checklist",
+      "acceptance-audit---19-october-2026": "assessment-compliance-checklist--acceptance-audit---19-october-2026",
+      "current-readiness-evidence": "assessment-compliance-checklist--current-readiness-evidence",
+      "assessment-plan-100-marks": "assessment-compliance-checklist--assessment-plan-100-marks",
+      "historical-verification-record-through-18-october-2026": "assessment-compliance-checklist--historical-verification-record-through-18-october-2026",
+      "historical-automated-readiness-run-17-october-2026": "assessment-compliance-checklist--historical-automated-readiness-run-17-october-2026",
+      "test-crosswalk": "assessment-compliance-checklist--test-crosswalk",
+      "score-record": "assessment-compliance-checklist--score-record"
+    }
+  },
+  {
+    "source": "instructor/solutions/basic_agent_governance_labs_solution_guide.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "basic-agent-governance-labs-solution-guide",
+    "fragments": {
+      "supplemental-governance-practice-exercises-solution-guide": "basic-agent-governance-labs-solution-guide",
+      "strong-answer-indicators": "basic-agent-governance-labs-solution-guide--strong-answer-indicators",
+      "optional-exercise-1-governed-logistics-weather-agent": "basic-agent-governance-labs-solution-guide--optional-exercise-1-governed-logistics-weather-agent",
+      "optional-exercise-2-bounded-writer-agent": "basic-agent-governance-labs-solution-guide--optional-exercise-2-bounded-writer-agent",
+      "optional-exercise-3-security--compliance-team-audit": "basic-agent-governance-labs-solution-guide--optional-exercise-3-security--compliance-team-audit",
+      "optional-exercise-4-ceo-directed-project-planning": "basic-agent-governance-labs-solution-guide--optional-exercise-4-ceo-directed-project-planning"
+    }
+  },
+  {
+    "source": "instructor/solutions/ex1_solution_guide.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "ex1-solution-guide",
+    "fragments": {
+      "ex1-solution-guide-agent-roster--sops": "ex1-solution-guide",
+      "expected-architecture": "ex1-solution-guide--expected-architecture",
+      "strong-answer-indicators": "ex1-solution-guide--strong-answer-indicators",
+      "common-mistakes": "ex1-solution-guide--common-mistakes",
+      "instructor-check": "ex1-solution-guide--instructor-check"
+    }
+  },
+  {
+    "source": "instructor/solutions/ex2_solution_guide.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "ex2-solution-guide",
+    "fragments": {
+      "ex2-solution-guide-theory-of-mind-memory-system": "ex2-solution-guide",
+      "expected-behavior": "ex2-solution-guide--expected-behavior",
+      "minimal-correct-implementation": "ex2-solution-guide--minimal-correct-implementation",
+      "strong-answer-indicators": "ex2-solution-guide--strong-answer-indicators",
+      "common-mistakes": "ex2-solution-guide--common-mistakes"
+    }
+  },
+  {
+    "source": "instructor/solutions/ex3_solution_guide.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "ex3-solution-guide",
+    "fragments": {
+      "ex3-solution-guide-rag--mcp-architecture": "ex3-solution-guide",
+      "expected-architecture": "ex3-solution-guide--expected-architecture",
+      "strong-answer-indicators": "ex3-solution-guide--strong-answer-indicators",
+      "common-mistakes": "ex3-solution-guide--common-mistakes"
+    }
+  },
+  {
+    "source": "instructor/solutions/ex4_solution_guide.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "ex4-solution-guide",
+    "fragments": {
+      "ex4-solution-guide-trust--governance-matrix": "ex4-solution-guide",
+      "expected-architecture": "ex4-solution-guide--expected-architecture",
+      "strong-answer-indicators": "ex4-solution-guide--strong-answer-indicators",
+      "common-mistakes": "ex4-solution-guide--common-mistakes",
+      "instructor-check": "ex4-solution-guide--instructor-check"
+    }
+  },
+  {
+    "source": "instructor/solutions/ex5_capstone_solution_guide.md",
+    "target": "INSTRUCTOR_PLAYBOOK.md",
+    "anchor": "ex5-capstone-solution-guide",
+    "fragments": {
+      "capstone-solution-guide": "ex5-capstone-solution-guide"
+    }
+  }
+]

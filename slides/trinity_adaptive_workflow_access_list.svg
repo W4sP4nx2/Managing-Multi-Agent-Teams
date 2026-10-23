@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+<title id="title">TRINITY roles, evidence access, repair, and escalation</title>
+<desc id="desc">A Thinker plans, a Worker builds, a Verifier tests and reviews, and the Conductor routes selected evidence through an access list to a repair Worker. The course retry cap leads to human escalation.</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#ff9b52"/></marker>
+  <marker id="arrowPale" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#cad1ff"/></marker>
+</defs>
+<g stroke-linecap="round" stroke-linejoin="round">
+  <!-- Five labelled phases. -->
+  <rect fill="#282ba8" stroke="#aab2ff" stroke-width="2" x="36" y="25" rx="14" width="192" height="112"/>
+  <circle fill="#ff9b52" cx="58" cy="49" r="5"/><text font-family="Calibri,Arial,sans-serif" font-size="16" font-weight="700" fill="#ffc38f" x="72" y="55">01 · THINKER</text>
+  <text font-family="Calibri,Arial,sans-serif" font-size="18" fill="#f0f2ff" x="58" y="87">Plan and split</text><text font-family="Calibri,Arial,sans-serif" font-size="18" fill="#f0f2ff" x="58" y="112">the task</text>
+
+  <rect fill="#282ba8" stroke="#aab2ff" stroke-width="2" x="272" y="25" rx="14" width="192" height="112"/>
+  <circle fill="#ff9b52" cx="294" cy="49" r="5"/><text font-family="Calibri,Arial,sans-serif" font-size="16" font-weight="700" fill="#ffc38f" x="308" y="55">02 · WORKER</text>
+  <text font-family="Calibri,Arial,sans-serif" font-size="18" fill="#f0f2ff" x="294" y="87">Build a patch</text><text font-family="Calibri,Arial,sans-serif" font-size="18" fill="#f0f2ff" x="294" y="112">or work result</text>
+
+  <rect fill="#282ba8" stroke="#aab2ff" stroke-width="2" x="508" y="25" rx="14" width="192" height="112"/>
+  <circle fill="#ff9b52" cx="530" cy="49" r="5"/><text font-family="Calibri,Arial,sans-serif" font-size="16" font-weight="700" fill="#ffc38f" x="544" y="55">03 · VERIFIER</text>
+  <text font-family="Calibri,Arial,sans-serif" font-size="18" fill="#f0f2ff" x="530" y="87">Test and review</text><text font-family="Calibri,Arial,sans-serif" font-size="18" fill="#f0f2ff" x="530" y="112">return diagnosis</text>
+
+  <rect fill="#282ba8" stroke="#aab2ff" stroke-width="2" x="744" y="25" rx="14" width="192" height="112"/>
+  <circle fill="#ff9b52" cx="766" cy="49" r="5"/><text font-family="Calibri,Arial,sans-serif" font-size="16" font-weight="700" fill="#ffc38f" x="780" y="55">04 · REPAIR</text>
+  <text font-family="Calibri,Arial,sans-serif" font-size="18" fill="#f0f2ff" x="766" y="87">Worker uses</text><text font-family="Calibri,Arial,sans-serif" font-size="18" fill="#f0f2ff" x="766" y="112">selected evidence</text>
+
+  <rect fill="#282ba8" stroke="#aab2ff" stroke-width="2" x="980" y="25" rx="14" width="192" height="112"/>
+  <circle fill="#ff9b52" cx="1002" cy="49" r="5"/><text font-family="Calibri,Arial,sans-serif" font-size="16" font-weight="700" fill="#ffc38f" x="1016" y="55">05 · ESCALATE</text>
+  <text font-family="Calibri,Arial,sans-serif" font-size="18" fill="#f0f2ff" x="1002" y="87">Human decides</text><text font-family="Calibri,Arial,sans-serif" font-size="18" fill="#f0f2ff" x="1002" y="112">when budget ends</text>
+
+  <!-- Main process flow. -->
+  <path d="M230 81 H265" fill="none" stroke="#ff9b52" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M466 81 H501" fill="none" stroke="#ff9b52" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M702 81 H737" fill="none" stroke="#ff9b52" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M938 81 H973" fill="none" stroke="#ff9b52" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Re-test loop from repair to verifier. -->
+  <path d="M840 139 V174 H605 V145" fill="none" stroke="#cad1ff" stroke-width="2.5" marker-end="url(#arrowPale)"/>
+  <text font-family="Calibri,Arial,sans-serif" font-size="17" fill="#e5e8ff" x="626" y="170">failed check / re-test</text>
+
+  <!-- Context selection and evidence lane. -->
+  <rect fill="#25289a" stroke="#818cff" stroke-width="2" x="48" y="198" rx="14" width="1104" height="108"/>
+  <text font-family="Calibri,Arial,sans-serif" font-size="20" font-weight="700" fill="#ffffff" x="72" y="232">ACCESS LIST · Conductor selects which earlier task outputs the next Worker can read.</text>
+  <text font-family="Calibri,Arial,sans-serif" font-size="18" fill="#eef0ff" x="72" y="268">Verifier evidence: failing test · diagnosis · expected behavior · prior patch rationale</text>
+  <text font-family="Calibri,Arial,sans-serif" font-size="18" fill="#eef0ff" x="72" y="292">Only selected steps enter repair context; other workers' context stays separate.</text>
+
+  <path d="M605 138 V190" fill="none" stroke="#ff9b52" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M840 190 V145" fill="none" stroke="#ff9b52" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <text font-family="Calibri,Arial,sans-serif" font-size="17" fill="#e5e8ff" x="54" y="351">COURSE POLICY · Stop at the assigned retry cap and escalate unresolved work to a human.</text>
+  <text font-family="Calibri,Arial,sans-serif" font-size="17" fill="#e5e8ff" x="54" y="383">FUGU-STYLE PATTERN · Local routing; TRINITY and Conductor inform roles and access-list design.</text>
+  <text font-family="Calibri,Arial,sans-serif" font-size="17" fill="#e5e8ff" x="54" y="415">This is a bounded teaching example, not a trained orchestration system.</text>
+</g>
+</svg>

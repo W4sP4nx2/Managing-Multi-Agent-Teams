@@ -1,0 +1,200 @@
+{
+  "versions": {
+    "crewai": "1.15.0",
+    "crewai-tools": "1.15.0",
+    "pydantic": "2.12.5"
+  },
+  "graph": {
+    "agents": 7,
+    "tasks": 7,
+    "process": "Process.sequential",
+    "tasks_detail": [
+      {
+        "name": "research_mission",
+        "context": [],
+        "guardrail": false,
+        "guardrails": false,
+        "output_pydantic": false,
+        "output_json": false,
+        "output_file": null,
+        "human_input": false,
+        "guardrail_max_retries": 3
+      },
+      {
+        "name": "write_article",
+        "context": [
+          "research_mission"
+        ],
+        "guardrail": false,
+        "guardrails": false,
+        "output_pydantic": false,
+        "output_json": false,
+        "output_file": null,
+        "human_input": false,
+        "guardrail_max_retries": 3
+      },
+      {
+        "name": "evaluate_content",
+        "context": [
+          "research_mission",
+          "write_article"
+        ],
+        "guardrail": false,
+        "guardrails": false,
+        "output_pydantic": false,
+        "output_json": false,
+        "output_file": null,
+        "human_input": false,
+        "guardrail_max_retries": 3
+      },
+      {
+        "name": "quality_gate_check",
+        "context": [
+          "research_mission",
+          "write_article",
+          "evaluate_content"
+        ],
+        "guardrail": false,
+        "guardrails": false,
+        "output_pydantic": false,
+        "output_json": false,
+        "output_file": null,
+        "human_input": false,
+        "guardrail_max_retries": 3
+      },
+      {
+        "name": "manager_review_and_score",
+        "context": [
+          "research_mission",
+          "write_article",
+          "evaluate_content",
+          "quality_gate_check"
+        ],
+        "guardrail": false,
+        "guardrails": false,
+        "output_pydantic": false,
+        "output_json": false,
+        "output_file": null,
+        "human_input": false,
+        "guardrail_max_retries": 3
+      },
+      {
+        "name": "compile_final_report",
+        "context": [
+          "write_article",
+          "evaluate_content",
+          "quality_gate_check",
+          "manager_review_and_score"
+        ],
+        "guardrail": false,
+        "guardrails": false,
+        "output_pydantic": false,
+        "output_json": false,
+        "output_file": null,
+        "human_input": false,
+        "guardrail_max_retries": 3
+      },
+      {
+        "name": "deliver_clean_report",
+        "context": [
+          "compile_final_report"
+        ],
+        "guardrail": false,
+        "guardrails": false,
+        "output_pydantic": false,
+        "output_json": false,
+        "output_file": null,
+        "human_input": false,
+        "guardrail_max_retries": 3
+      }
+    ],
+    "max_iter": [
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25
+    ]
+  },
+  "scenarios": [
+    {
+      "name": "retry_rejected",
+      "task_order": [
+        "research_mission",
+        "write_article",
+        "evaluate_content",
+        "quality_gate_check",
+        "manager_review_and_score",
+        "compile_final_report",
+        "deliver_clean_report"
+      ],
+      "final_raw": "# Delivered despite invalid upstream evidence",
+      "typed_outputs": 0,
+      "report_md_created": false
+    },
+    {
+      "name": "infrastructure_error",
+      "task_order": [
+        "research_mission",
+        "write_article",
+        "evaluate_content",
+        "quality_gate_check",
+        "manager_review_and_score",
+        "compile_final_report",
+        "deliver_clean_report"
+      ],
+      "final_raw": "# Delivered despite invalid upstream evidence",
+      "typed_outputs": 0,
+      "report_md_created": false
+    },
+    {
+      "name": "hard_stop",
+      "task_order": [
+        "research_mission",
+        "write_article",
+        "evaluate_content",
+        "quality_gate_check",
+        "manager_review_and_score",
+        "compile_final_report",
+        "deliver_clean_report"
+      ],
+      "final_raw": "# Delivered despite invalid upstream evidence",
+      "typed_outputs": 0,
+      "report_md_created": false
+    }
+  ],
+  "tool_empty_query_accepted": true,
+  "tool_bad_shape": "AttributeError",
+  "network_attempts": 0,
+  "main_definitions": [
+    "run",
+    "train",
+    "replay",
+    "test"
+  ],
+  "run_with_trigger_missing": true,
+  "test_files": [],
+  "audit_date": "2026-10-19",
+  "method": "Installed CrewAI kickoff with Agent.execute_task replaced by deterministic fixture outputs; network connections blocked. This demonstrates scheduler and task-boundary behavior, not live model compliance or retrieval quality.",
+  "static_checks": {
+    "python_files_parsed": 6,
+    "project_test_files": 0,
+    "missing_readme_link": "../notebooks/02_lab_crewai_team_handoff.ipynb",
+    "current_lab_link": "../notebooks/02_lab_crewai.ipynb",
+    "advertised_archive_exists": false,
+    "env_example_exists": false
+  },
+  "source_sha256": {
+    "crewai_learning/README.md": "636c125ee35a2509848a3913db24bd1d5c2aef8fb43ab131561dab35dd79019f",
+    "crewai_learning/SETUP_AND_LEARNING_EXPERIENCE.md": "69e8fbab1c6c72da2584850eeb1a33815a242d974891543135d9c766cdde7c95",
+    "assignments/module14_crewai_orchestration_patterns.md": "3c4afbf7e9ee95e89fe7b172528579e106fee77152c58749eeda19d8c7d6888e",
+    "crewai_learning/academic_research_crewai_project/pyproject.toml": "5c9982cac74fac1f7ea1f11c34a40490e01ffacd7c550245252224f71602d39d",
+    "crewai_learning/academic_research_crewai_project/src/academic_research_writer_evaluator/crew.py": "37490e914189c145347bc74aa4a0529b66e3476e2b0ed682506a7cf879d08b6f",
+    "crewai_learning/academic_research_crewai_project/src/academic_research_writer_evaluator/main.py": "94b4be43581a39f6a1e3589e5c31a1150a0da07099646a10966d40238414c4b1",
+    "crewai_learning/academic_research_crewai_project/src/academic_research_writer_evaluator/config/agents.yaml": "3b2c607be81e60335976367ee2c9828185f87b88a7f70fe318e4d654463a7a7c",
+    "crewai_learning/academic_research_crewai_project/src/academic_research_writer_evaluator/config/tasks.yaml": "9c5afd044f88225c6d3f71eddeb7330fdb70d3b1421bcf70b5993476e05d68f1",
+    "crewai_learning/academic_research_crewai_project/src/academic_research_writer_evaluator/tools/semantic_scholar_search_tool.py": "7a9b753cfa105f409f12642efbf5acce5ed346c6c8e292f9aa1f18400693e948"
+  }
+}

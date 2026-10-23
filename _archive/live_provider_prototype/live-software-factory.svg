@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1050" viewBox="0 0 1200 1050" role="img" aria-labelledby="factory-title factory-description">
+  <title id="factory-title">Live Software Factory: proposed architecture and approval gates</title>
+  <desc id="factory-description">Read from top to bottom. Approved GitHub issue intake enters an orchestrator which validates scope, reserves budget, and waits for a human spend decision when required. The Coder edits an assigned branch in a separate Git worktree. Security, UI/UX, and QA reviewers inspect the same candidate revision. Evidence tied to that revision enters a pull request with required CI and human merge review. Protected main then supplies an approved build to a separate human deployment gate. Deployment completes only with an artifact digest, health result, and rollback receipt. Any failure blocks the next transition; a new revision invalidates old reviews. This is a proposed live design, separate from the deterministic required course notebooks.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/></marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #172b44; }
+      .title { font-size: 30px; font-weight: 700; }
+      .subtitle { font-size: 17px; }
+      .label { font-size: 19px; font-weight: 700; }
+      .body { font-size: 16px; }
+      .small { font-size: 15px; }
+      .lane { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.5; }
+      .box { fill: #fff; stroke: #334155; stroke-width: 2; }
+      .gate { fill: #fff4d6; stroke: #8a5700; stroke-width: 2; }
+      .evidence { fill: #e7f4ef; stroke: #25624d; stroke-width: 2; }
+      .flow { fill: none; stroke: #334155; stroke-width: 2.5; marker-end: url(#arrow); }
+      .branch { fill: none; stroke: #334155; stroke-width: 2; }
+    </style>
+  </defs>
+  <rect width="1200" height="1050" fill="#fff"/>
+  <text x="40" y="48" class="title">Live Software Factory</text>
+  <text x="40" y="77" class="subtitle">Proposed live design · optional post-course extension · separate from required offline labs</text>
+
+  <rect x="30" y="100" width="1140" height="205" rx="14" class="lane"/>
+  <text x="50" y="128" class="label">1  Intake and scheduling</text>
+  <rect x="55" y="150" width="270" height="125" rx="10" class="box"/>
+  <text x="75" y="179" class="label">GitHub Issues</text>
+  <text x="75" y="207" class="body">Approved scope + acceptance</text>
+  <text x="75" y="232" class="body">Issue text is untrusted input</text>
+  <text x="75" y="257" class="small">Deduplicate events by revision</text>
+  <path d="M325 212 H385" class="flow"/>
+  <rect x="390" y="150" width="365" height="125" rx="10" class="box"/>
+  <text x="410" y="179" class="label">Orchestrator</text>
+  <text x="410" y="207" class="body">Validate work order · reserve budget</text>
+  <text x="410" y="232" class="body">Scope tools · cap attempts/concurrency</text>
+  <text x="410" y="257" class="small">Durable state + accountable decisions</text>
+  <path d="M755 212 H810" class="flow"/>
+  <rect x="815" y="150" width="330" height="125" rx="10" class="gate"/>
+  <text x="835" y="179" class="label">Human spend gate</text>
+  <text x="835" y="207" class="body">Approve threshold exceptions</text>
+  <text x="835" y="232" class="body">Deny or no funds → wait/stop</text>
+  <text x="835" y="257" class="small">Approval before paid action</text>
+
+  <rect x="30" y="325" width="1140" height="330" rx="14" class="lane"/>
+  <text x="50" y="353" class="label">2  Local work and independent review</text>
+  <path d="M980 275 V365 H600 V370" class="flow"/>
+  <text x="650" y="316" class="small">Funds reserved; exception approved if required</text>
+  <rect x="55" y="375" width="1090" height="94" rx="10" class="box"/>
+  <text x="75" y="405" class="label">Coder → assigned branch in its own Git worktree</text>
+  <text x="75" y="432" class="body">Edit + test scoped paths · record base and candidate hashes · no production credentials</text>
+  <text x="75" y="456" class="small">Separate directories/indexes; shared history. Concurrent processes need limits and isolation.</text>
+  <path d="M600 469 V490 H226 V510" class="flow"/>
+  <path d="M600 490 V510" class="flow"/>
+  <path d="M600 490 H974 V510" class="flow"/>
+  <rect x="55" y="515" width="342" height="110" rx="10" class="box"/>
+  <text x="75" y="546" class="label">Security reviewer</text>
+  <text x="75" y="574" class="body">SAST · secrets · dependencies</text>
+  <text x="75" y="600" class="small">Findings + tool/rules versions</text>
+  <rect x="429" y="515" width="342" height="110" rx="10" class="box"/>
+  <text x="449" y="546" class="label">UI/UX reviewer</text>
+  <text x="449" y="574" class="body">Accessibility + design criteria</text>
+  <text x="449" y="600" class="small">Automated + manual observations</text>
+  <rect x="803" y="515" width="342" height="110" rx="10" class="box"/>
+  <text x="823" y="546" class="label">QA reviewer</text>
+  <text x="823" y="574" class="body">Unit · integration · acceptance</text>
+  <text x="823" y="600" class="small">Reports + exit status + artifacts</text>
+
+  <path d="M226 625 V677 H600" class="branch"/>
+  <path d="M974 625 V677 H600" class="branch"/>
+  <path d="M600 625 V695" class="flow"/>
+  <rect x="55" y="700" width="1090" height="65" rx="10" class="evidence"/>
+  <text x="75" y="727" class="label">Evidence for the same candidate revision</text>
+  <text x="75" y="752" class="body">Any failed/missing report → block or bounded repair. New code → invalidate previous approval.</text>
+  <rect x="30" y="780" width="1140" height="225" rx="14" class="lane"/>
+  <text x="430" y="809" class="label">3  Remote enforcement and release</text>
+  <path d="M226 765 V825" class="flow"/>
+  <rect x="55" y="830" width="342" height="145" rx="10" class="gate"/>
+  <text x="75" y="861" class="label">PR → protected main</text>
+  <text x="75" y="891" class="body">Required CI + human review</text>
+  <text x="75" y="917" class="body">Trusted policies · no bypass</text>
+  <text x="75" y="951" class="small">Local hooks cannot enforce merge</text>
+  <path d="M397 902 H424" class="flow"/>
+  <rect x="429" y="830" width="342" height="145" rx="10" class="gate"/>
+  <text x="449" y="861" class="label">Deployment approval</text>
+  <text x="449" y="891" class="body">Separate environment gate</text>
+  <text x="449" y="917" class="body">Approve immutable build digest</text>
+  <text x="449" y="951" class="small">Release service holds credentials</text>
+  <path d="M771 902 H798" class="flow"/>
+  <rect x="803" y="830" width="342" height="145" rx="10" class="evidence"/>
+  <text x="823" y="861" class="label">Deploy + verify</text>
+  <text x="823" y="891" class="body">Deployment ID / URL + digest</text>
+  <text x="823" y="917" class="body">Health / acceptance result</text>
+  <text x="823" y="951" class="small">Failure → rollback + retain receipts</text>
+
+  <text x="40" y="1035" class="small">Yellow boxes are distinct human/policy gates. Green boxes carry evidence. Failure stops the next transition.</text>
+</svg>

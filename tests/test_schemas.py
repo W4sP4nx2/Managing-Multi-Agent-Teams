@@ -5,6 +5,8 @@ from pydantic import ValidationError
 
 from src.enterprise_agent_team import CodeFile, CodePatch, TaskSpec
 
+pytestmark = pytest.mark.unit
+
 
 def test_task_spec_validation_accepts_actionable_contract() -> None:
     task = TaskSpec(
