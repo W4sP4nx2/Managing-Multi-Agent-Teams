@@ -70,7 +70,7 @@ Run the default offline check before distribution:
 python tools/audit_links.py check
 ```
 
-The scope follows the learner-package file list, required and advanced-reference notebook manifest entries, current root guides, and active instructor references. Archived content, environments, generated reports, and the previous presentation are excluded as audit sources. A link into an archive still has its destination and fragment checked. Notebook Markdown is checked at its distributed location; repairs update the maintained source before regenerating the affected handout. Code examples and illustrative URLs are excluded.
+The scope follows the learner-package file list, required and advanced-reference notebook manifest entries, current root guides, and active instructor references. Archived content, environments, and generated reports are excluded as audit sources. A link into an archive still has its destination and fragment checked. Notebook Markdown is checked at its distributed location; repairs update the maintained source before regenerating the affected handout. Code examples and illustrative URLs are excluded.
 
 An explicit external check records time-dependent HTTP observations and writes JSON plus a readable report:
 
@@ -89,7 +89,7 @@ Apply rejects stale source hashes. Valid paths, anchors, and successful redirect
 
 ## Rebuild the six-slide deck and executive brief
 
-The canonical deck content is [Marp Markdown](slides/managing_multi_agent_teams_6_slides.md). Its builder, `tools/build_compact_deck.mjs`, reads that source and creates the editable PowerPoint and matching PDF. Use the Codex bundled Node runtime and set `CODEX_RUNTIME_NODE_MODULES`, `CODEX_RUNTIME_PYTHON`, and `CODEX_PRESENTATIONS_SKILL_DIR` to the paths returned by the workspace dependency loader and the installed presentation skill. The builder uses the bundled presentation tooling and LibreOffice PDF conversion; it does not install dependencies.
+The canonical deck content is [Marp Markdown](slides/managing_multi_agent_teams_6_slides.md). Its builder, `tools/build_compact_deck.mjs`, reads that source and creates the editable PowerPoint in `slides/` and matching PDF in `pdf/`. The root `pdf/` folder is the canonical location for PDF exports. Use the Codex bundled Node runtime and set `CODEX_RUNTIME_NODE_MODULES`, `CODEX_RUNTIME_PYTHON`, and `CODEX_PRESENTATIONS_SKILL_DIR` to the paths returned by the workspace dependency loader and the installed presentation skill. The builder uses the bundled presentation tooling and LibreOffice PDF conversion; it does not install dependencies.
 
 ```sh
 node tools/build_compact_deck.mjs
@@ -101,7 +101,7 @@ The [leadership brief source](leadership/executive_brief.md) is maintained separ
 python tools/build_executive_brief.py
 ```
 
-Arial is embedded in the executive PDF. On other platforms, pass `--font-dir` pointing to a licensed Arial installation containing the regular and bold faces. Confirm six deck slides, six slide-PDF pages, and one A4 executive page, then inspect every rendered page. Keep the executive PDF outside the learner ZIP. The previous 26-slide PowerPoint remains unchanged as a historical full-repository reference.
+Arial is embedded in the executive PDF. On other platforms, pass `--font-dir` pointing to a licensed Arial installation containing the regular and bold faces. Confirm six deck slides, six slide-PDF pages, and one A4 executive page, then inspect every rendered page. Keep the executive PDF outside the learner ZIP. Keep the exported deck PDF, executive brief, and Paper ADR quick sheet together in the root `pdf/` folder.
 
 ## Build the learner handout
 

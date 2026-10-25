@@ -20,7 +20,7 @@ from reportlab.platypus import (
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "output/pdf/capstone_paper_adr_quick_sheet.pdf"
+OUTPUT = ROOT / "pdf/capstone_paper_adr_quick_sheet.pdf"
 INK = colors.HexColor("#17212B")
 MUTED = colors.HexColor("#455565")
 LINE = colors.HexColor("#B8C2CC")

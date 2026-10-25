@@ -25,7 +25,7 @@ const arg = (name, fallback) => {
 };
 const buildDir = arg("--build-dir", path.join(root, ".test-results/compact-deck"));
 const finalPptx = arg("--output-pptx", path.join(root, "slides/managing_multi_agent_teams_6_slides.pptx"));
-const finalPdf = arg("--output-pdf", path.join(root, "output/pdf/managing_multi_agent_teams_6_slides.pdf"));
+const finalPdf = arg("--output-pdf", path.join(root, "pdf/managing_multi_agent_teams_6_slides.pdf"));
 const source = path.join(root, "slides/managing_multi_agent_teams_6_slides.md");
 await fs.mkdir(buildDir, { recursive: true });
 await fs.mkdir(path.dirname(finalPptx), { recursive: true });

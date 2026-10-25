@@ -23,7 +23,7 @@ from reportlab.platypus import Paragraph, SimpleDocTemplate
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "leadership/executive_brief.md"
-OUTPUT = ROOT / "output/pdf/executive_brief_governed_multi_agent_training.pdf"
+OUTPUT = ROOT / "pdf/executive_brief_governed_multi_agent_training.pdf"
 TITLE = "Executive Brief: Governed Multi-Agent AI Training Curriculum"
 INK = colors.HexColor("#1E1E24")
 PAPER = colors.HexColor("#F8F9FA")

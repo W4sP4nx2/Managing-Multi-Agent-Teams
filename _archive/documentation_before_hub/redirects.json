@@ -8,7 +8,6 @@
       "teaching-design-and-ai-literacy": "readings-teaching-design-and-ai-literacy",
       "framework-literacy-presentation-reference": "readings-framework-literacy-presentation-reference",
       "start-here-multi-agent-systems-applications--rag": "readings-start-here-multi-agent-systems-applications--rag",
-      "agent-building-discussions": "readings-agent-building-discussions",
       "required-practical-route": "readings-required-practical-route",
       "topics-12-ai-orchestration-workspace--strategic-prompt-engineering": "readings-topics-12-ai-orchestration-workspace--strategic-prompt-engineering",
       "topics-35-contracts-team-memory--code-auditing": "readings-topics-35-contracts-team-memory--code-auditing",
@@ -217,8 +216,7 @@
       "objective": "assignment-03-architectural-supervision-objective",
       "architecture-and-flow": "assignment-03-architectural-supervision-architecture-and-flow",
       "task": "assignment-03-architectural-supervision-task",
-      "passfail": "assignment-03-architectural-supervision-passfail",
-      "transfer-checkpoint-ungraded": "assignment-03-architectural-supervision-transfer-checkpoint-ungraded"
+      "passfail": "assignment-03-architectural-supervision-passfail"
     }
   },
   {
@@ -289,22 +287,6 @@
       "capstone-code-20-points": "ex5-capstone-virtual-software-company-capstone-code-20-points",
       "architecture-decision-record-20-points": "ex5-capstone-virtual-software-company-architecture-decision-record-20-points",
       "optional-architecture-extension-a-langgraph-state-machine": "ex5-capstone-virtual-software-company-optional-architecture-extension-a-langgraph-state-machine"
-    }
-  },
-  {
-    "source": "assignments/agent_building_design_guide.md",
-    "target": "ASSIGNMENTS.md",
-    "anchor": "agent-building-design-guide",
-    "fragments": {
-      "building-a-managed-agent-team": "agent-building-design-guide",
-      "start-with-one-agent": "agent-building-design-guide-start-with-one-agent",
-      "context-engineering": "agent-building-design-guide-context-engineering",
-      "one-main-agent-and-specialist-helpers": "agent-building-design-guide-one-main-agent-and-specialist-helpers",
-      "choosing-a-capability-and-pairing-with-the-human": "agent-building-design-guide-choosing-a-capability-and-pairing-with-the-human",
-      "stable-tools-and-loading-on-demand": "agent-building-design-guide-stable-tools-and-loading-on-demand",
-      "state-changes-and-actionable-errors": "agent-building-design-guide-state-changes-and-actionable-errors",
-      "takeaways-and-evidence": "agent-building-design-guide-takeaways-and-evidence",
-      "source-notes": "agent-building-design-guide-source-notes"
     }
   },
   {
@@ -441,7 +423,6 @@
       "instructor-teaching-notes": "teaching-notes",
       "facilitate-the-practice-and-feedback-cycle": "teaching-notes--facilitate-the-practice-and-feedback-cycle",
       "discussion-prompts-for-the-application-slides": "teaching-notes--discussion-prompts-for-the-application-slides",
-      "facilitate-the-agent-building-checkpoints": "teaching-notes--facilitate-the-agent-building-checkpoints",
       "day-1-opening-deterministic-mode": "teaching-notes--day-1-opening-deterministic-mode",
       "why-a-native-virtual-environment": "teaching-notes--why-a-native-virtual-environment",
       "why-separate-coder-and-qa-roles": "teaching-notes--why-separate-coder-and-qa-roles",
@@ -496,17 +477,6 @@
       "day-1--mas-foundations-contracts-and-team-context": "delivery-schedule--day-1--mas-foundations-contracts-and-team-context",
       "day-2--security-bounded-repair-and-team-to-team-delivery": "delivery-schedule--day-2--security-bounded-repair-and-team-to-team-delivery",
       "integrated-factory-facilitation": "delivery-schedule--integrated-factory-facilitation"
-    }
-  },
-  {
-    "source": "instructor/agent_building_slide_alignment.md",
-    "target": "INSTRUCTOR_PLAYBOOK.md",
-    "anchor": "agent-building-slide-alignment",
-    "fragments": {
-      "agent-building-slide-and-exercise-alignment": "agent-building-slide-alignment",
-      "content-crosswalk": "agent-building-slide-alignment--content-crosswalk",
-      "assessment-and-scope": "agent-building-slide-alignment--assessment-and-scope",
-      "18-october-verification-historical": "agent-building-slide-alignment--18-october-verification-historical"
     }
   },
   {

@@ -22,7 +22,7 @@ FILES = (
     'notebook_manifest.yml',
     'slides/managing_multi_agent_teams_6_slides.pptx',
     'slides/managing_multi_agent_teams_6_slides.md',
-    'output/pdf/managing_multi_agent_teams_6_slides.pdf',
+    'pdf/managing_multi_agent_teams_6_slides.pdf',
     'slides/assets/managing_multi_agent_teams_mindmap.png',
     'slides/assets/un_volunteers_iyv26.png',
     'slides/trinity_adaptive_workflow_access_list.svg',

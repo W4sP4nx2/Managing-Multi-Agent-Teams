@@ -21,7 +21,7 @@ def test_pack_omits_non_course_files_and_preserves_code_and_deck(repo_root, tmp_
     assert len([name for name in payload if name.endswith(".pptx")]) == 1
     assert {"slides/managing_multi_agent_teams_6_slides.pptx",
             "slides/managing_multi_agent_teams_6_slides.md",
-            "output/pdf/managing_multi_agent_teams_6_slides.pdf"} <= payload.keys()
+            "pdf/managing_multi_agent_teams_6_slides.pdf"} <= payload.keys()
     assert "slides/managing_multi_agent_teams_workshop_v16.pptx" not in payload
     assert not any("executive_brief" in name for name in payload)
     with ZipFile(BytesIO(payload["slides/managing_multi_agent_teams_6_slides.pptx"])) as deck:

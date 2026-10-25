@@ -210,11 +210,11 @@ The [multi-agent framework comparison](#framework-comparison) compares CrewAI, L
 <a id="readings-start-here-multi-agent-systems-applications--rag"></a>
 #### Start here: Multi-Agent Systems, Applications & RAG
 
-Read **slides 1–2** for architecture and execution. Use the written references below for MAS foundations and optional tabletop simulations:
+Use the [notebook exercise guide](COURSE_MAP.md#how-to-use-the-notebook-exercises) for architecture and execution. The written references below cover MAS foundations and optional tabletop simulations:
 
 | Reference | Focus | Companion material |
 | --- | --- | --- |
-| Slides 1–2 | Course architecture and controlled execution | [Agent-building guide](ASSIGNMENTS.md#agent-building-design-guide-start-with-one-agent) |
+| Notebook exercises | Roles, rules, and collaboration patterns | [Lab 2 comparison](notebooks/02_lab_crewai.ipynb#lab2-collaboration-patterns) |
 | Written foundations | MAS definition, types, and applications | IBM MAS introduction below; [simulation introduction](ASSIGNMENTS.md#workshop-simulations-what-is-a-multi-agent-system) |
 | Written simulation | Procurement recommendation | [Procurement simulation](ASSIGNMENTS.md#workshop-simulations-simulation-1-automating-a-procurement-recommendation) |
 | Written simulation | HR policy assistant with RAG | IBM RAG reading below; [HR simulation](ASSIGNMENTS.md#workshop-simulations-simulation-2-enhancing-an-hr-virtual-assistant-with-rag) |
@@ -224,15 +224,10 @@ Read **slides 1–2** for architecture and execution. Use the written references
 - **course applications:** [Procurement and HR policy RAG simulations](ASSIGNMENTS.md#workshop-simulations) provide fixed facts, role diagrams, typed outcome designs, and expected decisions. These are ungraded tabletop demonstrations linked to the existing three labs and Capstone, not implemented notebooks or new installation requirements.
 - **Scope:** A RAG workflow can use one agent or several. Routing among model-level experts is not itself a multi-agent team; the Capstone's Fast/Expert records are routing targets, not additional agents.
 
-<a id="readings-agent-building-discussions"></a>
-#### Agent-building discussions
-
-The [design guide](ASSIGNMENTS.md#agent-building-design-guide) retains detailed working briefs, helper roles, capability choice and human pairing, stable tools, state changes, and takeaways. Slides 2–5 introduce the execution, contract, review, and deliverable concepts; use the written guide for the fuller discussion prompts. Its [source notes](ASSIGNMENTS.md#agent-building-design-guide-source-notes) distinguish course conventions from platform documentation. The prompts are ungraded; the required notebooks do not implement proposed desktop/video/cloud, tool-discovery, durable-state, or user-interaction capabilities.
-
 <a id="readings-required-practical-route"></a>
 #### Required practical route
 
-Follow the [exercise index](ASSIGNMENTS.md#assignment-index): **preflight → Lab 1 → Lab 2 → Lab 3 → Capstone → Software Factory → local CI/CD**. The six-slide deck summarizes this route; slides 3–5 connect contracts, team review, and deliverables. Background readings below support those tasks; they do not create extra graded work. The older short theory decks are archived and are not required reading.
+Follow the [exercise index](ASSIGNMENTS.md#assignment-index): **preflight → Lab 1 → Lab 2 → Lab 3 → Capstone → Software Factory → local CI/CD**. The six-slide deck summarizes this route; slides 3–5 connect contracts, team review, and deliverables. Background readings below support those tasks; they do not create extra graded work.
 
 <a id="readings-topics-12-ai-orchestration-workspace--strategic-prompt-engineering"></a>
 #### Topics 1–2: AI Orchestration, Workspace & Strategic Prompt Engineering
@@ -362,7 +357,7 @@ Pydantic establishes declared field constraints. It does not detect arbitrary pe
 
 ## Main deck slide index
 
-[Open the six-slide PowerPoint](slides/managing_multi_agent_teams_6_slides.pptx) · [Shareable slide PDF](output/pdf/managing_multi_agent_teams_6_slides.pdf) · [Editable Marp source](slides/managing_multi_agent_teams_6_slides.md)
+[Open the six-slide PowerPoint](slides/managing_multi_agent_teams_6_slides.pptx) · [Shareable slide PDF](pdf/managing_multi_agent_teams_6_slides.pdf) · [Editable Marp source](slides/managing_multi_agent_teams_6_slides.md)
 
 | Slide | Title | Related activity |
 | ---: | --- | --- |
@@ -375,9 +370,8 @@ Pydantic establishes declared field constraints. It does not detect arbitrary pe
 
 The [mind-map image](slides/assets/managing_multi_agent_teams_mindmap.png), [framework comparison](#framework-comparison), and [complete ERD](resources/diagrams/capstone_factory_erd.md) remain written/reference companions. The deck summarizes six core concepts; the detailed guides retain the remaining discussions.
 
-For leadership, share the separate [one-page executive brief](pdf/executive_brief_governed_multi_agent_training.pdf), maintained in [editable Markdown](leadership/executive_brief.md).
+Downloadable PDFs are kept in the [root PDF folder](pdf/). For leadership, share the separate [one-page executive brief](pdf/executive_brief_governed_multi_agent_training.pdf), maintained in [editable Markdown](leadership/executive_brief.md).
 
-The previous 26-slide presentation remains unchanged at `slides/managing_multi_agent_teams_workshop_v16.pptx` as a historical reference in the full repository. It is excluded from the learner handout; other superseded decks remain in the archive.
 
 <a id="reference-and-maintenance"></a>
 

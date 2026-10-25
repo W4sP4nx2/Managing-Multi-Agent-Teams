@@ -17,7 +17,6 @@ The required runtime is deterministic. Learners construct CrewAI roles and task 
 | The learner workflow and assessment | [Learner Playbook](README.md#golden-path) |
 | Assessment and the Paper ADR route | [Assessment](#assessment-100-course-marks) · [Capstone brief](ASSIGNMENTS.md#ex5-capstone-virtual-software-company) |
 | Research context | [Curated academic and technical resources](README.md#readings) |
-| Agent-building design prompts | [Design guide](ASSIGNMENTS.md#agent-building-design-guide); optional reading alongside runnable exercises |
 | Framework literacy in the written reference | [Framework comparison](README.md#framework-comparison); ungraded reference reading |
 
 ## Seven-notebook order
@@ -51,7 +50,7 @@ Each required notebook starts with **Run / Edit / Inspect / Finish** instruction
 | 06 · Local CI/CD | Prove denied, stale, and missing-input cases cannot publish. |
 | Optional CrewAI bridge | Create and run a real sequential Crew with scripted responses; display Markdown and inspect stop/retry behavior. |
 
-All exercises use local Python and fixed teaching data. No GPT, other LLM, or reasoning model is called. The optional bridge substitutes a scripted adapter at the model boundary; it still executes CrewAI's task machinery. [The design guide](ASSIGNMENTS.md#agent-building-design-guide) remains optional reading.
+All exercises use local Python and fixed teaching data. No GPT, other LLM, or reasoning model is called. The optional bridge substitutes a scripted adapter at the model boundary; it still executes CrewAI's task machinery.
 
 ## Control and cell map
 

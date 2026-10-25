@@ -5,7 +5,7 @@ Original standalone documents are preserved here for provenance. Active learning
 | Original snapshot | Current section |
 | --- | --- |
 | [PLAYBOOK.md](PLAYBOOK.md) | [Current section](../../README.md#golden-path) |
-| [assignments/agent_building_design_guide.md](assignments/agent_building_design_guide.md) | [Current section](../../ASSIGNMENTS.md#agent-building-design-guide) |
+| [assignments/agent_building_design_guide.md](assignments/agent_building_design_guide.md) | Archived reference; removed from the current course |
 | [assignments/assignment_01_strategic_prompt_engineering.md](assignments/assignment_01_strategic_prompt_engineering.md) | [Current section](../../ASSIGNMENTS.md#assignment-01-strategic-prompt-engineering) |
 | [assignments/assignment_02_ai_workspace_and_role_context.md](assignments/assignment_02_ai_workspace_and_role_context.md) | [Current section](../../ASSIGNMENTS.md#assignment-02-ai-workspace-and-role-context) |
 | [assignments/assignment_03_architectural_supervision.md](assignments/assignment_03_architectural_supervision.md) | [Current section](../../ASSIGNMENTS.md#assignment-03-architectural-supervision) |
@@ -26,7 +26,7 @@ Original standalone documents are preserved here for provenance. Active learning
 | [crewai_learning/VERIFICATION.md](crewai_learning/VERIFICATION.md) | [Current section](../../crewai_learning/README.md#historical-verification) |
 | [extensions/README.md](extensions/README.md) | [Current section](../../README.md#reference-and-maintenance) |
 | [instructor/GRADING.md](instructor/GRADING.md) | [Current section](../../INSTRUCTOR_PLAYBOOK.md#grading) |
-| [instructor/agent_building_slide_alignment.md](instructor/agent_building_slide_alignment.md) | [Current section](../../INSTRUCTOR_PLAYBOOK.md#agent-building-slide-alignment) |
+| [instructor/agent_building_slide_alignment.md](instructor/agent_building_slide_alignment.md) | Archived reference; removed from the current course |
 | [instructor/assessment_compliance_checklist.md](instructor/assessment_compliance_checklist.md) | [Current section](../../INSTRUCTOR_PLAYBOOK.md#assessment-compliance-checklist) |
 | [instructor/capstone_paper_adr_quick_sheet.md](instructor/capstone_paper_adr_quick_sheet.md) | [Current section](../../INSTRUCTOR_PLAYBOOK.md#capstone-paper-adr-quick-sheet) |
 | [instructor/course_delivery_readiness_checklist.md](instructor/course_delivery_readiness_checklist.md) | [Current section](../../INSTRUCTOR_PLAYBOOK.md#course-delivery-readiness-checklist) |
@@ -54,7 +54,5 @@ Original standalone documents are preserved here for provenance. Active learning
 | [resources/framework_comparison.md](resources/framework_comparison.md) | [Current section](../../README.md#framework-comparison) |
 | [resources/papers/README.md](resources/papers/README.md) | [Current section](../../README.md#resource-files) |
 | [resources/videos/README.md](resources/videos/README.md) | [Current section](../../README.md#resource-files) |
-| [slides/README.md](slides/README.md) | [Current section](../../README.md#main-deck-slide-index) |
-| [slides/managing_multi_agent_teams_mindmap.md](slides/managing_multi_agent_teams_mindmap.md) | [Current section](../../README.md#main-deck-slide-index) |
 
-The previous root README is preserved as [original_README.md](original_README.md). The original deck before hyperlink repair is under `slides/`. [redirects.json](redirects.json) records original heading mappings. Archive contents are excluded from the learner pack.
+The previous root README is preserved as [original_README.md](original_README.md). [redirects.json](redirects.json) records original heading mappings. Archive contents are excluded from the learner pack.

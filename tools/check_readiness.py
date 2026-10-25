@@ -51,8 +51,7 @@ def source_fingerprint(root: Path) -> dict:
                 "requirements.txt", "requirements/*.txt", ".github/workflows/*.yml",
                 "*.md", "assignments/*.md", "resources/**/*.md", "resources/diagrams/*.svg", "slides/*.md",
                 "slides/*.pptx", "slides/*.svg", "slides/assets/*", "leadership/*.md",
-                "output/pdf/managing_multi_agent_teams_6_slides.pdf",
-                "output/pdf/executive_brief_governed_multi_agent_training.pdf"]
+                "pdf/*.pdf", "pdf/*.pptx", "pdf/*.md"]
     paths = {path for pattern in patterns for path in root.glob(pattern)}
     paths.update(root / name for name in (
         "pytest.ini", "notebook_manifest.yml", "tools/check_readiness.py",

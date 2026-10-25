@@ -13,7 +13,7 @@ The current route has **seven notebooks and six slides**. Three lab scores `/15`
 - [Assessment files, marks and calculation rules](#grading)
 - [Paper ADR worksheet and partial credit](#capstone-paper-adr-quick-sheet)
 - [Private delivery schedule](#delivery-schedule)
-- [Presentation and exercise crosswalk](#agent-building-slide-alignment)
+- [Notebook and control crosswalk](#notebook-control-crosswalk)
 - [Teaching-design rationale and AI-use policy](#stanford-teaching-guide-alignment)
 - [Management principles and evidence](#management-principle-matrix)
 - [Technical scenarios and instructor Q&A](#technical-implementation-playbook)
@@ -183,7 +183,7 @@ The learner-facing approach adapts the [Stanford Teaching Commons AI Teaching Gu
 
 ### Facilitate the practice-and-feedback cycle
 
-Use the same sequence in the slides, simulations, and notebook labs:
+Use the same sequence in the written simulations and notebook labs:
 
 1. **Connect:** open with a short workplace or learner-relevant scenario. Invite several possible perspectives before narrowing to the course's fixed facts.
 2. **Predict:** before revealing the simulation outcome or running a fixture, ask learners to write or discuss what might fail and what evidence they would expect.
@@ -202,7 +202,7 @@ Frame a broken starter as a planned, low-stakes diagnostic case. Do not turn a v
 - **HR/RAG:** Ask pairs to match each answer claim to a current, authorized snippet. Then ask what the assistant should do when the policy collection does not answer the question.
 - **After a notebook grader:** Ask the learner to name one passed check, one boundary of the check, and one next test or review action.
 
-<a id="teaching-notes--facilitate-the-agent-building-checkpoints"></a>
+<a id="teaching-notes--facilitate-the-notebook-exercises"></a>
 
 ### Facilitate the notebook exercises
 
@@ -215,7 +215,7 @@ Start with each notebook's Run / Edit / Inspect / Finish guide and embedded exer
 - **Capstone and delivery labs:** trace the typed API handoff, scoped review memory, bounded repair, and local candidate through the supplied adversarial checks; connect them to the ADR interaction map.
 - **Optional CrewAI bridge:** create a real sequential Crew, call `kickoff`, display final-task Markdown, and compare exception stop, bounded recovery, and escalation. All responses are scripted locally; no LLM or reasoning model runs.
 
-Keep reflection tied to observed notebook behavior. Preserve the existing TODOs, graders, and ADR criteria. A learner can explain a result aloud, in a short note, or by annotating the exercise diagram. Broader helper designs remain in the optional [design guide](ASSIGNMENTS.md#agent-building-design-guide).
+Keep reflection tied to observed notebook behavior. Preserve the existing TODOs, graders, and ADR criteria. A learner can explain a result aloud, in a short note, or by annotating the exercise diagram.
 
 <a id="teaching-notes--day-1-opening-deterministic-mode"></a>
 
@@ -456,11 +456,11 @@ Record this sheet's score in **ADR & defense /20**. It awards ADR marks only. Th
 
 ## Instructor delivery schedule
 
-Private facilitation reference. Learner navigation uses competency order without delivery dates or durations. The schedule below adapts the historical classroom time allocations to the current six-slide deck. Integrate the factory and local CI/CD rehearsals into the delivery allocation rather than presenting them as an end-of-course bonus.
+Private facilitation reference. Learner navigation uses competency order without delivery dates or durations. The schedule below uses the practical notebook sequence and written walkthroughs. Integrate the factory and local CI/CD rehearsals into the delivery allocation rather than presenting them as an end-of-course bonus.
 
 
 
-The [course syllabus](README.md#course-topics) groups nine competency topics into the sessions below. One main six-slide presentation supports the entire route. Procurement and HR/RAG are formative walkthroughs, not additional graded implementations. The practical sequence contains one preflight, three labs, one software Capstone, and the integrated factory and local CI/CD labs.
+The [course syllabus](README.md#course-topics) groups nine competency topics into the sessions below. Procurement and HR/RAG are formative walkthroughs, not additional graded implementations. The practical sequence contains one preflight, three labs, one software Capstone, and the integrated factory and local CI/CD labs.
 
 <a id="delivery-schedule--day-1--mas-foundations-contracts-and-team-context"></a>
 
@@ -468,10 +468,10 @@ The [course syllabus](README.md#course-topics) groups nine competency topics int
 
 | Time | Session | Activity and completion evidence |
 | --- | --- | --- |
-| 09:00–10:30 | Starting small, MAS foundations, and use cases · slides 1–2 and written simulations | Define a first task and when it needs a helper; classify MAS interaction types; trace [procurement and HR/RAG](ASSIGNMENTS.md#workshop-simulations), identify coordination risks, then run the [preflight](notebooks/00_sandbox_preflight.ipynb). |
-| 10:45–12:00 | Lab 1: Context Engineering — Working Brief and Typed Contracts · slide 3 | Prepare a short context packet; connect it to typed constraints; repair the weak Pydantic schema and reach `✅ SUCCESS: 15/15`. |
-| 13:00–14:00 | Roles, context, and framework literacy · slide 4 and framework reading | Compare general, computer-use, video, and cloud coding helper designs with Manager–Coder–QA responsibilities; inspect context dependencies; compare CrewAI, LangGraph, AutoGen, and Microsoft Agent Framework using the [framework reference](README.md#framework-comparison). |
-| 14:15–16:30 | Lab 2: Multi-Agent Management — Code Auditing and Team Oversight · slide 4 | Repair tools/context, inspect the supplied Manager audit and local QA inbox, record the decision, and reach 15/15. |
+| 09:00–10:30 | MAS foundations and written simulations | Identify role responsibilities and acceptance rules; classify MAS interaction types; trace [procurement and HR/RAG](ASSIGNMENTS.md#workshop-simulations), identify coordination risks, then run the [preflight](notebooks/00_sandbox_preflight.ipynb). |
+| 10:45–12:00 | Lab 1: Context Engineering — Working Brief and Typed Contracts | Prepare a short context packet; connect it to typed constraints; repair the weak Pydantic schema and reach `✅ SUCCESS: 15/15`. |
+| 13:00–14:00 | Roles, context, and framework literacy | Compare Manager–Coder–QA responsibilities with independent, decentralized, centralized and hybrid routing; inspect context dependencies; compare CrewAI, LangGraph, AutoGen, and Microsoft Agent Framework using the [framework reference](README.md#framework-comparison). |
+| 14:15–16:30 | Lab 2: Multi-Agent Management — Code Auditing and Team Oversight | Repair tools/context, inspect the supplied Manager audit and local QA inbox, record the decision, and reach 15/15. |
 
 <a id="delivery-schedule--day-2--security-bounded-repair-and-team-to-team-delivery"></a>
 
@@ -479,11 +479,11 @@ The [course syllabus](README.md#course-topics) groups nine competency topics int
 
 | Time | Session | Activity and completion evidence |
 | --- | --- | --- |
-| 09:00–10:30 | Capability choice, tool design, and debugging · slides 2–4 and design guide | Choose an adequate capability, identify a human pairing point, and discuss stable tools, state receipts, and useful errors; select role-specific evidence using the [academic resources](README.md#readings); diagnose a failure from the supplied workflow trace. |
-| 10:45–12:00 | Lab 3: Manager Oversight — Code Validation and Bounded Repair · slides 2 and 4 | Repair the gate/retry limit, inspect the Manager oversight evidence, record escalation, and reach `✅ SUCCESS: 15/15`. |
-| 13:00–14:30 | Capstone and factory build · slides 3 and 5 | Validate `DevDeliverable` before the Coordinator starts the local Security adapter; inspect the audit result. Use [notebook 05](notebooks/05_live_software_factory.ipynb) to connect the travel-site brief to fixture outputs, simulated costs, candidate Git revision, and approval evidence. |
-| 14:45–15:45 | Local CI/CD, defense, and Paper ADR option · slides 5–6 | Use [notebook 06](notebooks/06_local_cicd.ipynb) to demonstrate denied publication and stale-evidence blocks. Present the inter-team contract, observed checks, and ADR, or submit a sound Paper ADR fallback. |
-| 15:45–16:00 | Framework ecosystem and takeaways · written framework reference and slide 5 | Review broader framework choices as ungraded literacy; connect the five [agent-building takeaways](ASSIGNMENTS.md#agent-building-design-guide-takeaways-and-evidence) to observed evidence and a next decision. |
+| 09:00–10:30 | Governed tools and debugging | Inspect the Lab 2 tool allowlists, input schemas and audit record; select role-specific evidence using the [academic resources](README.md#readings); diagnose a failure from the supplied workflow trace. |
+| 10:45–12:00 | Lab 3: Manager Oversight — Code Validation and Bounded Repair | Repair the gate/retry limit, inspect the Manager oversight evidence, record escalation, and reach `✅ SUCCESS: 15/15`. |
+| 13:00–14:30 | Capstone and factory build | Validate `DevDeliverable` before the Coordinator starts the local Security adapter; inspect the audit result. Use [notebook 05](notebooks/05_live_software_factory.ipynb) to connect the travel-site brief to fixture outputs, simulated costs, candidate Git revision, and approval evidence. |
+| 14:45–15:45 | Local CI/CD, defense, and Paper ADR option | Use [notebook 06](notebooks/06_local_cicd.ipynb) to demonstrate denied publication and stale-evidence blocks. Present the inter-team contract, observed checks, and ADR, or submit a sound Paper ADR fallback. |
+| 15:45–16:00 | Framework ecosystem and observed controls | Review broader framework choices as ungraded literacy; connect a typed contract, tool boundary, bounded retry and approval decision to the evidence observed in the notebooks. |
 
 <a id="delivery-schedule--integrated-factory-facilitation"></a>
 
@@ -493,49 +493,23 @@ Use the [five-minute demonstration script](#demo-script) during the factory bloc
 
 ---
 
-<a id="agent-building-slide-alignment"></a>
+<a id="notebook-control-crosswalk"></a>
 
-## Agent-building slide and exercise alignment
+## Notebook and control crosswalk
 
-Updated **22 October 2026**. Use the [current six-slide deck](slides/managing_multi_agent_teams_6_slides.pptx), [README slide index](README.md#main-deck-slide-index), [curriculum mind map](README.md#main-deck-slide-index), and [design guide](ASSIGNMENTS.md#agent-building-design-guide) together.
+Use the [course map](COURSE_MAP.md), [assignment briefs](ASSIGNMENTS.md), and each notebook's Run / Edit / Inspect / Finish guide to connect practical work to the control being taught.
 
-<a id="agent-building-slide-alignment--content-crosswalk"></a>
-
-### Content crosswalk
-
-| Core concept | Slides | Learner connection |
+| Exercise | Control | Observable learner evidence |
 | --- | --- | --- |
-| Architecture and controlled execution | 1–2 | Preflight checks the local runtime before exercises; Lab 3 validates tool input and bounds attempts. |
-| Typed context and team boundaries | 3 | Lab 1 checks declared constraints; Capstone validates before Security starts. |
-| Manager, Coder, and QA authority | 4 | Lab 2 repairs tools/context, inspects the skill matrix and typed patch, then records the audit decision. |
-| Submission and release evidence | 5 | Three lab repairs, Capstone and ADR, candidate revision, simulated ledger, gate decisions, and local publication receipt. |
-| Setup and assessment | 6 | Python 3.12, Git, local JupyterLab, notebooks 00–06, and the unchanged /100 rubric. |
-| Fuller design discussion | Written guide | Helper types, adequate capabilities, human pairing, deferred loading, 4,000-character tool budget, actionable errors, and state receipts remain in the [design guide](ASSIGNMENTS.md#agent-building-design-guide). |
-| Framework and research literacy | Written references | Use the framework comparison, curated readings, and companion mind map without adding work or marks. |
+| Preflight | Check the local environment before execution. | Package, working-directory and temporary-file checks pass. |
+| Lab 1 | Validate typed context at a boundary. | The repaired contract accepts valid data and rejects malformed data; the grader reaches 15/15. |
+| Lab 2 | Limit tools, supply dependencies, and audit a handoff. | The repaired tools/context settings, skill matrix, typed patch and Manager decision support admission to the local QA inbox; the grader reaches 15/15. |
+| Lab 3 | Validate input and bound repair attempts. | The local lookup rejects invalid input; the failing worker stops after the initial attempt plus three retries and records escalation; the grader reaches 15/15. |
+| Capstone | Govern a Development-to-Security handoff. | The typed API boundary, scoped review memory, repair loop and adversarial checks support the interaction map and ADR. |
+| Factory and local CI/CD | Bind decisions to revision-specific evidence before local publication. | Candidate revision, gate decisions, stale-evidence and denied-publication checks, and local publication receipt. |
+| Optional CrewAI bridge | Compare configured roles with actual framework execution. | A real sequential Crew runs with scripted local responses; final-task Markdown and exception handling remain inspectable. |
 
-<a id="agent-building-slide-alignment--assessment-and-scope"></a>
-
-### Assessment and scope
-
-The required sequence is preflight, three labs, Development-to-Security Capstone, factory and local CI/CD. Slide 5 identifies the latter labs and their evidence deliverables; the factory guide and ERD explain revision-bound checks, simulated spending, approval decisions, and local release evidence. Each notebook contains an embedded exercise diagram and a Run / Edit / Inspect / Finish guide. The supplied DX helpers, tool docstrings, state inspection, and Lab 2 debug task support the existing exercises. Learner TODOs and grading rules remain unchanged. Course marks remain three labs × 20, Capstone implementation /20, and ADR/defense /20.
-
-General/computer-use/video/cloud helper patterns, tool discovery, user-interaction tools, and durable state tools are design proposals. The supplied notebooks continue to use local deterministic fixtures. The capability ladder is an adequacy heuristic, not a measured price ranking.
-
-<a id="agent-building-slide-alignment--18-october-verification-historical"></a>
-
-### 18 October verification (historical)
-
-The records below describe the earlier design-discussion update. Its hash and checks do not validate later DX/AX or mind-map changes. Current runtime evidence comes from a fresh run of the [readiness gate](DEVELOPMENT.md).
-
-- The README's 21 numbered titles match the presentation order and slide page numbers.
-- All 51 internal slide links resolve to the intended agenda, practice map, teaching stage, or lab section. Each slide has Agenda, Practice, and Index navigation.
-- The final audit passed 403 local documentation/notebook links and anchors, the README image path, and 45 local targets in the deck. It covered the curriculum, design guide, instructor records, and slides README.
-- All five notebooks passed structural validation; comparison with the pre-edit copies confirmed preserved code cells and code positions.
-- Presentation package, layout, font policy, native-table arithmetic, and first-party re-import checks passed. Four estimated table-height warnings were reviewed in the rendered slides.
-- Independent visual QA inspected all 21 slides individually using LibreOffice renders and found no clipping or overlap. Native PowerPoint rendering and viewer-specific hyperlink behavior were not tested.
-- Runtime tests were not rerun for these Markdown and presentation changes. Earlier readiness results remain historical evidence for their recorded inputs.
-
-18 October deck SHA256: `711699860a2f7852523fbc6547e1b411e0d55778b060a3b40ef8324ee9b770f6`.
+The required sequence and assessment remain preflight, three labs, Development-to-Security Capstone, factory and local CI/CD. Course marks remain three labs × 20, Capstone implementation /20, and ADR/defense /20. Notebook reflections and the optional bridge add no marks. The supplied notebooks use local deterministic fixtures and do not call a model provider.
 
 [Teaching notes](#teaching-notes) · [Assessment checklist](#assessment-compliance-checklist) · [Learner paths](README.md#learner-paths)
 
@@ -1384,7 +1358,7 @@ Theory of Mind and TeamLog explain role-specific context and shared commitments.
 
 ### Verification record and earlier rehearsal notes
 
-Use the [verification pyramid](#verification-pyramid) and [assessment evidence](#assessment-compliance-checklist). Current completion requires current input hashes and successful command output. Earlier v14/v15/v16 reviews and setup timings are dated evidence for their own artifacts. The current deck is six slides. A manifest entry, constructed Crew or green score does not establish unrestricted behavior, security or certification.
+Use the [verification pyramid](#verification-pyramid) and [assessment evidence](#assessment-compliance-checklist). Current completion requires current input hashes and successful command output. Earlier artifact reviews and setup timings are dated evidence for their own inputs. The current deck is six slides. A manifest entry, constructed Crew or green score does not establish unrestricted behavior, security or certification.
 
 <a id="scope-alignment-verification--scope-controls"></a>
 
@@ -1433,7 +1407,7 @@ Use the single [marks table](#grading--marks) and [Paper ADR scoring anchors](#c
 
 ### Historical verification record (through 18 October 2026)
 
-The archived original retains detailed test, setup, grading, slide and alignment records through 18 October. It recorded 112 local tests (73 unit, 39 integration) on 17 October; v14/v15 presentation reviews; and an 18 October v16 presentation/navigation review. These reviews used earlier notebook layouts and presentation artifacts. They do not verify current files.
+Archived text records retain historical test, setup, grading, and alignment notes through 18 October. They recorded 112 local tests (73 unit, 39 integration) on 17 October and used earlier course artifacts. These records do not verify current files.
 
 The substantive acceptance rules remain: invalid contracts block downstream work; Manager permissions/context are audited; stale QA inbox work is cleared; bounded repair records four maximum failing calls and escalation; failed QA is rejected before Security starts; tool scanning/approval authority is separate; and grading arithmetic distinguishes partial, zero and missing marks. Inspect the current tests and actual notebook results for each claim.
 
